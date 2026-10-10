@@ -10,11 +10,11 @@ import { cn } from "@/lib/cn";
 import { publicPath } from "@/lib/site";
 import type { Locale } from "@/i18n/routing";
 
-const covers = {
+const covers: Record<string, string> = {
   "operations-platform": "/projects/operations-platform.jpg",
   "cloud-foundation": "/projects/cloud-foundation.jpg",
   "content-os": "/projects/content-os.jpg",
-} as const;
+};
 
 export async function FeaturedProjects() {
   const t = await getTranslations("projects");
