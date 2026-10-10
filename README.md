@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# VIA Global
 
-## Getting Started
+Website doanh nghiệp song ngữ (Tiếng Việt / English) được dựng bằng Next.js và Tailwind CSS. Mục tiêu chính là tạo uy tín với khách hàng và đối tác qua giao diện tối giản, nội dung rõ ràng và cấu trúc SEO chuẩn.
 
-First, run the development server:
+## Chạy dự án
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Tiếng Việt: [http://localhost:3000](http://localhost:3000)
+- Tiếng Anh: [http://localhost:3000/en](http://localhost:3000/en)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tài liệu cấu hình
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Toàn bộ tài liệu nằm trong thư mục [`docs/`](./docs/README.md):
 
-## Learn More
+- Hệ thống thiết kế, i18n, SEO
+- Cấu hình từng màn hình
+- Quy tắc cập nhật nội dung và thương hiệu
 
-To learn more about Next.js, take a look at the following resources:
+## Công nghệ
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 16 App Router
+- Tailwind CSS 4
+- next-intl (URL riêng cho từng ngôn ngữ)
+- TypeScript

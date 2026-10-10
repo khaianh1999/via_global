@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "homeTitle": "VIA Global",
+    "homeDescription": "VIA Global phát triển giải pháp công nghệ, nền tảng số và dịch vụ truyền thông, đồng hành cùng doanh nghiệp trong kỷ nguyên số.",
+    "aboutTitle": "Giới thiệu",
+    "aboutDescription": "Tìm hiểu định hướng, cách làm việc và giá trị VIA Global mang lại cho khách hàng cùng đối tác.",
+    "expertiseTitle": "Lĩnh vực hoạt động",
+    "expertiseDescription": "Technology & Software, Cloud & Digital Infrastructure, Digital Media & Communication.",
+    "solutionsTitle": "Giải pháp",
+    "solutionsDescription": "Năm hướng giải pháp của VIA Global: phần mềm doanh nghiệp, nền tảng số, kiến trúc Cloud, tích hợp hệ thống và công nghệ truyền thông. Mỗi hướng được mô tả theo bài toán, phạm vi, cách triển khai và điều kiện phù hợp.",
+    "projectsTitle": "Dự án",
+    "projectsDescription": "Các dự án triển khai và năng lực thực tế của VIA Global trong công nghệ, hạ tầng số và truyền thông.",
+    "insightsTitle": "Tin công nghệ",
+    "insightsDescription": "Góc nhìn của VIA Global về AI, chuyển đổi số, Cloud, phần mềm và công nghệ truyền thông.",
+    "contactTitle": "Liên hệ",
+    "contactDescription": "Trao đổi với VIA Global về nhu cầu công nghệ, hạ tầng số và định hướng phát triển của doanh nghiệp."
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "expertise": "Lĩnh vực hoạt động",
+    "solutions": "Giải pháp",
+    "projects": "Dự án",
+    "insights": "Tin công nghệ",
+    "contact": "Liên hệ",
+    "partnerCta": "Liên hệ hợp tác",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu"
+  },
+  "common": {
+    "learnMore": "Tìm hiểu thêm",
+    "readArticle": "Đọc bài viết",
+    "viewAll": "Xem tất cả",
+    "backHome": "Về trang chủ",
+    "role": "Vai trò",
+    "field": "Lĩnh vực",
+    "readingTime": "{minutes} phút đọc",
+    "skipToContent": "Đến nội dung chính",
+    "openZalo": "Nhắn tin Zalo",
+    "notFoundTitle": "Không tìm thấy trang",
+    "notFoundBody": "Đường dẫn không tồn tại hoặc đã được điều chỉnh. Quý khách có thể quay lại trang chủ hoặc liên hệ với chúng tôi."
+  },
+  "hero": {
+    "eyebrow": "VIA Global",
+    "title": "Công nghệ kiến tạo giá trị",
+    "subtitle": "Đồng hành cùng doanh nghiệp trong kỷ nguyên số",
+    "body": "Chúng tôi phát triển các giải pháp công nghệ, nền tảng số và dịch vụ truyền thông, giúp doanh nghiệp nâng cao hiệu quả hoạt động và mở rộng cơ hội phát triển.",
+    "primary": "Khám phá năng lực",
+    "secondary": "Liên hệ hợp tác",
+    "visualAlt": "Ba tầng năng lực của VIA Global: phần mềm, hạ tầng số và mạng lưới kết nối"
+  },
+  "aboutPreview": {
+    "label": "Giới thiệu",
+    "title": "Kết hợp công nghệ và tư duy đổi mới",
+    "body": "VIA Global hướng đến những giải pháp đủ cụ thể để vận hành và đủ vững để phát triển lâu dài. Chúng tôi làm việc từ bài toán của doanh nghiệp: làm rõ nhu cầu, thiết kế phương án phù hợp, rồi triển khai với sự kiểm soát về kỹ thuật và trải nghiệm sử dụng.",
+    "point1": "Năng lực công nghệ được đặt trong bối cảnh vận hành thực tế.",
+    "point2": "Mỗi hợp tác đều hướng tới sự rõ ràng, bền vững và có thể bàn giao.",
+    "cta": "Tìm hiểu về chúng tôi"
+  },
+  "expertise": {
+    "label": "Lĩnh vực hoạt động",
+    "title": "Ba năng lực then chốt",
+    "body": "Chúng tôi tập trung vào những lĩnh vực có thể tạo ra giá trị vận hành rõ ràng cho doanh nghiệp, thay vì trải rộng mọi dịch vụ công nghệ.",
+    "cta": "Tìm hiểu thêm"
+  },
+  "advantages": {
+    "label": "Năng lực và lợi thế",
+    "title": "Giải pháp phù hợp. Công nghệ bền vững. Hợp tác lâu dài.",
+    "items": {
+      "capability": {
+        "title": "Năng lực công nghệ",
+        "body": "Khả năng nghiên cứu và phát triển giải pháp phù hợp với bối cảnh của từng doanh nghiệp."
+      },
+      "practice": {
+        "title": "Tư duy thực tiễn",
+        "body": "Tập trung vào nhu cầu và bài toán của khách hàng, không bắt đầu từ danh sách công nghệ."
+      },
+      "integration": {
+        "title": "Khả năng tích hợp",
+        "body": "Kết nối hệ thống, dữ liệu và nền tảng để hoạt động trở nên thống nhất hơn."
+      },
+      "partnership": {
+        "title": "Đồng hành lâu dài",
+        "body": "Hướng đến quan hệ hợp tác bền vững, với lộ trình có thể tiếp tục sau lần triển khai đầu tiên."
+      }
+    }
+  },
+  "projects": {
+    "label": "Dự án tiêu biểu",
+    "title": "Những hướng triển khai đã được hiện thực hóa",
+    "body": "Khi số lượng dự án thương mại còn đang được tích lũy, chúng tôi giới thiệu các hạng mục đã triển khai thực tế hoặc sản phẩm nội bộ, với vai trò được nêu rõ.",
+    "cta": "Xem danh mục dự án"
+  },
+  "insights": {
+    "label": "Góc công nghệ",
+    "title": "Chuyên môn được viết lại cho người ra quyết định",
+    "body": "Các bài viết giúp khách hàng và đối tác hiểu cách chúng tôi tiếp cận AI, chuyển đổi số, hạ tầng Cloud, phần mềm và truyền thông số.",
+    "cta": "Xem tin công nghệ"
+  },
+  "cta": {
+    "title": "Bạn đang tìm kiếm đối tác công nghệ?",
+    "body": "Hãy trao đổi với chúng tôi về nhu cầu và định hướng phát triển của doanh nghiệp.",
+    "button": "Kết nối với chúng tôi"
+  },
+  "aboutPage": {
+    "label": "Về VIA Global",
+    "title": "Một đối tác công nghệ chọn sự rõ ràng hơn sự phô trương",
+    "lead": "VIA Global được xây dựng để đồng hành cùng doanh nghiệp trong việc phát triển giải pháp công nghệ, nền tảng số và năng lực truyền thông. Chúng tôi tin uy tín đến từ cách làm việc: hiểu đúng bài toán, triển khai có kiểm soát và giữ lời trong từng bước bàn giao.",
+    "storyTitle": "Định hướng",
+    "story": "Chúng tôi không đặt mục tiêu trở thành một nhà cung cấp ôm đồm mọi dịch vụ số. VIA Global tập trung vào ba năng lực có thể kết nối với nhau: phần mềm và nền tảng số, hạ tầng Cloud, cùng công nghệ truyền thông. Cách tập trung này giúp mỗi hợp tác có người chịu trách nhiệm, có phạm vi và có tiêu chí hoàn thành.",
+    "approachTitle": "Cách chúng tôi làm việc",
+    "approach": "Mọi dự án bắt đầu bằng việc lắng nghe bối cảnh vận hành. Sau đó là phương án đủ cụ thể để quyết định, rồi mới đến thiết kế và phát triển. Khách hàng luôn biết đang ở giai đoạn nào, điều gì đã chốt và điều gì còn cần làm rõ.",
+    "steps": {
+      "listen": {
+        "title": "Lắng nghe bài toán",
+        "body": "Xác định nhu cầu, ràng buộc và kết quả mà doanh nghiệp thực sự cần."
+      },
+      "design": {
+        "title": "Thiết kế phương án",
+        "body": "Đề xuất hướng triển khai phù hợp quy mô, dữ liệu và khả năng vận hành."
+      },
+      "build": {
+        "title": "Triển khai có kiểm soát",
+        "body": "Phát triển theo phạm vi đã thống nhất, với các mốc có thể xem và điều chỉnh."
+      },
+      "handover": {
+        "title": "Bàn giao để tiếp tục",
+        "body": "Hệ thống, quy trình và kiến thức được chuyển giao để doanh nghiệp làm chủ được."
+      }
+    },
+    "valuesTitle": "Giá trị mang lại cho khách hàng",
+    "values": {
+      "clarity": {
+        "title": "Rõ ràng",
+        "body": "Phạm vi, tiến độ và quyết định kỹ thuật được diễn đạt để ban lãnh đạo và đội ngũ chuyên môn cùng hiểu."
+      },
+      "fit": {
+        "title": "Phù hợp",
+        "body": "Giải pháp được chọn theo bài toán, không theo xu hướng hay gói dịch vụ có sẵn."
+      },
+      "continuity": {
+        "title": "Liền mạch",
+        "body": "Công nghệ, hạ tầng và truyền thông được xem xét trong cùng một bức tranh vận hành."
+      }
+    }
+  },
+  "expertisePage": {
+    "label": "Lĩnh vực hoạt động",
+    "title": "Năng lực đủ sâu để chịu trách nhiệm",
+    "lead": "Ba lĩnh vực dưới đây là phạm vi VIA Global sẵn sàng đồng hành. Mỗi lĩnh vực đều có thể đứng độc lập hoặc được kết hợp trong cùng một chương trình hợp tác.",
+    "relatedSolutions": "Giải pháp liên quan"
+  },
+  "solutionsPage": {
+    "label": "Giải pháp",
+    "title": "Từ bài toán vận hành đến phương án có thể triển khai",
+    "lead": "Năm hướng dưới đây là cách VIA Global tổ chức năng lực. Mỗi giải pháp được viết theo bài toán thật, phạm vi có thể bàn giao và điều kiện để hợp tác có kết quả. Khi làm việc cùng nhau, phạm vi sẽ được chỉnh theo bối cảnh của doanh nghiệp, không áp một gói cứng.",
+    "methodTitle": "Cách chúng tôi định nghĩa một giải pháp",
+    "methodBody": "Một giải pháp chỉ được đưa ra khi có thể trả lời bốn câu hỏi: việc gì đang tắc, ai sẽ dùng kết quả, giai đoạn đầu gồm những gì, và khi nào đây không phải lựa chọn đúng.",
+    "principles": {
+      "problem": {
+        "title": "Bắt đầu từ việc",
+        "body": "Phần mềm, hạ tầng hay nền tảng chỉ là phương tiện. Chúng tôi mô tả công việc đang diễn ra trước khi đề xuất kiến trúc."
+      },
+      "scope": {
+        "title": "Phạm vi có thể chốt",
+        "body": "Giai đoạn đầu phải đủ cụ thể để xem, kiểm tra và bàn giao. Phần còn lại được ghi nhận, không bị trộn vào cho đầy đủ."
+      },
+      "fit": {
+        "title": "Nói rõ khi nào không phù hợp",
+        "body": "Uy tín đến từ việc từ chối đúng lúc. Nếu bài toán chưa rõ hoặc kỳ vọng không khớp cách làm, chúng tôi sẽ nói thẳng."
+      }
+    },
+    "problem": "Bài toán",
+    "audience": "Dành cho ai",
+    "scope": "Phạm vi triển khai",
+    "process": "Cách triển khai",
+    "outcomes": "Kết quả hướng tới",
+    "fit": "Phù hợp khi",
+    "notFor": "Chưa phải lựa chọn nếu",
+    "related": "Các giải pháp khác",
+    "expertiseLink": "Xem lĩnh vực",
+    "viewSolution": "Xem chi tiết giải pháp",
+    "backToList": "Tất cả giải pháp"
+  },
+  "projectsPage": {
+    "label": "Dự án",
+    "title": "Năng lực được thể hiện qua việc đã làm",
+    "lead": "Danh mục này ưu tiên các hạng mục đã được triển khai, gồm dự án thực tế và sản phẩm nội bộ. Chúng tôi ghi rõ vai trò của VIA Global và không sử dụng số liệu chưa kiểm chứng.",
+    "disclaimer": "Một số hạng mục được trình bày như mô hình triển khai hoặc năng lực nội bộ. Tên khách hàng thương mại chỉ được nêu khi có sự đồng ý."
+  },
+  "insightsPage": {
+    "label": "Tin công nghệ",
+    "title": "Góc nhìn chuyên môn, viết cho người cần quyết định",
+    "lead": "Nội dung được biên soạn để làm rõ cách tiếp cận của VIA Global, hỗ trợ khách hàng hiểu năng lực công ty và tạo nền tảng thông tin cho tìm kiếm."
+  },
+  "contactPage": {
+    "label": "Liên hệ hợp tác",
+    "title": "Hãy mô tả nhu cầu của doanh nghiệp",
+    "lead": "Chúng tôi đọc từng thông tin được gửi đến. Một mô tả ngắn về bối cảnh, mục tiêu và thời điểm mong muốn đã đủ để bắt đầu trao đổi.",
+    "asideTitle": "Thông tin liên hệ",
+    "asideBody": "Quý khách cũng có thể viết trực tiếp qua email. Đoàn ngũ của VIA Global sẽ phản hồi trong giờ làm việc.",
+    "name": "Họ và tên",
+    "company": "Doanh nghiệp",
+    "email": "Email",
+    "phone": "Số điện thoại",
+    "topic": "Nhu cầu chính",
+    "message": "Nội dung trao đổi",
+    "topicOptions": {
+      "software": "Phần mềm và nền tảng số",
+      "cloud": "Cloud và hạ tầng",
+      "media": "Công nghệ truyền thông",
+      "other": "Hợp tác hoặc trao đổi khác"
+    },
+    "submit": "Gửi thông tin",
+    "sending": "Đang gửi...",
+    "successTitle": "Chúng tôi đã nhận được thông tin",
+    "successBody": "VIA Global sẽ liên hệ lại qua email hoặc số điện thoại đã cung cấp. Cảm ơn quý khách đã tin tưởng trao đổi.",
+    "error": "Không thể gửi form lúc này. Quý khách vui lòng thử lại hoặc gửi email trực tiếp.",
+    "required": "Trường này là bắt buộc",
+    "invalidEmail": "Email chưa đúng định dạng"
+  },
+  "footer": {
+    "tagline": "Công nghệ kiến tạo giá trị. Đồng hành cùng doanh nghiệp trong kỷ nguyên số.",
+    "explore": "Khám phá",
+    "contact": "Liên hệ",
+    "rights": "Mọi quyền được bảo lưu.",
+    "placeholderNote": "Tên pháp lý, địa chỉ và thông tin liên hệ sẽ được cập nhật khi hoàn tất hồ sơ doanh nghiệp."
+  }
+}

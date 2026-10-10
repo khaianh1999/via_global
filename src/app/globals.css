@@ -1,26 +1,96 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --navy: #0b1f3a;
+  --navy-deep: #071525;
+  --blue: #1a5f9e;
+  --blue-bright: #2b7ec4;
+  --ice: #f3f7fb;
+  --mist: #e4eef6;
+  --line: #d5e2ee;
+  --ink: #142033;
+  --muted: #5d6b7c;
+  --paper: #ffffff;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-navy: var(--navy);
+  --color-navy-deep: var(--navy-deep);
+  --color-blue: var(--blue);
+  --color-blue-bright: var(--blue-bright);
+  --color-ice: var(--ice);
+  --color-mist: var(--mist);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-paper: var(--paper);
+  --font-sans: var(--font-manrope);
+  --font-serif: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-manrope), "Segoe UI", sans-serif;
+}
+
+::selection {
+  background: #d7e8f6;
+  color: var(--navy);
+}
+
+.font-serif {
+  font-family: var(--font-fraunces), "Times New Roman", serif;
+}
+
+@keyframes zalo-shake {
+  0%,
+  78%,
+  100% {
+    transform: rotate(0deg);
+  }
+  82% {
+    transform: rotate(-8deg);
+  }
+  86% {
+    transform: rotate(8deg);
+  }
+  90% {
+    transform: rotate(-6deg);
+  }
+  94% {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes zalo-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  70%,
+  100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.zalo-float {
+  animation: zalo-shake 3.4s ease-in-out infinite;
+}
+
+.zalo-float:hover {
+  animation-play-state: paused;
+}
+
+.zalo-float-ping {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: #3a8bff;
+  animation: zalo-ping 2.4s ease-out infinite;
 }
