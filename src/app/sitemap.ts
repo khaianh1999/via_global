@@ -8,6 +8,8 @@ import type { PageHref } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
 import type { MetadataRoute } from "next";
 
+export const dynamic = "force-static";
+
 const staticPaths = [
   "/",
   "/gioi-thieu",

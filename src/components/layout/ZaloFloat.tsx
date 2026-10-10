@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { siteConfig } from "@/lib/site";
+import { publicPath, siteConfig } from "@/lib/site";
 
 export async function ZaloFloat() {
   if (!siteConfig.zalo.href) return null;
@@ -16,7 +16,7 @@ export async function ZaloFloat() {
     >
       <span className="zalo-float-ping" aria-hidden="true" />
       <img
-        src="/icon-zalo.svg"
+        src={publicPath("/icon-zalo.svg")}
         alt=""
         width={56}
         height={56}

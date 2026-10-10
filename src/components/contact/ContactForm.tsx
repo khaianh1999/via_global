@@ -1,16 +1,30 @@
 "use client";
 
-import { useActionState } from "react";
+import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { submitContact, type ContactState } from "@/app/actions/contact";
 
-const initialState: ContactState = { status: "idle" };
+type ContactStatus = "idle" | "success" | "error";
 
 export function ContactForm() {
   const t = useTranslations("contactPage");
-  const [state, formAction, pending] = useActionState(submitContact, initialState);
+  const [status, setStatus] = useState<ContactStatus>("idle");
 
-  if (state.status === "success") {
+  function onSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get("name") ?? "").trim();
+    const email = String(formData.get("email") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+
+    if (!name || !email || !message || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setStatus("error");
+      return;
+    }
+
+    setStatus("success");
+  }
+
+  if (status === "success") {
     return (
       <div className="rounded-[1.6rem] border border-line bg-ice p-8">
         <h2 className="font-serif text-3xl text-navy">{t("successTitle")}</h2>
@@ -20,7 +34,7 @@ export function ContactForm() {
   }
 
   return (
-    <form action={formAction} className="grid gap-5">
+    <form onSubmit={onSubmit} className="grid gap-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <Field label={t("name")} name="name" required />
         <Field label={t("company")} name="company" />
@@ -49,15 +63,12 @@ export function ContactForm() {
           className="w-full rounded-2xl border border-line bg-white px-4 py-3 text-sm text-ink outline-none focus:border-blue"
         />
       </label>
-      {state.status === "error" ? (
-        <p className="text-sm text-red-700">{t("error")}</p>
-      ) : null}
+      {status === "error" ? <p className="text-sm text-red-700">{t("error")}</p> : null}
       <button
         type="submit"
-        disabled={pending}
-        className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-deep disabled:opacity-70"
+        className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-deep"
       >
-        {pending ? t("sending") : t("submit")}
+        {t("submit")}
       </button>
     </form>
   );
