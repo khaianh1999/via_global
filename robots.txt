@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://khaianh1999.github.io/via_global
+Sitemap: https://khaianh1999.github.io/via_global/sitemap.xml

@@ -1,0 +1,30 @@
+3:"$Sreact.fragment"
+4:"/via_global/_next/static/chunks/0umf92h1sb77c.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+b:"/via_global/_next/static/chunks/2q73mt-9f2ras.js"
+c:"/via_global/_next/static/chunks/0hj50t4vp8z6z.js"
+d:"/via_global/_next/static/chunks/33tklduiih7cr.js"
+e:I[14219,["$b","$c","$d"],"ContactForm"]
+f:I[97367,["$4"],"OutletBoundary"]
+10:"$Sreact.suspense"
+13:"ViewportBoundary"
+14:I[97367,["$4"],"$13"]
+15:"MetadataBoundary"
+16:I[97367,["$4"],"$15"]
+17:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[[["$","section",null,{"className":"border-b border-line bg-ice","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-8 max-w-4xl py-16 lg:py-20","children":[["$","p",null,{"className":"text-xs font-semibold tracking-[0.22em] text-blue uppercase","children":"Liên hệ hợp tác"}],["$","h1",null,{"className":"mt-4 font-serif text-4xl leading-tight text-navy text-balance sm:text-5xl","children":"Hãy mô tả nhu cầu của doanh nghiệp"}],["$","p",null,{"className":"mt-6 max-w-3xl text-base leading-8 text-muted sm:text-lg","children":"Chúng tôi đọc từng thông tin được gửi đến. Một mô tả ngắn về bối cảnh, mục tiêu và thời điểm mong muốn đã đủ để bắt đầu trao đổi."}]]}]}],["$","section",null,{"className":"bg-white py-20","children":["$","div",null,{"className":"mx-auto w-full max-w-6xl px-5 sm:px-8 grid gap-12 lg:grid-cols-[1.2fr_0.8fr]","children":[["$","$Le",null,{}],["$","aside",null,{"className":"h-fit rounded-[1.6rem] bg-ice p-8","children":[["$","h2",null,{"className":"font-serif text-2xl text-navy","children":"Thông tin liên hệ"}],["$","p",null,{"className":"mt-4 text-sm leading-7 text-muted","children":"Quý khách cũng có thể viết trực tiếp qua email. Đoàn ngũ của VIA Global sẽ phản hồi trong giờ làm việc."}],["$","ul",null,{"className":"mt-6 space-y-3 text-sm text-navy","children":[["$","li",null,{"children":["$","a",null,{"href":"mailto:contact@via-global.vn","className":"hover:text-blue","children":"contact@via-global.vn"}]}],["$","li",null,{"children":"+84 000 000 000"}],["$","li",null,{"children":"Việt Nam"}]]}]]}]]}]}]],[["$","script","script-0",{"src":"/via_global/_next/static/chunks/33tklduiih7cr.js","async":true}]],["$","$Lf",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@11"}]}]]}],"p":"$@12","v":null,"s":"$9"}}]]
+2:[["children",{"s":"lien-he","h":64,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":{"n":"locale","t":"d","k":"vi","s":["actions"]},"h":32,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":80,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L14",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L16",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Liên hệ | VIA Global"}],["$","meta","1",{"name":"description","content":"Trao đổi với VIA Global về nhu cầu công nghệ, hạ tầng số và định hướng phát triển của doanh nghiệp."}],["$","meta","2",{"name":"robots","content":"index, follow"}],["$","link","3",{"rel":"canonical","href":"https://khaianh1999.github.io/via_global/lien-he/"}],["$","link","4",{"rel":"alternate","hrefLang":"vi","href":"https://khaianh1999.github.io/via_global/lien-he/"}],["$","link","5",{"rel":"alternate","hrefLang":"en","href":"https://khaianh1999.github.io/via_global/en/contact/"}],["$","link","6",{"rel":"alternate","hrefLang":"x-default","href":"https://khaianh1999.github.io/via_global/lien-he/"}],["$","meta","7",{"property":"og:title","content":"Liên hệ | VIA Global"}],["$","meta","8",{"property":"og:description","content":"Trao đổi với VIA Global về nhu cầu công nghệ, hạ tầng số và định hướng phát triển của doanh nghiệp."}],["$","meta","9",{"property":"og:url","content":"https://khaianh1999.github.io/via_global/lien-he/"}],["$","meta","10",{"property":"og:site_name","content":"VIA Global"}],["$","meta","11",{"property":"og:locale","content":"vi_VN"}],["$","meta","12",{"property":"og:type","content":"website"}],["$","meta","13",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","14",{"name":"twitter:title","content":"Liên hệ | VIA Global"}],["$","meta","15",{"name":"twitter:description","content":"Trao đổi với VIA Global về nhu cầu công nghệ, hạ tầng số và định hướng phát triển của doanh nghiệp."}],["$","link","16",{"rel":"icon","href":"/via_global/favicon.ico?favicon.117ezoe8m31dk.ico","sizes":"48x48","type":"image/x-icon"}],["$","link","17",{"rel":"icon","href":"/icon?dfe27c551e603604","type":"image/png","sizes":"32x32"}],["$","$L17","18",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@18","v":null,"s":"$9"}},"a":"$@19","u":"$@1a","b":"Kn9Mus63S-x131yE5FE2Z"}
+11:null
+1a:true
+9:300
+9:C
+19:0
+7:"$undefined"
+18:"$undefined"
+12:"$undefined"
