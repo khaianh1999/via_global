@@ -12,10 +12,8 @@ export function Logo({
     <Link href="/" className={cn("group flex items-center gap-3", className)}>
       <span
         className={cn(
-          "flex h-9 w-9 items-center justify-center rounded-full border text-[13px] font-semibold tracking-[0.14em]",
-          onLight
-            ? "border-navy/15 bg-navy text-white"
-            : "border-white/20 bg-white text-navy",
+          "flex h-10 w-10 items-center justify-center rounded-2xl text-[12px] font-semibold tracking-[0.12em] shadow-[0_8px_18px_rgba(18,59,114,0.22)]",
+          onLight ? "bg-navy text-white" : "bg-white text-navy",
         )}
       >
         VIA

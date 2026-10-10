@@ -10,7 +10,7 @@ export async function Footer() {
   const year = 2026;
 
   return (
-    <footer className="border-t border-line bg-ice">
+    <footer className="snap-end border-t border-line bg-ice">
       <div className="mx-auto grid max-w-6xl gap-8 px-5 py-12 sm:gap-12 sm:px-8 sm:py-16 lg:grid-cols-12">
         <div className="lg:col-span-5">
           <Logo />

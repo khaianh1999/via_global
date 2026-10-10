@@ -1,11 +1,20 @@
+import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
-import { ProjectCover } from "@/components/projects/ProjectCover";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { homeSectionFrame } from "@/components/home/homeSection";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { projects } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/cn";
+import { publicPath } from "@/lib/site";
 import type { Locale } from "@/i18n/routing";
+
+const covers = {
+  "operations-platform": "/projects/operations-platform.jpg",
+  "cloud-foundation": "/projects/cloud-foundation.jpg",
+  "content-os": "/projects/content-os.jpg",
+} as const;
 
 export async function FeaturedProjects() {
   const t = await getTranslations("projects");
@@ -13,28 +22,35 @@ export async function FeaturedProjects() {
   const featured = projects.slice(0, 3);
 
   return (
-    <section className="bg-ice py-12 sm:py-20 lg:py-28">
+    <section id="du-an" className={cn(homeSectionFrame, "bg-ice py-10 sm:py-14 lg:py-10")}>
       <Container>
-        <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end lg:gap-8">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end lg:gap-8">
           <SectionHeading label={t("label")} title={t("title")} body={t("body")} />
           <ButtonLink href="/du-an" variant="secondary" className="w-full shrink-0 sm:w-auto">
             {t("cta")}
           </ButtonLink>
         </div>
-        <div className="mt-7 grid gap-4 sm:mt-12 sm:gap-6 lg:grid-cols-3">
+        <div className="mt-6 grid gap-3 sm:mt-8 lg:grid-cols-3 lg:gap-6">
           {featured.map((project) => (
             <Link
               key={project.slug}
               href={{ pathname: "/du-an/[slug]", params: { slug: project.slug } }}
-              className="group overflow-hidden rounded-[1.35rem] border border-line bg-white sm:rounded-[1.6rem]"
+              className="group flex flex-col overflow-hidden rounded-[1.35rem] border border-line bg-white shadow-[0_10px_30px_rgba(18,59,114,0.04)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(18,59,114,0.1)] sm:rounded-[1.6rem]"
             >
-              <ProjectCover accent={project.accent} className="h-36 sm:h-52" />
-              <div className="p-4 sm:p-6">
+              <Image
+                src={publicPath(covers[project.slug])}
+                alt={project.title[locale]}
+                width={1280}
+                height={720}
+                sizes="(min-width: 1024px) 360px, 100vw"
+                className="h-40 w-full object-cover object-center sm:h-48 lg:h-44"
+              />
+              <div className="p-3.5 sm:p-6">
                 <p className="text-[11px] tracking-[0.16em] text-blue uppercase sm:text-xs">{project.field[locale]}</p>
-                <h3 className="mt-2 font-serif text-xl text-navy group-hover:text-blue sm:mt-3 sm:text-2xl">
+                <h3 className="mt-1.5 font-serif text-lg leading-snug text-navy group-hover:text-blue sm:mt-3 sm:text-2xl">
                   {project.title[locale]}
                 </h3>
-                <p className="mt-2 text-sm leading-6 text-muted sm:mt-3 sm:leading-7">{project.excerpt[locale]}</p>
+                <p className="mt-1.5 text-sm leading-6 text-muted sm:mt-3">{project.excerpt[locale]}</p>
               </div>
             </Link>
           ))}

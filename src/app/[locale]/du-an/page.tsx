@@ -51,7 +51,7 @@ export default async function ProjectsPage({
                 href={{ pathname: "/du-an/[slug]", params: { slug: project.slug } }}
                 className="group overflow-hidden rounded-[1.6rem] border border-line"
               >
-                <ProjectCover accent={project.accent} />
+                <ProjectCover accent={project.accent} className="h-52" />
                 <div className="p-7">
                   <p className="text-xs tracking-[0.16em] text-blue uppercase">
                     {project.field[currentLocale]}

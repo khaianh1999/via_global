@@ -104,7 +104,7 @@ export default async function SolutionsPage({
                 </div>
                 <Link
                   href={{ pathname: "/giai-phap/[slug]", params: { slug: item.slug } }}
-                  className="inline-flex h-fit items-center justify-center rounded-full bg-navy px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-deep"
+                  className="inline-flex h-fit items-center justify-center rounded-full bg-blue px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(37,99,235,0.18)] transition-colors hover:bg-blue-deep"
                 >
                   {t("viewSolution")}
                 </Link>

@@ -47,7 +47,7 @@
     "body": "Chúng tôi phát triển các giải pháp công nghệ, nền tảng số và dịch vụ truyền thông, giúp doanh nghiệp nâng cao hiệu quả hoạt động và mở rộng cơ hội phát triển.",
     "primary": "Khám phá năng lực",
     "secondary": "Liên hệ hợp tác",
-    "visualAlt": "Ba tầng năng lực của VIA Global: phần mềm, hạ tầng số và mạng lưới kết nối"
+    "visualAlt": "Phần mềm, hạ tầng đám mây và truyền thông số của VIA Global"
   },
   "aboutPreview": {
     "label": "Giới thiệu",
@@ -98,9 +98,45 @@
     "cta": "Xem tin công nghệ"
   },
   "cta": {
+    "label": "Bắt đầu hợp tác",
     "title": "Bạn đang tìm kiếm đối tác công nghệ?",
-    "body": "Hãy trao đổi với chúng tôi về nhu cầu và định hướng phát triển của doanh nghiệp.",
-    "button": "Kết nối với chúng tôi"
+    "body": "Hãy trao đổi về nhu cầu và định hướng của doanh nghiệp. Một mô tả ngắn về bối cảnh, mục tiêu và thời điểm đã đủ để bắt đầu.",
+    "button": "Kết nối với chúng tôi",
+    "emailLabel": "Email",
+    "pathsLabel": "Ba hướng trao đổi",
+    "paths": {
+      "software": {
+        "title": "Phần mềm và nền tảng số",
+        "body": "Sản phẩm, hệ thống nghiệp vụ và nền tảng phục vụ vận hành hằng ngày."
+      },
+      "cloud": {
+        "title": "Cloud và hạ tầng",
+        "body": "Kiến trúc máy chủ, đám mây và cách giữ hệ thống chạy ổn định."
+      },
+      "media": {
+        "title": "Công nghệ truyền thông",
+        "body": "Nền tảng nội dung số và luồng truyền thông gắn với vận hành."
+      }
+    },
+    "stepsLabel": "Một cuộc trao đổi đi qua bốn bước",
+    "steps": {
+      "listen": {
+        "title": "Lắng nghe bài toán",
+        "body": "Nhu cầu, ràng buộc và kết quả cần đạt."
+      },
+      "design": {
+        "title": "Thiết kế phương án",
+        "body": "Hướng triển khai vừa quy mô và khả năng vận hành."
+      },
+      "build": {
+        "title": "Triển khai có kiểm soát",
+        "body": "Làm theo phạm vi đã chốt, với mốc xem được."
+      },
+      "handover": {
+        "title": "Bàn giao để tiếp tục",
+        "body": "Hệ thống và kiến thức về tay doanh nghiệp."
+      }
+    }
   },
   "aboutPage": {
     "label": "Về VIA Global",

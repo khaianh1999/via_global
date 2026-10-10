@@ -1,10 +1,20 @@
+import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { homeSectionFrame } from "@/components/home/homeSection";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { cn } from "@/lib/cn";
 import { insights } from "@/content/insights";
 import { Link } from "@/i18n/navigation";
+import { publicPath } from "@/lib/site";
 import type { Locale } from "@/i18n/routing";
+
+const covers: Record<string, string> = {
+  "ai-in-the-enterprise": "/insights/ai.jpg",
+  "digital-transformation": "/insights/transformation.jpg",
+  "cloud-and-internet": "/insights/cloud.jpg",
+};
 
 export async function InsightsPreview() {
   const t = await getTranslations("insights");
@@ -13,33 +23,36 @@ export async function InsightsPreview() {
   const featured = insights.slice(0, 3);
 
   return (
-    <section className="bg-white py-12 sm:py-20 lg:py-28">
+    <section id="goc-nhin" className={cn(homeSectionFrame, "bg-white py-10 sm:py-14 lg:py-8")}>
       <Container>
-        <div className="flex flex-col justify-between gap-5 lg:flex-row lg:items-end lg:gap-8">
+        <div className="flex flex-col justify-between gap-4 lg:flex-row lg:items-end lg:gap-8">
           <SectionHeading label={t("label")} title={t("title")} body={t("body")} />
           <ButtonLink href="/cong-nghe" variant="secondary" className="w-full shrink-0 sm:w-auto">
             {t("cta")}
           </ButtonLink>
         </div>
-        <div className="mt-6 divide-y divide-line border-y border-line sm:mt-12">
+        <div className="mt-6 grid gap-4 sm:mt-8 lg:mt-8 lg:grid-cols-3 lg:gap-6">
           {featured.map((article) => (
             <Link
               key={article.slug}
               href={{ pathname: "/cong-nghe/[slug]", params: { slug: article.slug } }}
-              className="group grid gap-2 py-5 sm:gap-4 sm:py-8 lg:grid-cols-12 lg:items-center"
+              className="group flex flex-col overflow-hidden rounded-[1.35rem] border border-line bg-white shadow-[0_10px_30px_rgba(18,59,114,0.04)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(18,59,114,0.1)]"
             >
-              <p className="text-[11px] tracking-[0.16em] text-blue uppercase sm:text-xs lg:col-span-3">
-                {article.topic[locale]}
-              </p>
-              <div className="lg:col-span-7">
-                <h3 className="font-serif text-xl leading-snug text-navy group-hover:text-blue sm:text-2xl">
+              <Image
+                src={publicPath(covers[article.slug])}
+                alt={article.topic[locale]}
+                width={1280}
+                height={720}
+                sizes="(min-width: 1024px) 360px, 100vw"
+                className="h-44 w-full object-cover object-center sm:h-52 lg:h-40"
+              />
+              <div className="flex flex-1 flex-col p-4 sm:p-5">
+                <h3 className="font-serif text-lg leading-snug text-navy group-hover:text-blue sm:text-xl">
                   {article.title[locale]}
                 </h3>
-                <p className="mt-2 max-w-2xl text-sm leading-6 text-muted sm:mt-3 sm:leading-7">{article.excerpt[locale]}</p>
+                <p className="mt-2 line-clamp-3 flex-1 text-sm leading-6 text-muted">{article.excerpt[locale]}</p>
+                <p className="mt-4 text-sm font-semibold text-blue">{common("readArticle")} →</p>
               </div>
-              <p className="text-sm font-semibold text-blue lg:col-span-2 lg:text-right">
-                {common("readArticle")} →
-              </p>
             </Link>
           ))}
         </div>

@@ -1,15 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #0b1f3a;
-  --navy-deep: #071525;
-  --blue: #1a5f9e;
-  --blue-bright: #2b7ec4;
-  --ice: #f3f7fb;
-  --mist: #e4eef6;
-  --line: #d5e2ee;
-  --ink: #142033;
-  --muted: #5d6b7c;
+  --navy: #123b72;
+  --navy-deep: #0c2c56;
+  --blue: #2563eb;
+  --blue-deep: #1d4ed8;
+  --blue-bright: #3b82f6;
+  --ice: #f5f7fa;
+  --mist: #e7ecf2;
+  --line: #e2e8f0;
+  --ink: #1b2838;
+  --muted: #5c6b7c;
   --paper: #ffffff;
 }
 
@@ -17,6 +18,7 @@
   --color-navy: var(--navy);
   --color-navy-deep: var(--navy-deep);
   --color-blue: var(--blue);
+  --color-blue-deep: var(--blue-deep);
   --color-blue-bright: var(--blue-bright);
   --color-ice: var(--ice);
   --color-mist: var(--mist);
@@ -39,7 +41,7 @@ body {
 }
 
 ::selection {
-  background: #d7e8f6;
+  background: #dbe7ff;
   color: var(--navy);
 }
 
@@ -91,6 +93,59 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 9999px;
-  background: #3a8bff;
+  background: #2563eb;
   animation: zalo-ping 2.4s ease-out infinite;
+}
+
+@keyframes orbit-spin {
+  from {
+    transform: rotate(-120deg);
+  }
+  to {
+    transform: rotate(240deg);
+  }
+}
+
+@keyframes orbit-spin-rev {
+  from {
+    transform: rotate(40deg);
+  }
+  to {
+    transform: rotate(-320deg);
+  }
+}
+
+@keyframes orbit-spin-slow {
+  from {
+    transform: rotate(170deg);
+  }
+  to {
+    transform: rotate(530deg);
+  }
+}
+
+.orbit-ring,
+.orbit-ring-rev,
+.orbit-ring-slow {
+  transform-origin: center;
+}
+
+.orbit-ring {
+  animation: orbit-spin 26s linear infinite;
+}
+
+.orbit-ring-rev {
+  animation: orbit-spin-rev 18s linear infinite;
+}
+
+.orbit-ring-slow {
+  animation: orbit-spin-slow 34s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-ring,
+  .orbit-ring-rev,
+  .orbit-ring-slow {
+    animation: none;
+  }
 }

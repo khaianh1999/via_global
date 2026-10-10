@@ -47,7 +47,7 @@
     "body": "We develop technology solutions, digital platforms and communication services that help organizations operate with greater clarity and open new room to grow.",
     "primary": "Explore our capability",
     "secondary": "Partner with us",
-    "visualAlt": "VIA Global’s three layers of capability: software, digital infrastructure, and a connected network"
+    "visualAlt": "VIA Global software, cloud infrastructure, and digital media"
   },
   "aboutPreview": {
     "label": "About",
@@ -98,9 +98,45 @@
     "cta": "Browse insights"
   },
   "cta": {
+    "label": "Start a partnership",
     "title": "Looking for a technology partner?",
-    "body": "Tell us about your organization’s needs and the direction you want to take.",
-    "button": "Connect with us"
+    "body": "Tell us about the need and the direction your organization wants to take. A short note on context, aim and timing is enough to begin.",
+    "button": "Connect with us",
+    "emailLabel": "Email",
+    "pathsLabel": "Three ways to start",
+    "paths": {
+      "software": {
+        "title": "Software and digital platforms",
+        "body": "Products, business systems and platforms people use every day."
+      },
+      "cloud": {
+        "title": "Cloud and infrastructure",
+        "body": "Server and cloud architecture, and a system that stays reliable."
+      },
+      "media": {
+        "title": "Communication technology",
+        "body": "Digital content platforms and communication flows tied to operations."
+      }
+    },
+    "stepsLabel": "A conversation moves through four steps",
+    "steps": {
+      "listen": {
+        "title": "Listen to the problem",
+        "body": "The need, the constraints and the outcome required."
+      },
+      "design": {
+        "title": "Design the approach",
+        "body": "A path that fits scale and the ability to operate it."
+      },
+      "build": {
+        "title": "Deliver with control",
+        "body": "Build the agreed scope, with milestones you can review."
+      },
+      "handover": {
+        "title": "Hand over to continue",
+        "body": "Systems and knowledge return to the organization."
+      }
+    }
   },
   "aboutPage": {
     "label": "About VIA Global",

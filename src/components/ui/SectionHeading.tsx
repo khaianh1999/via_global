@@ -6,12 +6,14 @@ export function SectionHeading({
   body,
   align = "left",
   light = false,
+  bodyClassName,
 }: {
   label?: string;
   title: string;
   body?: string;
   align?: "left" | "center";
   light?: boolean;
+  bodyClassName?: string;
 }) {
   return (
     <div
@@ -43,6 +45,7 @@ export function SectionHeading({
           className={cn(
             "mt-3 text-[15px] leading-7 sm:mt-5 sm:text-lg sm:leading-8",
             light ? "text-white/75" : "text-muted",
+            bodyClassName,
           )}
         >
           {body}

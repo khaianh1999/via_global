@@ -21,9 +21,9 @@ export function ButtonLink({
       className={cn(
         "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-200",
         variant === "primary" &&
-          "bg-navy text-white shadow-sm hover:bg-navy-deep",
+          "bg-blue text-white shadow-[0_8px_20px_rgba(37,99,235,0.22)] hover:bg-blue-deep",
         variant === "secondary" &&
-          "border border-navy/15 bg-white text-navy hover:border-navy/40 hover:bg-ice",
+          "border border-navy/15 bg-white text-navy hover:border-blue/40 hover:bg-ice",
         variant === "ghost" && "px-0 text-blue hover:text-navy",
         variant === "light" &&
           "bg-white text-navy hover:bg-ice",

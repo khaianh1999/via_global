@@ -66,7 +66,7 @@ export function ContactForm() {
       {status === "error" ? <p className="text-sm text-red-700">{t("error")}</p> : null}
       <button
         type="submit"
-        className="inline-flex items-center justify-center rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-deep"
+        className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_20px_rgba(37,99,235,0.22)] transition-colors hover:bg-blue-deep"
       >
         {t("submit")}
       </button>

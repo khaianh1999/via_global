@@ -64,7 +64,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${manrope.variable} ${fraunces.variable} h-full scroll-smooth antialiased`}
+      className={`${manrope.variable} ${fraunces.variable} h-full scroll-pt-16 scroll-smooth antialiased sm:scroll-pt-[4.75rem] motion-reduce:snap-none`}
     >
       <body className="min-h-full bg-paper font-sans text-ink">
         <NextIntlClientProvider messages={messages}>
