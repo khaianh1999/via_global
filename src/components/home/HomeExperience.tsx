@@ -11,7 +11,7 @@ type SectionLink = {
 export function HomeExperience({ sections }: { sections: SectionLink[] }) {
   const [active, setActive] = useState(sections[0]?.id ?? "");
   const signature = sections.map((section) => section.id).join("|");
-  const onDark = active === "lien-he";
+  const onDark = active === "lien-he" || active === "mo-dau";
 
   useEffect(() => {
     const root = document.documentElement;

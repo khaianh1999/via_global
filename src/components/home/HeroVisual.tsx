@@ -7,7 +7,7 @@ export async function HeroVisual() {
 
   return (
     <div className="relative mx-auto w-[min(92vw,340px)] min-w-0 sm:w-[min(70vw,420px)] lg:mx-0 lg:w-full lg:max-w-[520px] xl:max-w-[600px] [@media(max-height:740px)]:w-[min(78vw,280px)] [@media(max-height:740px)]:sm:w-[min(56vw,340px)]">
-      <div className="pointer-events-none absolute inset-[8%] rounded-full bg-blue/20 blur-2xl sm:-inset-[4%] sm:blur-2xl lg:-inset-[28%] lg:bg-blue/25 lg:blur-3xl" />
+      <div className="pointer-events-none absolute inset-[10%] rounded-full bg-[#8fd4ff]/30 blur-2xl sm:inset-[2%] lg:-inset-[16%] lg:bg-[#8fd4ff]/35 lg:blur-3xl" />
       <div
         aria-hidden
         className="pointer-events-none absolute top-1/2 left-1/2 aspect-square h-[104%] -translate-x-1/2 -translate-y-1/2 lg:h-[150%]"
@@ -42,7 +42,7 @@ export async function HeroVisual() {
             cy="100"
             r="92"
             fill="none"
-            stroke="#2563EB"
+            stroke="#D7EEFF"
             strokeWidth="10"
             strokeLinecap="round"
             strokeDasharray="128 450"
@@ -50,13 +50,13 @@ export async function HeroVisual() {
         </svg>
       </div>
       <Image
-        src={publicPath("/hero-via.png")}
+        src={publicPath("/hero-stage.png")}
         alt={t("visualAlt")}
-        width={1536}
-        height={1024}
+        width={1280}
+        height={720}
         priority
         sizes="(min-width: 1280px) 600px, (min-width: 1024px) 520px, (min-width: 640px) 420px, 92vw"
-        className="relative z-10 h-auto w-full drop-shadow-[0_24px_36px_rgba(18,59,114,0.18)]"
+        className="relative z-10 h-auto w-full drop-shadow-[0_0_22px_rgba(160,220,255,0.55)] drop-shadow-[0_18px_28px_rgba(0,0,0,0.5)]"
       />
     </div>
   );
