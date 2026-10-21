@@ -49,8 +49,9 @@ export function ContactForm() {
           defaultValue="software"
         >
           <option value="software">{t("topicOptions.software")}</option>
-          <option value="cloud">{t("topicOptions.cloud")}</option>
+          <option value="ai">{t("topicOptions.ai")}</option>
           <option value="media">{t("topicOptions.media")}</option>
+          <option value="cloud">{t("topicOptions.cloud")}</option>
           <option value="other">{t("topicOptions.other")}</option>
         </select>
       </label>

@@ -6,6 +6,7 @@ import { FeaturedProjects } from "@/components/home/FeaturedProjects";
 import { Hero } from "@/components/home/Hero";
 import { HomeExperience } from "@/components/home/HomeExperience";
 import { InsightsPreview } from "@/components/home/InsightsPreview";
+import { ServicesSection } from "@/components/home/ServicesSection";
 import { routing, type Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/metadata";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -38,6 +39,7 @@ export default async function HomePage({
   const { locale } = await params;
   setRequestLocale(locale);
   const hero = await getTranslations("hero");
+  const services = await getTranslations("services");
   const about = await getTranslations("aboutPreview");
   const expertise = await getTranslations("expertise");
   const advantages = await getTranslations("advantages");
@@ -50,6 +52,7 @@ export default async function HomePage({
       <HomeExperience
         sections={[
           { id: "mo-dau", label: hero("eyebrow") },
+          { id: "dich-vu", label: services("label") },
           { id: "gioi-thieu", label: about("label") },
           { id: "linh-vuc", label: expertise("label") },
           { id: "nang-luc", label: advantages("label") },
@@ -59,6 +62,7 @@ export default async function HomePage({
         ]}
       />
       <Hero />
+      <ServicesSection />
       <AboutPreview />
       <ExpertiseSection />
       <Advantages />

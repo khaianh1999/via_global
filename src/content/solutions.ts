@@ -1,692 +1,583 @@
 type Localized<T> = { vi: T; en: T };
 
-type SolutionCopy = {
-  title: string;
-  body: string;
+export type ServiceIconName = "web" | "code" | "ai" | "flow" | "news" | "shield" | "cloud";
+
+type Service = {
+  slug: string;
+  expertise: string;
+  icon: ServiceIconName;
+  title: Localized<string>;
+  tagline: Localized<string>;
+  excerpt: Localized<string>;
+  audience: Localized<string>;
+  highlights: Localized<string[]>;
+  body: Localized<string[]>;
+  scope: Localized<string[]>;
+  outcomes: Localized<string[]>;
+  note?: Localized<string>;
+  product?: boolean;
 };
 
-export const solutions = [
+export const solutions: Service[] = [
   {
-    slug: "enterprise-software",
+    slug: "website-design",
     expertise: "technology-software",
+    icon: "web",
     title: {
-      vi: "Phần mềm doanh nghiệp",
-      en: "Enterprise software",
+      vi: "Thiết kế website chuyên nghiệp",
+      en: "Professional website design",
+    },
+    tagline: {
+      vi: "Website hiện đại, chuẩn SEO, tải nhanh và dễ quản trị.",
+      en: "Modern, SEO-ready websites that load fast and are easy to manage.",
     },
     excerpt: {
-      vi: "Xây dựng ứng dụng và hệ thống quản trị bám sát quy trình vận hành, giúp đội ngũ làm việc chính xác, thống nhất và dễ bàn giao.",
-      en: "Applications and administration systems aligned with operating processes, so teams work accurately, consistently and can hand work over cleanly.",
-    },
-    problem: {
-      vi: "Nhiều doanh nghiệp đang điều hành công việc trên bảng tính, email và các phần mềm rời. Thông tin trùng, trách nhiệm không rõ, và mỗi lần nhân sự thay đổi là quy trình lại phải giảng giải lại từ đầu.",
-      en: "Many organizations still run work through spreadsheets, email and disconnected tools. Information is duplicated, ownership is unclear, and every staff change means the process has to be explained again from the start.",
+      vi: "Website doanh nghiệp, thương mại điện tử, cổng thông tin và nền tảng trực tuyến theo yêu cầu — giao diện hiện đại, trải nghiệm tốt, tối ưu tốc độ và SEO.",
+      en: "Company websites, e-commerce, portals and custom online platforms — modern design, good experience, fast loading and SEO built in.",
     },
     audience: {
-      vi: "Phù hợp với doanh nghiệp cần số hóa một quy trình cụ thể: điều hành nội bộ, quản trị hồ sơ, theo dõi công việc, cổng thông tin hoặc hệ thống quản trị riêng theo nghiệp vụ.",
-      en: "A fit for organizations that need to digitize a concrete process: internal operations, records, work tracking, an information portal or a purpose-built administration system.",
+      vi: "Doanh nghiệp cần website giới thiệu, bán hàng, cổng thông tin hoặc tin tức, và đơn vị muốn nâng cấp, tái cấu trúc website đang dùng.",
+      en: "Organizations that need a company, sales, portal or news website, and teams that want to upgrade or restructure an existing site.",
     },
     highlights: {
       vi: [
-        "Thiết kế theo vai trò người dùng và quy trình thật",
-        "Dữ liệu có nguồn, có quyền truy cập và có thể đối soát",
-        "Bàn giao để đội ngũ nội bộ vận hành được",
+        "Hiển thị tốt trên máy tính và thiết bị di động",
+        "Cấu trúc URL thân thiện, tối ưu tốc độ và SEO",
+        "Dễ quản trị, sẵn sàng tích hợp CMS và API",
       ],
       en: [
-        "Designed around real user roles and live process",
-        "Data with a source, access rules and a way to reconcile",
-        "Handed over so an internal team can operate it",
+        "Works well on desktop and mobile devices",
+        "Friendly URLs, fast loading and SEO",
+        "Easy to manage, ready for CMS and API integration",
       ],
     },
     body: {
       vi: [
-        "Phần mềm doanh nghiệp chỉ có giá trị khi người dùng hoàn thành được việc của họ. VIA Global không bắt đầu từ danh sách tính năng, mà từ công việc đang diễn ra: ai làm, dữ liệu đi đâu, điểm nào bị tắc, và tiêu chí nào cho thấy hệ thống đã dùng được.",
-        "Trước khi thiết kế kiến trúc, chúng tôi làm rõ phạm vi nghiệp vụ, vai trò, quyền hạn và những hệ thống liên quan. Cách này giúp tránh hai sai lầm phổ biến: xây quá rộng nên lâu không dùng được, hoặc xây quá hẹp nên phải làm lại ngay sau lần triển khai đầu.",
-        "Hệ thống được phát triển theo module, với giao diện đủ rõ cho người vận hành và phần kỹ thuật đủ minh bạch để bảo trì. Mục tiêu bàn giao không chỉ là mã nguồn hay tài khoản quản trị, mà là một cách làm việc mà doanh nghiệp nắm được.",
+        "Website là nền tảng quan trọng giúp doanh nghiệp xây dựng thương hiệu, tiếp cận khách hàng và phát triển hoạt động kinh doanh trên môi trường số. VIA Global cung cấp dịch vụ thiết kế website chuyên nghiệp, tập trung vào giao diện hiện đại, trải nghiệm người dùng, hiệu năng và khả năng tối ưu công cụ tìm kiếm (SEO).",
+        "Chúng tôi phát triển website doanh nghiệp, website giới thiệu dịch vụ, website thương mại điện tử, cổng thông tin, website tin tức và các nền tảng trực tuyến theo yêu cầu riêng. Giải pháp được xây dựng phù hợp với đặc thù hoạt động của từng đơn vị, đồng thời hỗ trợ tích hợp hệ thống quản trị nội dung, cơ sở dữ liệu, API và các dịch vụ bên thứ ba.",
+        "Dịch vụ chú trọng khả năng hiển thị trên máy tính và thiết bị di động, cấu trúc URL thân thiện, tối ưu tốc độ tải trang, khả năng quản trị và định hướng phát triển lâu dài. Bên cạnh việc xây dựng website mới, chúng tôi còn hỗ trợ nâng cấp, tái cấu trúc và tối ưu các hệ thống hiện có nhằm cải thiện hiệu suất và đáp ứng nhu cầu phát triển của doanh nghiệp.",
       ],
       en: [
-        "Enterprise software has value only when users can finish their work. VIA Global does not begin with a feature list, but with the work already happening: who does it, where data goes, where it stalls, and which criteria show that the system is actually usable.",
-        "Before architecture work begins, we clarify business scope, roles, permissions and related systems. This avoids two common mistakes: building so broadly that nothing can be used, or so narrowly that the first delivery has to be rebuilt.",
-        "The system is developed in modules, with an interface clear enough for operators and a technical structure transparent enough to maintain. Handover is not only source code or an admin account, but a way of working the organization can own.",
+        "A website is a key foundation for building a brand, reaching customers and growing business online. VIA Global designs professional websites with a focus on modern interfaces, user experience, performance and search engine optimization (SEO).",
+        "We build company websites, service websites, e-commerce stores, portals, news sites and custom online platforms. Each solution fits how the organization works and can integrate a content management system, databases, APIs and third-party services.",
+        "We pay attention to desktop and mobile display, friendly URL structure, page speed, ease of administration and long-term growth. Beyond new builds, we upgrade, restructure and optimize existing systems to improve performance and meet new needs.",
       ],
     },
     scope: {
       vi: [
-        "Khảo sát quy trình, vai trò người dùng và nguồn dữ liệu hiện có",
-        "Thiết kế thông tin, luồng thao tác và phân quyền",
-        "Phát triển ứng dụng web và hệ thống quản trị",
-        "Chuẩn hóa dữ liệu đầu vào, kiểm tra và báo cáo vận hành",
-        "Kiểm thử theo kịch bản nghiệp vụ, không chỉ theo màn hình",
-        "Tài liệu sử dụng, tài liệu kỹ thuật vừa đủ và hướng dẫn bàn giao",
+        "Website doanh nghiệp và giới thiệu dịch vụ",
+        "Website thương mại điện tử",
+        "Cổng thông tin và website tin tức",
+        "Nền tảng trực tuyến theo yêu cầu riêng",
+        "Tích hợp CMS, cơ sở dữ liệu, API và dịch vụ bên thứ ba",
+        "Nâng cấp, tái cấu trúc và tối ưu website hiện có",
       ],
       en: [
-        "Review of process, user roles and existing data sources",
-        "Information design, task flow and access control",
-        "Development of the web application and administration system",
-        "Input standards, checks and operating reports",
-        "Testing against business scenarios, not only screens",
-        "Enough user and technical documentation, plus a handover guide",
+        "Company and service websites",
+        "E-commerce websites",
+        "Portals and news websites",
+        "Custom online platforms",
+        "CMS, database, API and third-party integration",
+        "Upgrading, restructuring and optimizing existing sites",
       ],
     },
-    process: {
-      vi: [
-        {
-          title: "Làm rõ bài toán",
-          body: "Mô tả công việc hiện tại, ràng buộc và kết quả cần đạt sau giai đoạn đầu. Chốt phạm vi bằng việc sẽ làm được, không bằng danh sách mong muốn.",
-        },
-        {
-          title: "Thiết kế để dùng được",
-          body: "Dựng cấu trúc thông tin, vai trò và các màn hình then chốt. Khách hàng xem và điều chỉnh trước khi phát triển diện rộng.",
-        },
-        {
-          title: "Phát triển theo mốc",
-          body: "Chia hạng mục có thể kiểm tra được. Mỗi mốc có sản phẩm xem được, dữ liệu thử và danh sách việc còn mở.",
-        },
-        {
-          title: "Bàn giao và ổn định",
-          body: "Đưa hệ thống vào sử dụng thật, hỗ trợ chỉnh theo phát sinh hợp lý, rồi chuyển quyền vận hành cho đội ngũ nội bộ.",
-        },
-      ],
-      en: [
-        {
-          title: "Clarify the problem",
-          body: "Describe current work, constraints and the result required after the first stage. Scope is settled by what will be possible, not by a wish list.",
-        },
-        {
-          title: "Design for use",
-          body: "Shape the information structure, roles and key screens. The client reviews and adjusts before broad development begins.",
-        },
-        {
-          title: "Build in milestones",
-          body: "Split work into parts that can be inspected. Each milestone has something to see, test data and an open-item list.",
-        },
-        {
-          title: "Hand over and stabilize",
-          body: "Put the system into real use, adjust reasonable issues, then transfer operating ownership to the internal team.",
-        },
-      ],
-    } satisfies Localized<SolutionCopy[]>,
     outcomes: {
       vi: [
-        "Một hệ thống gắn với việc thật, không phải một công cụ thêm vào quy trình cũ.",
-        "Dữ liệu có người chịu trách nhiệm và có cách đối soát.",
-        "Đội ngũ mới có thể tiếp quản nhờ tài liệu và phân quyền rõ.",
-        "Phạm vi còn lại được ghi nhận để phát triển tiếp, không bị trộn vào giai đoạn đầu.",
+        "Hình ảnh thương hiệu chuyên nghiệp trên môi trường số.",
+        "Khách hàng tìm thấy và tiếp cận doanh nghiệp dễ hơn nhờ SEO.",
+        "Trang tải nhanh, hiển thị tốt trên mọi thiết bị.",
+        "Đội ngũ nội bộ tự quản trị nội dung, website sẵn sàng phát triển tiếp.",
       ],
       en: [
-        "A system attached to real work, not another tool laid on top of the old process.",
-        "Data with an owner and a way to reconcile it.",
-        "New team members can take over because documentation and access are clear.",
-        "Remaining scope is recorded for later work, not mixed into the first stage.",
-      ],
-    },
-    fit: {
-      vi: [
-        "Doanh nghiệp đã mô tả được việc cần số hóa, dù quy trình còn thủ công.",
-        "Có người nội bộ chịu trách nhiệm dùng và phản hồi trong quá trình triển khai.",
-        "Cần một hệ thống có thể phát triển tiếp sau giai đoạn đầu.",
-      ],
-      en: [
-        "The organization can describe the work to digitize, even if it is still manual.",
-        "Someone inside will use the system and give feedback during delivery.",
-        "The first stage should leave room to grow later.",
-      ],
-    },
-    notFor: {
-      vi: [
-        "Nhu cầu còn ở mức “làm một phần mềm” mà chưa chỉ ra việc nào cần thay đổi.",
-        "Muốn một sản phẩm đóng gói dùng ngay mà không tham gia làm rõ nghiệp vụ.",
-      ],
-      en: [
-        "The need is still “build some software” with no work identified to change.",
-        "A ready-made product is expected, without taking part in clarifying the process.",
+        "A professional brand presence online.",
+        "Customers find and reach the business more easily through SEO.",
+        "Fast pages that display well on every device.",
+        "The internal team manages content, and the site is ready to grow.",
       ],
     },
   },
   {
-    slug: "digital-platforms",
+    slug: "custom-software",
     expertise: "technology-software",
+    icon: "code",
     title: {
-      vi: "Nền tảng số",
-      en: "Digital platforms",
+      vi: "Phát triển phần mềm theo yêu cầu",
+      en: "Custom software development",
+    },
+    tagline: {
+      vi: "Số hóa quy trình, giảm thao tác thủ công, dữ liệu tập trung.",
+      en: "Digitize workflows, cut manual work and keep data in one place.",
     },
     excerpt: {
-      vi: "Thiết kế nền tảng kết nối người dùng, dữ liệu và dịch vụ, tạo nền vững cho các sản phẩm số thay vì một ứng dụng đứng riêng.",
-      en: "Platforms that connect users, data and services, giving digital products a foundation instead of a single isolated application.",
-    },
-    problem: {
-      vi: "Khi doanh nghiệp có nhiều điểm chạm số — cổng khách hàng, ứng dụng nội bộ, kênh đối tác — mỗi phần thường được làm riêng. Dữ liệu lệch, trải nghiệm không liền, và mỗi tính năng mới lại phải xây từ đầu.",
-      en: "When an organization has many digital touchpoints — a client portal, internal apps, partner channels — each piece is often built alone. Data drifts, the experience breaks, and every new feature has to start from scratch.",
+      vi: "Phần mềm được thiết kế theo quy trình, chức năng và yêu cầu quản lý riêng của doanh nghiệp, thay vì chấp nhận giới hạn của giải pháp có sẵn.",
+      en: "Software designed around the organization’s own processes, functions and management needs, instead of accepting the limits of off-the-shelf tools.",
     },
     audience: {
-      vi: "Phù hợp khi doanh nghiệp cần một nền chung cho nhiều sản phẩm số: cổng dịch vụ, hệ thống thành viên, nền tảng giao dịch hoặc lớp kết nối giữa các ứng dụng.",
-      en: "A fit when the organization needs a shared base for several digital products: a service portal, membership system, transaction platform or a connection layer between applications.",
+      vi: "Doanh nghiệp cần số hóa quy trình nghiệp vụ, tự động hóa công việc và xây dựng hệ thống quản trị phù hợp với mô hình vận hành thực tế.",
+      en: "Organizations that need to digitize business processes, automate work and build administration systems that match how they actually operate.",
     },
     highlights: {
       vi: [
-        "Cấu trúc module, API rõ, có thể mở theo giai đoạn",
-        "Một nguồn sự thật cho người dùng, dịch vụ và dữ liệu cốt lõi",
-        "Kiểm soát sản phẩm tốt hơn khi nhu cầu tăng",
+        "Phân tích nghiệp vụ và tư vấn kiến trúc trước khi phát triển",
+        "Thiết kế cơ sở dữ liệu, tích hợp API với hệ thống đang dùng",
+        "Nâng cấp và mở rộng theo từng giai đoạn",
       ],
       en: [
-        "Modular structure, clear APIs, room to grow in stages",
-        "One source of truth for users, services and core data",
-        "Better product control as demand increases",
+        "Business analysis and architecture advice before development",
+        "Database design and API integration with current systems",
+        "Upgraded and extended in stages",
       ],
     },
     body: {
       vi: [
-        "Nền tảng số khác một website hay ứng dụng đơn lẻ ở chỗ nó được thiết kế để nhiều phần dùng chung. VIA Global tập trung vào những thành phần ít thay đổi nhưng quyết định khả năng phát triển: danh tính người dùng, mô hình dữ liệu, quyền hạn, API và cách tách module.",
-        "Chúng tôi không chủ trương xây một nền tảng “bao hết” ngay từ đầu. Giai đoạn một thường chỉ gồm phần lõi đủ để một sản phẩm thật chạy được. Các năng lực khác được thêm khi có nhu cầu rõ, để doanh nghiệp không phải nuôi một hệ thống quá lớn so với quy mô hiện tại.",
-        "Khi nền tảng đứng vững, sản phẩm mới bớt phụ thuộc vào người từng viết phần cũ. Đó là điều kiện để hợp tác kỹ thuật kéo dài được, thay vì mỗi lần thay đổi lại phải mở lại toàn bộ hệ thống.",
+        "VIA Global cung cấp dịch vụ phát triển phần mềm theo yêu cầu dành cho doanh nghiệp cần số hóa quy trình nghiệp vụ, tự động hóa công việc và xây dựng hệ thống quản trị phù hợp với mô hình vận hành thực tế.",
+        "Thay vì sử dụng các giải pháp có sẵn với nhiều giới hạn, doanh nghiệp có thể lựa chọn phần mềm được thiết kế theo quy trình, chức năng và yêu cầu quản lý riêng. Chúng tôi hỗ trợ phân tích nghiệp vụ, tư vấn kiến trúc hệ thống, thiết kế cơ sở dữ liệu, phát triển ứng dụng, tích hợp API và triển khai các chức năng phục vụ hoạt động kinh doanh.",
+        "Các giải pháp có thể bao gồm phần mềm quản lý nội bộ, hệ thống quản lý dữ liệu, phần mềm điều hành, hệ thống báo cáo, ứng dụng web và các nền tảng nghiệp vụ chuyên biệt. VIA Global cũng hỗ trợ nâng cấp phần mềm hiện hữu, tối ưu hiệu năng, cải thiện bảo mật và mở rộng chức năng theo từng giai đoạn.",
+        "Dịch vụ giúp doanh nghiệp giảm thao tác thủ công, hạn chế dữ liệu phân tán, tăng khả năng kiểm soát và chủ động hơn trong việc phát triển hệ thống công nghệ.",
       ],
       en: [
-        "A digital platform differs from a single website or application because it is designed to be shared. VIA Global concentrates on the parts that change least and decide how far the product can grow: identity, data model, permissions, APIs and module boundaries.",
-        "We do not try to build a platform that “covers everything” at the start. The first stage usually contains only the core needed for one real product to run. Other capabilities are added when the need is clear, so the organization does not have to maintain a system larger than its current scale.",
-        "When the platform is sound, new products depend less on the person who wrote the last piece. That is what makes a technical partnership durable, instead of reopening the whole system at every change.",
+        "VIA Global develops custom software for organizations that need to digitize business processes, automate work and build administration systems that match how they actually operate.",
+        "Instead of off-the-shelf tools with many limits, organizations can choose software designed around their own processes, functions and management needs. We support business analysis, system architecture, database design, application development, API integration and the features that run daily business.",
+        "Solutions can include internal management software, data management systems, operations software, reporting systems, web applications and specialized business platforms. We also upgrade existing software, improve performance and security, and extend functions in stages.",
+        "The result is less manual work, less scattered data, better control and more ownership over how the organization’s technology grows.",
       ],
     },
     scope: {
       vi: [
-        "Xác định sản phẩm nào dùng chung nền và phần nào được phép riêng",
-        "Thiết kế mô hình dữ liệu, danh tính và phân quyền",
-        "Xây dựng API, module lõi và môi trường tích hợp",
-        "Cổng hoặc ứng dụng đầu tiên chạy trên nền tảng",
-        "Quy ước phiên bản, tài liệu kỹ thuật và ranh giới mở rộng",
-        "Kế hoạch giai đoạn: phần làm ngay và phần để sau",
+        "Phân tích nghiệp vụ và tư vấn kiến trúc hệ thống",
+        "Thiết kế cơ sở dữ liệu",
+        "Phần mềm quản lý nội bộ và phần mềm điều hành",
+        "Hệ thống quản lý dữ liệu và báo cáo",
+        "Ứng dụng web và nền tảng nghiệp vụ chuyên biệt",
+        "Nâng cấp phần mềm hiện hữu: hiệu năng, bảo mật, chức năng",
       ],
       en: [
-        "Decide which products share the platform and which may stay separate",
-        "Design the data model, identity and permissions",
-        "Build APIs, core modules and the integration environment",
-        "Deliver the first portal or application on that foundation",
-        "Versioning rules, technical notes and extension boundaries",
-        "A staged plan: what is built now and what is left for later",
+        "Business analysis and system architecture",
+        "Database design",
+        "Internal management and operations software",
+        "Data management and reporting systems",
+        "Web applications and specialized business platforms",
+        "Upgrading existing software: performance, security, features",
       ],
     },
-    process: {
-      vi: [
-        {
-          title: "Khoanh vùng nền chung",
-          body: "Tách phần phải dùng chung khỏi phần chỉ thuộc một sản phẩm. Nếu mọi thứ đều bị coi là nền tảng, sẽ không có nền tảng thật.",
-        },
-        {
-          title: "Thiết kế lõi",
-          body: "Chốt mô hình dữ liệu, API và cách xác thực. Những quyết định này được ghi lại vì chúng khó đổi về sau.",
-        },
-        {
-          title: "Chạy một sản phẩm thật",
-          body: "Đưa một ứng dụng cụ thể lên nền tảng để kiểm chứng. Nền tảng chưa được coi là xong nếu chưa có sản phẩm dùng nó.",
-        },
-        {
-          title: "Mở có kiểm soát",
-          body: "Bổ sung năng lực theo nhu cầu đã thấy, giữ ranh giới module để không phá lõi mỗi lần phát triển.",
-        },
-      ],
-      en: [
-        {
-          title: "Bound the shared layer",
-          body: "Separate what must be shared from what belongs to one product. If everything is treated as platform, there is no platform.",
-        },
-        {
-          title: "Design the core",
-          body: "Settle the data model, APIs and authentication. These decisions are written down because they are costly to change later.",
-        },
-        {
-          title: "Run one real product",
-          body: "Put a concrete application on the platform to prove it. A platform is not finished until something uses it.",
-        },
-        {
-          title: "Extend with control",
-          body: "Add capability when the need is visible, keeping module boundaries so later work does not break the core.",
-        },
-      ],
-    } satisfies Localized<SolutionCopy[]>,
     outcomes: {
       vi: [
-        "Doanh nghiệp có một nền kỹ thuật có thể giải thích được cho đội ngũ nội bộ và đối tác.",
-        "Sản phẩm tiếp theo không phải xây lại phần danh tính, dữ liệu lõi và quyền hạn.",
-        "Phạm vi từng giai đoạn rõ, nên tiến độ và chi phí dễ trao đổi hơn.",
-        "Khả năng mở rộng được gắn với nhu cầu thật, không phải với kiến trúc phình sẵn.",
+        "Giảm thao tác thủ công và công việc lặp lại.",
+        "Hạn chế dữ liệu phân tán giữa các bộ phận.",
+        "Tăng khả năng kiểm soát hoạt động.",
+        "Chủ động phát triển hệ thống công nghệ theo nhu cầu.",
       ],
       en: [
-        "The organization has a technical foundation it can explain to internal teams and partners.",
-        "The next product does not have to rebuild identity, core data and permissions.",
-        "Each stage has a clear scope, so timing and cost are easier to discuss.",
-        "Scale follows real demand, not an architecture inflated in advance.",
-      ],
-    },
-    fit: {
-      vi: [
-        "Doanh nghiệp dự kiến có hơn một sản phẩm số dùng chung dữ liệu hoặc người dùng.",
-        "Cần kiểm soát lâu dài, không muốn mỗi tính năng mới là một hệ thống mới.",
-        "Sẵn sàng đầu tư cho phần lõi trước khi làm nhiều giao diện.",
-      ],
-      en: [
-        "More than one digital product is expected to share data or users.",
-        "Long-term control matters more than adding another isolated system.",
-        "The organization is willing to invest in the core before many interfaces.",
-      ],
-    },
-    notFor: {
-      vi: [
-        "Chỉ cần một website hoặc ứng dụng đơn, không có nhu cầu dùng chung về sau.",
-        "Muốn “nền tảng tổng” ngay từ đầu trong khi nghiệp vụ chưa ổn định.",
-      ],
-      en: [
-        "Only a single website or application is needed, with no later sharing.",
-        "A complete “total platform” is wanted while the business itself is still unsettled.",
+        "Less manual and repetitive work.",
+        "Less data scattered across teams.",
+        "Better control over operations.",
+        "More ownership over how technology grows.",
       ],
     },
   },
   {
-    slug: "cloud-architecture",
-    expertise: "cloud-infrastructure",
-    title: {
-      vi: "Kiến trúc Cloud và hạ tầng",
-      en: "Cloud architecture and infrastructure",
-    },
-    excerpt: {
-      vi: "Thiết lập môi trường vận hành ổn định, có sao lưu, giám sát và lộ trình mở rộng phù hợp quy mô — giải thích bằng rủi ro và chi phí, không bằng thuật ngữ chung.",
-      en: "Stable operating environments with backup, monitoring and a scale path matched to size — explained in risk and cost, not generic terminology.",
-    },
-    problem: {
-      vi: "Hạ tầng thường chỉ được chú ý khi hệ thống chậm hoặc gián đoạn. Khi đó doanh nghiệp vừa chịu sự cố, vừa phải quyết định trong thế bị động: vá tạm, nâng gấp, hoặc chuyển nhà cung cấp mà chưa hiểu mình đang phụ thuộc vào điều gì.",
-      en: "Infrastructure is often noticed only when a system is slow or unavailable. The organization then faces an incident and a forced decision at once: a temporary patch, an emergency upgrade, or a vendor change without knowing what it depends on.",
-    },
-    audience: {
-      vi: "Phù hợp với doanh nghiệp có hệ thống trực tuyến cần vận hành liên tục: website, phần mềm, cổng dịch vụ, hoặc hạ tầng nội bộ cần sao lưu và kiểm soát truy cập rõ.",
-      en: "A fit for organizations with online systems that must stay available: websites, software, service portals, or internal infrastructure that needs backup and clear access control.",
-    },
-    highlights: {
-      vi: [
-        "Kiến trúc minh bạch, tách môi trường rõ",
-        "Sao lưu, giám sát và quy trình sự cố được ghi lại",
-        "Quyết định hạ tầng gắn với rủi ro và chi phí thật",
-      ],
-      en: [
-        "Transparent architecture and clear environment separation",
-        "Backup, monitoring and incident steps written down",
-        "Infrastructure choices tied to real risk and cost",
-      ],
-    },
-    body: {
-      vi: [
-        "Hạ tầng tốt phải đủ vững cho việc hàng ngày và đủ rõ để đội ngũ kỹ thuật kiểm soát. VIA Global ưu tiên những quyết định có thể giải thích được: môi trường nào dùng để thử, dữ liệu nào cần sao lưu, ai được truy cập, sự cố được báo như thế nào, và chi phí tăng khi nào là hợp lý.",
-        "Doanh nghiệp vừa và nhỏ thường không cần kiến trúc quá phức tạp. Điều quan trọng hơn là không để toàn bộ vận hành dựa vào một máy, một người hoặc một thói quen không được ghi lại. Chúng tôi thiết kế đủ để chịu lỗi phổ biến, rồi để ngỏ đường mở rộng khi tải tăng.",
-        "Cloud chỉ là một lựa chọn triển khai, không phải mục tiêu. Có trường hợp cần Cloud công cộng, có trường hợp cần máy chủ riêng hoặc mô hình kết hợp. Lựa chọn được đặt trên yêu cầu về độ sẵn sàng, dữ liệu và năng lực vận hành của đội ngũ, không trên xu hướng.",
-      ],
-      en: [
-        "Good infrastructure must be strong enough for daily work and clear enough for a technical team to control. VIA Global favors decisions that can be explained: which environment is for testing, which data must be backed up, who has access, how an incident is raised, and when extra cost is justified.",
-        "Smaller organizations rarely need an overly complex architecture. What matters more is not leaving operations on one machine, one person or an unwritten habit. We design enough resilience for common failures, then leave a path to grow when load increases.",
-        "Cloud is a deployment choice, not a goal. Public cloud, dedicated servers or a mixed model can all be right. The choice sits on availability, data and the team’s ability to operate the result, not on a trend.",
-      ],
-    },
-    scope: {
-      vi: [
-        "Rà soát hệ thống hiện có, điểm phụ thuộc và rủi ro vận hành",
-        "Đề xuất kiến trúc: môi trường, mạng, lưu trữ và phân quyền",
-        "Triển khai máy chủ hoặc Cloud, kèm sao lưu và khôi phục",
-        "Thiết lập giám sát, nhật ký và ngưỡng cảnh báo",
-        "Viết quy trình sự cố đủ ngắn để dùng được khi có việc",
-        "Tối ưu chi phí theo mức sử dụng thật, không theo gói lớn nhất",
-      ],
-      en: [
-        "Review of current systems, dependencies and operating risk",
-        "Architecture proposal: environments, network, storage and access",
-        "Server or cloud delivery, with backup and recovery",
-        "Monitoring, logs and alert thresholds",
-        "A short incident process that can actually be used under pressure",
-        "Cost aligned to real use, not to the largest package available",
-      ],
-    },
-    process: {
-      vi: [
-        {
-          title: "Nhìn rủi ro trước",
-          body: "Liệt kê sự cố nào doanh nghiệp không chấp nhận được: mất dữ liệu, gián đoạn kéo dài, lộ quyền truy cập. Kiến trúc được vẽ từ đó.",
-        },
-        {
-          title: "Chọn mức vừa đủ",
-          body: "Đề xuất phương án theo quy mô hiện tại và một bước mở tiếp theo. Không bán trước một hạ tầng dành cho giai đoạn chưa tới.",
-        },
-        {
-          title: "Triển khai có kiểm tra",
-          body: "Dựng môi trường, sao lưu và giám sát, rồi thử khôi phục. Một bản sao lưu chưa từng được phục hồi thì chưa được coi là sao lưu.",
-        },
-        {
-          title: "Chuyển giao vận hành",
-          body: "Bàn giao sơ đồ, quyền hạn, kênh cảnh báo và việc cần làm định kỳ. Đội ngũ nội bộ phải biết hệ thống đang sống nhờ điều gì.",
-        },
-      ],
-      en: [
-        {
-          title: "See the risk first",
-          body: "List the incidents the organization cannot accept: data loss, long downtime, exposed access. Architecture is drawn from that list.",
-        },
-        {
-          title: "Choose enough, not excess",
-          body: "Propose a design for current scale and one next step. We do not sell infrastructure for a stage that has not arrived.",
-        },
-        {
-          title: "Deliver and test",
-          body: "Build environments, backup and monitoring, then test recovery. A backup that has never been restored is not yet a backup.",
-        },
-        {
-          title: "Transfer operations",
-          body: "Hand over diagrams, access, alert channels and routine work. The internal team should know what the system depends on.",
-        },
-      ],
-    } satisfies Localized<SolutionCopy[]>,
-    outcomes: {
-      vi: [
-        "Doanh nghiệp biết hệ thống đang chạy ở đâu, ai có quyền và dữ liệu được giữ thế nào.",
-        "Sự cố có lối xử lý, không còn phụ thuộc vào trí nhớ của một người.",
-        "Chi phí hạ tầng có thể giải thích được theo nhu cầu vận hành.",
-        "Có lộ trình mở rộng khi tải tăng, thay vì phải dựng lại từ đầu.",
-      ],
-      en: [
-        "The organization knows where the system runs, who has access and how data is kept.",
-        "Incidents have a path, instead of depending on one person’s memory.",
-        "Infrastructure cost can be explained in operating terms.",
-        "There is a path to grow when load rises, instead of rebuilding from zero.",
-      ],
-    },
-    fit: {
-      vi: [
-        "Có hệ thống đang chạy hoặc sắp đưa vào sử dụng thật.",
-        "Cần sự ổn định và khả năng giải thích hơn là kiến trúc phô trương.",
-        "Có người chịu trách nhiệm vận hành, dù đội ngũ kỹ thuật còn nhỏ.",
-      ],
-      en: [
-        "A system is already live or about to go into real use.",
-        "Stability and explainability matter more than a showy architecture.",
-        "Someone will own operations, even if the technical team is small.",
-      ],
-    },
-    notFor: {
-      vi: [
-        "Chỉ muốn “lên Cloud” như một tuyên bố, chưa có hệ thống cần vận hành.",
-        "Không sẵn sàng bàn về sao lưu, phân quyền và trách nhiệm khi có sự cố.",
-      ],
-      en: [
-        "“Moving to the cloud” is a statement, with no system that needs to be operated.",
-        "Backup, access and incident ownership are not open for discussion.",
-      ],
-    },
-  },
-  {
-    slug: "system-integration",
+    slug: "ai-agent",
     expertise: "technology-software",
+    icon: "ai",
     title: {
-      vi: "Tích hợp hệ thống",
-      en: "System integration",
+      vi: "AI Agent và tự động hóa thông minh",
+      en: "AI agents and intelligent automation",
+    },
+    tagline: {
+      vi: "Trợ lý AI xử lý thông tin và tự động hóa tác vụ nhiều bước.",
+      en: "AI assistants that handle information and multi-step tasks.",
     },
     excerpt: {
-      vi: "Kết nối phần mềm, dữ liệu và quy trình đang vận hành để giảm trùng lặp, sai lệch thông tin và thao tác nhập lại giữa các bộ phận.",
-      en: "Connecting live software, data and processes to reduce duplication, conflicting information and re-entry between teams.",
-    },
-    problem: {
-      vi: "Doanh nghiệp thường không thiếu phần mềm. Thiếu ở chỗ các phần mềm không nói cùng một ngôn ngữ dữ liệu. Nhân sự phải nhập lại, đối chiếu tay, và ban lãnh đạo nhận các báo cáo không khớp nhau.",
-      en: "Organizations rarely lack software. What they lack is a shared data language. People re-enter information, reconcile by hand, and leadership receives reports that do not agree.",
+      vi: "Phát triển AI Agent và tích hợp AI vào phần mềm, website, quy trình nghiệp vụ để xử lý thông tin, khai thác dữ liệu và tự động hóa các tác vụ nhiều bước.",
+      en: "AI agents and AI integration for software, websites and business processes — handling information, using data and automating multi-step tasks.",
     },
     audience: {
-      vi: "Phù hợp khi đã có từ hai hệ thống trở lên đang dùng thật — kế toán, CRM, vận hành, website, kho — và cần chúng trao đổi dữ liệu có kiểm soát.",
-      en: "A fit when two or more systems are already in real use — finance, CRM, operations, website, inventory — and they need to exchange data under control.",
+      vi: "Doanh nghiệp muốn ứng dụng AI vào công việc thực tế: hỏi đáp tài liệu nội bộ, tổng hợp thông tin, xử lý dữ liệu hoặc hỗ trợ nghiệp vụ lặp lại.",
+      en: "Organizations that want AI in real work: answering questions over internal documents, summarizing information, processing data or supporting repetitive tasks.",
     },
     highlights: {
       vi: [
-        "Rà soát luồng dữ liệu và điểm nghẽn trước khi viết kết nối",
-        "Lớp tích hợp có đối soát, nhật ký và phạm vi rõ",
-        "Giữ hệ thống hiện có khi chúng vẫn đang làm đúng việc",
+        "Kết hợp LLM, cơ sở tri thức nội bộ, API và phần mềm đang dùng",
+        "Tư vấn mô hình AI theo chi phí, hiệu năng và bảo mật",
+        "Cơ chế kiểm soát và cấp quyền công cụ rõ ràng",
       ],
       en: [
-        "Data flows and bottlenecks are reviewed before any connection is written",
-        "An integration layer with reconciliation, logs and a clear scope",
-        "Existing systems are kept when they still do their job",
+        "Combines LLMs, internal knowledge, APIs and current software",
+        "Model advice balanced on cost, performance and security",
+        "Clear controls and tool permissions",
       ],
     },
     body: {
       vi: [
-        "Tích hợp không có nghĩa là thay hết hệ thống cũ. VIA Global bắt đầu bằng việc vẽ luồng dữ liệu: nguồn nào là gốc, trường nào được phép ghi đè, tần suất đồng bộ, và sai lệch được xử lý ra sao. Chỉ khi bản đồ này đủ rõ, lớp kết nối mới được thiết kế.",
-        "Chúng tôi ưu tiên tích hợp có kiểm soát hơn là “nối tất cả với tất cả”. Mỗi đường kết nối là một cam kết phải bảo trì. Vì vậy phạm vi giai đoạn đầu thường là vài luồng quan trọng nhất — đơn hàng, khách hàng, tồn kho, trạng thái xử lý — thay vì một sơ đồ lý tưởng.",
-        "Khi làm xong, doanh nghiệp có thể chỉ ra dữ liệu đang đi từ đâu tới đâu. Đó là tiêu chí thành công rõ hơn việc liệt kê số API đã tạo.",
+        "Trí tuệ nhân tạo đang mở ra nhiều cơ hội nâng cao năng suất và thay đổi cách doanh nghiệp vận hành. VIA Global cung cấp dịch vụ phát triển AI Agent và tích hợp AI vào phần mềm, website và quy trình nghiệp vụ nhằm hỗ trợ xử lý thông tin, khai thác dữ liệu và tự động hóa các tác vụ nhiều bước.",
+        "AI Agent có thể được thiết kế để tiếp nhận yêu cầu, phân tích ngữ cảnh, truy xuất dữ liệu, sử dụng công cụ được cấp quyền và thực hiện các bước công việc theo mục tiêu xác định. Tùy theo nhu cầu, hệ thống có thể kết hợp mô hình ngôn ngữ lớn (LLM), cơ sở tri thức nội bộ, API và các phần mềm doanh nghiệp đang sử dụng.",
+        "Chúng tôi hỗ trợ xây dựng trợ lý AI nội bộ, AI Agent hỗ trợ nghiệp vụ, hệ thống hỏi đáp tài liệu, giải pháp tổng hợp thông tin, tự động hóa xử lý dữ liệu và các quy trình ứng dụng AI theo yêu cầu. VIA Global tư vấn lựa chọn mô hình AI, phương án tích hợp và cơ chế kiểm soát phù hợp với yêu cầu về chi phí, hiệu năng và bảo mật.",
+        "Việc ứng dụng AI Agent giúp doanh nghiệp giảm thời gian xử lý công việc lặp lại, nâng cao hiệu quả khai thác tri thức và tạo điều kiện để nhân sự tập trung vào những hoạt động có giá trị cao hơn.",
       ],
       en: [
-        "Integration does not mean replacing every existing system. VIA Global begins by mapping data: which source is authoritative, which fields may be overwritten, how often synchronization runs, and how conflicts are handled. The connection layer is designed only when that map is clear enough.",
-        "We prefer controlled integration to “connect everything to everything”. Each path is a commitment to maintain. The first stage therefore usually covers the few flows that matter most — orders, customers, stock, status — rather than an ideal diagram.",
-        "When the work is done, the organization can point to where data travels. That is a clearer measure of success than a count of APIs created.",
+        "Artificial intelligence is opening new ways to raise productivity and change how organizations operate. VIA Global builds AI agents and integrates AI into software, websites and business processes to handle information, use data and automate multi-step tasks.",
+        "An AI agent can be designed to receive requests, read context, retrieve data, use the tools it has been granted and carry out steps toward a defined goal. Depending on the need, it can combine large language models (LLMs), internal knowledge bases, APIs and the software already in use.",
+        "We build internal AI assistants, task-support agents, document Q&A systems, information summarization, data-processing automation and other AI workflows on request. We advise on model choice, integration approach and controls that fit cost, performance and security requirements.",
+        "AI agents reduce time spent on repetitive work, make internal knowledge easier to use and free people to focus on higher-value activities.",
       ],
     },
     scope: {
       vi: [
-        "Lập bản đồ hệ thống, nguồn dữ liệu gốc và điểm nhập tay",
-        "Chọn luồng ưu tiên và quy tắc đối soát",
-        "Thiết kế lớp kết nối, định dạng dữ liệu và xử lý lỗi",
-        "Phát triển tích hợp, nhật ký và cảnh báo lệch dữ liệu",
-        "Chạy song song, đối chiếu kết quả rồi mới cắt thao tác thủ công",
-        "Tài liệu luồng dữ liệu để đội ngũ vận hành đọc được",
+        "Trợ lý AI nội bộ",
+        "AI Agent hỗ trợ nghiệp vụ",
+        "Hệ thống hỏi đáp tài liệu",
+        "Giải pháp tổng hợp thông tin",
+        "Tự động hóa xử lý dữ liệu",
+        "Tích hợp AI vào website, phần mềm và quy trình hiện có",
       ],
       en: [
-        "Map systems, authoritative sources and manual entry points",
-        "Select priority flows and reconciliation rules",
-        "Design the connection layer, data shape and error handling",
-        "Build the integration, logs and drift alerts",
-        "Run in parallel, compare results, then retire manual steps",
-        "Document the data flow in language operators can read",
+        "Internal AI assistants",
+        "Business-support AI agents",
+        "Document Q&A systems",
+        "Information summarization",
+        "Data-processing automation",
+        "AI integration into existing websites, software and workflows",
       ],
     },
-    process: {
-      vi: [
-        {
-          title: "Vẽ trước, nối sau",
-          body: "Không viết kết nối khi chưa thống nhất nguồn gốc dữ liệu. Mọi tranh cãi về “số nào đúng” phải được xử lý ở bước này.",
-        },
-        {
-          title: "Chọn vài luồng then chốt",
-          body: "Ưu tiên những chỗ đang tốn công nhập lại hoặc gây sai lệch cho quyết định. Các luồng còn lại xếp vào giai đoạn sau.",
-        },
-        {
-          title: "Kết nối có đối soát",
-          body: "Mỗi lần đồng bộ để lại dấu vết: thành công, thất bại, bản ghi bị bỏ qua. Không có nhật ký thì không có tích hợp đáng tin.",
-        },
-        {
-          title: "Cắt dần thao tác tay",
-          body: "Giữ quy trình cũ chạy song song đến khi số liệu khớp. Chỉ khi đó mới dừng nhập tay để tránh đứt đoạn vận hành.",
-        },
-      ],
-      en: [
-        {
-          title: "Map first, connect second",
-          body: "No connection is written until the source of truth is agreed. Arguments about “which number is right” belong here.",
-        },
-        {
-          title: "Choose a few critical flows",
-          body: "Start where re-entry is costly or where conflicting data affects decisions. Other flows wait for a later stage.",
-        },
-        {
-          title: "Connect with a trail",
-          body: "Each synchronization leaves a record: success, failure, skipped rows. Without logs, the integration is not trustworthy.",
-        },
-        {
-          title: "Retire manual work gradually",
-          body: "Keep the old process in parallel until figures match. Only then is manual entry stopped, so operations do not break.",
-        },
-      ],
-    } satisfies Localized<SolutionCopy[]>,
     outcomes: {
       vi: [
-        "Các hệ thống then chốt trao đổi được dữ liệu mà không cần nhập lại.",
-        "Khi số liệu lệch, có chỗ để tìm nguyên nhân thay vì tranh luận giữa các bộ phận.",
-        "Phần mềm hiện có được giữ nếu vẫn làm đúng việc của nó.",
-        "Doanh nghiệp có bản đồ dữ liệu để quyết định tích hợp tiếp theo.",
+        "Giảm thời gian xử lý công việc lặp lại.",
+        "Khai thác tri thức nội bộ hiệu quả hơn.",
+        "Nhân sự tập trung vào việc có giá trị cao hơn.",
+        "Chi phí, hiệu năng và bảo mật được cân nhắc ngay từ thiết kế.",
       ],
       en: [
-        "Key systems can exchange data without re-entry.",
-        "When figures drift, there is a place to look instead of an argument between teams.",
-        "Existing software is kept if it still does its job.",
-        "The organization has a data map for the next integration decision.",
-      ],
-    },
-    fit: {
-      vi: [
-        "Đã có hệ thống đang dùng, không phải đang chọn phần mềm từ tờ giấy trắng.",
-        "Có thể chỉ ra luồng nào đang gây trùng hoặc sai lệch.",
-        "Chấp nhận làm theo giai đoạn, không đòi nối mọi hệ thống trong một lần.",
-      ],
-      en: [
-        "Systems are already in use; the work is not a green-field software choice.",
-        "The organization can point to flows that duplicate or conflict.",
-        "Staged work is acceptable; not every system must be connected at once.",
-      ],
-    },
-    notFor: {
-      vi: [
-        "Muốn thay toàn bộ phần mềm hiện có bằng một hệ thống mới trong cùng dự án.",
-        "Không có quyền tiếp cận hệ thống nguồn hoặc không có người hiểu dữ liệu nghiệp vụ.",
-      ],
-      en: [
-        "The aim is to replace every current system with a new one in the same project.",
-        "There is no access to source systems, or no one who understands the business data.",
+        "Less time spent on repetitive work.",
+        "Internal knowledge used more effectively.",
+        "People focus on higher-value work.",
+        "Cost, performance and security considered from the start.",
       ],
     },
   },
   {
-    slug: "media-technology",
+    slug: "via-contentflow",
     expertise: "digital-media",
+    icon: "flow",
+    product: true,
     title: {
-      vi: "Công nghệ truyền thông",
-      en: "Communication technology",
+      vi: "VIA ContentFlow",
+      en: "VIA ContentFlow",
+    },
+    tagline: {
+      vi: "Thu thập dữ liệu, sáng tạo nội dung và xuất bản đa kênh bằng AI.",
+      en: "Data collection, AI-assisted content and multi-channel publishing.",
     },
     excerpt: {
-      vi: "Ứng dụng công nghệ vào quản trị nội dung, kênh truyền thông và trải nghiệm thương hiệu, để hoạt động truyền thông có cấu trúc và đo được.",
-      en: "Technology applied to content operations, channels and brand experience, so communication work has structure and can be measured.",
-    },
-    problem: {
-      vi: "Hoạt động truyền thông thường phụ thuộc vào từng chiến dịch và từng kênh. Nội dung nằm rải trên nhiều công cụ, quy trình duyệt không thống nhất, và khi kênh thay đổi thì cả cách làm việc cũng phải làm lại.",
-      en: "Communication work often depends on each campaign and each channel. Content sits across many tools, approval is inconsistent, and when a channel changes the whole way of working has to be rebuilt.",
+      vi: "Giải pháp tự động hóa nội dung đa kênh: thu thập và phân tích dữ liệu, AI hỗ trợ biên soạn, kiểm duyệt và xuất bản lên CMS, website, mạng xã hội.",
+      en: "Multi-channel content automation: collect and analyze data, draft with AI, then review and publish to CMS, websites and social platforms.",
     },
     audience: {
-      vi: "Phù hợp với doanh nghiệp có đội ngũ truyền thông hoặc nội dung cần xuất bản đều đặn: thương hiệu, truyền thông nội bộ, cổng thông tin, hoặc đơn vị đang số hóa quy trình xuất bản.",
-      en: "A fit for organizations with a communication or content team that publishes regularly: brand, internal communication, an information portal, or a team digitizing its publishing process.",
+      vi: "Cơ quan báo chí, doanh nghiệp truyền thông, đội ngũ marketing và các đơn vị quản lý nội dung trên nhiều website hoặc nền tảng số.",
+      en: "Newsrooms, media companies, marketing teams and organizations managing content across several websites or digital platforms.",
     },
     highlights: {
       vi: [
-        "Một luồng soạn thảo, duyệt, xuất bản và đối chiếu kết quả",
-        "Nền tảng nội dung tách khỏi sự phụ thuộc vào từng kênh",
-        "Đo lường đủ để cải thiện, không chỉ để báo cáo cho có",
+        "Theo dõi nguồn, phân loại và tổng hợp thông tin theo chủ đề",
+        "AI gợi ý chủ đề, bản nháp, tiêu đề, mô tả và SEO",
+        "Kiểm duyệt, lập lịch và xuất bản đa kênh có lưu lịch sử",
       ],
       en: [
-        "One flow for drafting, approval, publishing and result review",
-        "A content foundation that is not tied to a single channel",
-        "Measurement used to improve work, not only to fill a report",
+        "Monitor sources, classify and summarize by topic",
+        "AI suggests topics, drafts, titles, descriptions and SEO",
+        "Review, schedule and publish across channels with history",
       ],
     },
     body: {
       vi: [
-        "Công nghệ truyền thông có ích khi giúp đội ngũ làm việc ít phân mảnh hơn. VIA Global xem đây là bài toán vận hành: nội dung được tạo ra thế nào, ai duyệt, phát hành ở đâu, và kết quả được đọc ra sao. Kênh chỉ là lớp cuối.",
-        "Chúng tôi hỗ trợ xây hệ thống quản trị nội dung, quy trình xuất bản và cách nhìn dữ liệu chung. Mục tiêu không phải tạo thêm một chiến dịch đẹp, mà là để doanh nghiệp nói nhất quán với khách hàng và đối tác trên nhiều điểm chạm.",
-        "Xu hướng nền tảng thay đổi nhanh. Năng lực bền hơn là khả năng quản trị nội dung và trải nghiệm, để khi kênh mới xuất hiện, doanh nghiệp không phải dựng lại toàn bộ cách làm việc.",
+        "VIA ContentFlow là giải pháp tự động hóa nội dung đa kênh do VIA Global định hướng phát triển, kết hợp công nghệ thu thập dữ liệu, phân tích thông tin, trí tuệ nhân tạo và hệ thống quản trị nội dung. Giải pháp hướng đến cơ quan báo chí, doanh nghiệp truyền thông, đội ngũ marketing và các đơn vị cần quản lý hoạt động nội dung trên nhiều website hoặc nền tảng số.",
+        "Hệ thống hỗ trợ thu thập thông tin từ các nguồn dữ liệu được phép truy cập, theo dõi nội dung mới, phân loại dữ liệu và tổng hợp thông tin theo chủ đề. Trên cơ sở dữ liệu thu thập được, AI có thể hỗ trợ nhận diện xu hướng, gợi ý chủ đề, đề xuất góc tiếp cận và xây dựng bản nháp nội dung phục vụ hoạt động biên tập.",
+        "VIA ContentFlow có thể tích hợp các mô hình AI thông qua API để hỗ trợ tổng hợp thông tin, biên soạn nội dung, đề xuất tiêu đề, tạo mô tả và tối ưu các thành phần SEO. Quy trình được thiết kế theo nhu cầu của khách hàng, từ hỗ trợ biên tập thủ công đến tự động hóa một phần hoặc nhiều bước trong quá trình sản xuất nội dung.",
+        "Bên cạnh việc tạo nội dung, giải pháp còn hướng đến tự động hóa quy trình xuất bản và phân phối thông tin. Hệ thống có thể kết nối với CMS, website và các nền tảng mạng xã hội thông qua API hoặc phương thức tích hợp được hỗ trợ, giúp giảm thao tác đăng tải lặp lại và quản lý nội dung tập trung.",
+        "Tùy theo cấu hình triển khai, doanh nghiệp có thể thiết lập quy trình kiểm duyệt, phê duyệt, lập lịch xuất bản và tự động đăng nội dung khi đáp ứng các điều kiện đã xác định. Các bước quan trọng có thể được lưu lịch sử xử lý để hỗ trợ theo dõi và kiểm soát chất lượng.",
       ],
       en: [
-        "Communication technology is useful when it makes the team’s work less fragmented. VIA Global treats this as an operating problem: how content is created, who approves it, where it is published and how results are read. The channel is only the last layer.",
-        "We help build a content system, a publishing process and a shared way of reading data. The aim is not one more polished campaign, but a consistent voice to customers and partners across touchpoints.",
-        "Platforms change quickly. A more durable capability is the ability to manage content and experience, so a new channel does not force the organization to rebuild its whole method.",
+        "VIA ContentFlow is a multi-channel content automation solution developed by VIA Global. It combines data collection, information analysis, artificial intelligence and content management for newsrooms, media companies, marketing teams and organizations running content across several websites or platforms.",
+        "The system collects information from sources it is permitted to access, tracks new content, classifies data and summarizes it by topic. From that data, AI can help spot trends, suggest topics and angles, and prepare drafts for the editorial team.",
+        "VIA ContentFlow can connect AI models through APIs to summarize information, write drafts, suggest titles, create descriptions and optimize SEO elements. The workflow is shaped to each client, from assisted manual editing to automating one or several production steps.",
+        "Beyond creating content, the solution automates publishing and distribution. It can connect to CMS platforms, websites and social networks through APIs or supported integration methods, reducing repeated posting and keeping content managed in one place.",
+        "Depending on the configuration, teams can set review, approval and scheduling rules, and publish automatically when defined conditions are met. Key steps can keep a processing history to support tracking and quality control.",
       ],
     },
     scope: {
       vi: [
-        "Rà soát luồng nội dung hiện tại, vai trò duyệt và các kênh đang dùng",
-        "Thiết kế mô hình nội dung, phân loại và quy trình xuất bản",
-        "Triển khai nền tảng quản trị, lịch xuất bản và phân quyền",
-        "Kết nối kênh phân phối khi cần, giữ nội dung gốc ở một nơi",
-        "Thiết lập chỉ số theo dõi vừa đủ: tiếp cận, hoàn thành, phản hồi",
-        "Hướng dẫn đội ngũ dùng hệ thống trong công việc hàng ngày",
+        "Thu thập thông tin từ nguồn được phép truy cập",
+        "Phân loại, tổng hợp và nhận diện xu hướng",
+        "AI gợi ý chủ đề, góc tiếp cận và bản nháp",
+        "Đề xuất tiêu đề, mô tả và tối ưu SEO",
+        "Kiểm duyệt, phê duyệt và lập lịch xuất bản",
+        "Kết nối CMS, website và mạng xã hội qua API",
       ],
       en: [
-        "Review the current content flow, approval roles and channels in use",
-        "Design the content model, taxonomy and publishing process",
-        "Implement the management platform, calendar and permissions",
-        "Connect distribution channels when needed, keeping the source in one place",
-        "Set a small set of measures: reach, completion, response",
-        "Guide the team to use the system in daily work",
+        "Collecting information from permitted sources",
+        "Classification, summaries and trend detection",
+        "AI suggestions for topics, angles and drafts",
+        "Title, description and SEO suggestions",
+        "Review, approval and publishing schedules",
+        "CMS, website and social connections through APIs",
       ],
     },
-    process: {
-      vi: [
-        {
-          title: "Nhìn việc trước kênh",
-          body: "Mô tả cách nội dung đang được tạo và duyệt. Nếu bước này rối, công nghệ chỉ số hóa sự rối đó.",
-        },
-        {
-          title: "Dựng luồng thống nhất",
-          body: "Chốt các trạng thái: nháp, chờ duyệt, xuất bản, lưu trữ. Mọi kênh dùng chung luồng này.",
-        },
-        {
-          title: "Đưa nền tảng vào dùng",
-          body: "Triển khai hệ thống và chuyển một nhóm nội dung thật sang quy trình mới để kiểm chứng.",
-        },
-        {
-          title: "Đọc kết quả để chỉnh",
-          body: "Chọn ít chỉ số có ý nghĩa với mục tiêu truyền thông, rồi dùng chúng để quyết định nội dung tiếp theo.",
-        },
-      ],
-      en: [
-        {
-          title: "See the work before the channel",
-          body: "Describe how content is created and approved. If this step is confused, technology will only digitize the confusion.",
-        },
-        {
-          title: "Build one flow",
-          body: "Settle the states: draft, review, published, archived. Every channel uses this flow.",
-        },
-        {
-          title: "Put the platform to use",
-          body: "Implement the system and move a real set of content onto the new process to prove it.",
-        },
-        {
-          title: "Read results to adjust",
-          body: "Choose a few measures that match the communication aim, then use them to decide what comes next.",
-        },
-      ],
-    } satisfies Localized<SolutionCopy[]>,
     outcomes: {
       vi: [
-        "Đội ngũ có một nơi để soạn, duyệt và theo dõi nội dung.",
-        "Thông điệp thương hiệu ít lệch giữa các kênh vì cùng một nguồn.",
-        "Khi nhân sự thay đổi, quy trình xuất bản vẫn đọc được.",
-        "Dữ liệu tiếp cận được dùng để điều chỉnh việc làm, không chỉ để báo cáo.",
+        "Tăng tốc độ sản xuất nội dung.",
+        "Quy trình khai thác dữ liệu có hệ thống.",
+        "Giảm thao tác đăng tải lặp lại, quản lý nội dung tập trung.",
+        "Tối ưu nguồn lực cho hoạt động truyền thông số.",
       ],
       en: [
-        "The team has one place to draft, approve and follow content.",
-        "Brand messages drift less between channels because they share a source.",
-        "When people change, the publishing process can still be read.",
-        "Reach data is used to adjust the work, not only to fill a report.",
+        "Faster content production.",
+        "A systematic way to use data.",
+        "Less repeated posting and content managed in one place.",
+        "Better use of resources for digital communication.",
       ],
     },
-    fit: {
+    note: {
+      vi: "Việc thu thập và sử dụng dữ liệu cần tuân thủ quyền truy cập, điều khoản của nguồn dữ liệu và quy định pháp luật liên quan; nội dung do AI tạo ra cần được kiểm soát phù hợp với mục đích sử dụng.",
+      en: "Data collection and use must respect access rights, source terms and applicable law, and AI-generated content must be reviewed in line with its intended use.",
+    },
+  },
+  {
+    slug: "newsroom-cms",
+    expertise: "digital-media",
+    icon: "news",
+    title: {
+      vi: "CMS báo chí và quản trị nội dung",
+      en: "Newsroom CMS and content management",
+    },
+    tagline: {
+      vi: "Biên tập, phân quyền, phê duyệt và xuất bản theo nghiệp vụ.",
+      en: "Editing, roles, approval and publishing shaped to your workflow.",
+    },
+    excerpt: {
+      vi: "Phát triển, tùy chỉnh và tích hợp CMS theo quy trình biên tập thực tế của cơ quan báo chí, doanh nghiệp truyền thông và đơn vị sở hữu nền tảng nội dung số.",
+      en: "Building, customizing and integrating a CMS around the real editorial workflow of newsrooms, media companies and digital content owners.",
+    },
+    audience: {
+      vi: "Cơ quan báo chí, doanh nghiệp truyền thông và đơn vị vận hành nền tảng nội dung số cần CMS mới hoặc nâng cấp hệ thống hiện có.",
+      en: "Newsrooms, media companies and digital content operators that need a new CMS or an upgrade to the current one.",
+    },
+    highlights: {
       vi: [
-        "Có hoạt động nội dung lặp lại, không chỉ vài chiến dịch rời trong năm.",
-        "Cần sự nhất quán hơn là tối ưu từng kênh riêng.",
-        "Sẵn sàng thống nhất quy trình duyệt trước khi thêm công cụ mới.",
+        "Quản lý bài viết, chuyên mục, tác giả, thẻ và đa phương tiện",
+        "Biên tập, phân quyền và phê duyệt theo cách vận hành",
+        "Tích hợp tìm kiếm, phân phối, phân tích và AI",
       ],
       en: [
-        "Content work repeats; it is not only a few isolated campaigns a year.",
-        "Consistency matters more than optimizing each channel alone.",
-        "The approval process can be settled before another tool is added.",
+        "Articles, sections, authors, tags and media",
+        "Editing, roles and approval that match operations",
+        "Search, distribution, analytics and AI integration",
       ],
     },
-    notFor: {
+    body: {
       vi: [
-        "Chỉ cần sản xuất một chiến dịch hoặc thuê chạy quảng cáo ngắn hạn.",
-        "Muốn công cụ tự làm nội dung thay cho đội ngũ biên tập và chịu trách nhiệm.",
+        "Hệ thống quản trị nội dung (CMS) đóng vai trò trung tâm trong hoạt động xuất bản, biên tập và phân phối thông tin của các cơ quan báo chí, doanh nghiệp truyền thông và đơn vị sở hữu nền tảng nội dung số. VIA Global cung cấp dịch vụ phát triển, tùy chỉnh và tích hợp CMS theo quy trình nghiệp vụ thực tế của từng tổ chức.",
+        "Giải pháp CMS báo chí có thể bao gồm quản lý bài viết, chuyên mục, tác giả, thẻ nội dung, hình ảnh, video và các tài nguyên đa phương tiện. Hệ thống hỗ trợ xây dựng quy trình biên tập, phân quyền người dùng, phê duyệt nội dung và quản lý trạng thái xuất bản theo yêu cầu vận hành.",
+        "Chúng tôi chú trọng khả năng mở rộng, hiệu năng xử lý, cấu trúc dữ liệu và khả năng tích hợp với các hệ thống bên ngoài. CMS có thể được kết nối với API, hệ thống tìm kiếm, nền tảng phân phối nội dung, công cụ phân tích và các giải pháp AI nhằm nâng cao hiệu quả khai thác thông tin.",
+        "Bên cạnh việc phát triển CMS mới, VIA Global hỗ trợ nâng cấp hệ thống hiện có, cải thiện trải nghiệm biên tập, tối ưu quy trình xuất bản và tư vấn các giải pháp SEO kỹ thuật phù hợp. Mục tiêu là giúp đơn vị vận hành nội dung hiệu quả hơn, giảm thao tác thủ công và chủ động phát triển nền tảng xuất bản theo nhu cầu dài hạn.",
       ],
       en: [
-        "Only a single campaign or a short paid-media burst is needed.",
-        "A tool is expected to replace an editorial team and its responsibility.",
+        "A content management system (CMS) sits at the center of publishing, editing and distribution for newsrooms, media companies and digital content owners. VIA Global builds, customizes and integrates CMS platforms around each organization’s real editorial workflow.",
+        "A newsroom CMS can cover articles, sections, authors, tags, images, video and other media assets. It supports editorial workflows, user roles, content approval and publishing states as operations require.",
+        "We focus on scalability, performance, data structure and integration with outside systems. The CMS can connect to APIs, search, content distribution platforms, analytics tools and AI solutions to get more value from information.",
+        "Beyond new builds, we upgrade existing systems, improve the editing experience, streamline publishing and advise on technical SEO. The aim is more efficient content operations, less manual work and a publishing platform the organization can grow over time.",
+      ],
+    },
+    scope: {
+      vi: [
+        "Quản lý bài viết, chuyên mục, tác giả và thẻ nội dung",
+        "Quản lý hình ảnh, video và tài nguyên đa phương tiện",
+        "Quy trình biên tập, phân quyền và phê duyệt",
+        "Quản lý trạng thái xuất bản",
+        "Tích hợp API, tìm kiếm, phân phối nội dung, phân tích và AI",
+        "Nâng cấp CMS hiện có và tư vấn SEO kỹ thuật",
+      ],
+      en: [
+        "Articles, sections, authors and tags",
+        "Images, video and media assets",
+        "Editorial workflow, roles and approval",
+        "Publishing states",
+        "API, search, distribution, analytics and AI integration",
+        "Upgrading an existing CMS and technical SEO advice",
+      ],
+    },
+    outcomes: {
+      vi: [
+        "Vận hành nội dung hiệu quả hơn.",
+        "Giảm thao tác thủ công trong biên tập và xuất bản.",
+        "Hệ thống có hiệu năng tốt và dễ mở rộng.",
+        "Chủ động phát triển nền tảng xuất bản dài hạn.",
+      ],
+      en: [
+        "More efficient content operations.",
+        "Less manual work in editing and publishing.",
+        "A system that performs well and can scale.",
+        "Ownership of the publishing platform over the long term.",
       ],
     },
   },
-] as const;
+  {
+    slug: "web-security",
+    expertise: "cloud-infrastructure",
+    icon: "shield",
+    title: {
+      vi: "Bảo mật website và quản trị hệ thống",
+      en: "Website security and system administration",
+    },
+    tagline: {
+      vi: "Rà soát cấu hình, kiểm soát truy cập, sao lưu và giám sát.",
+      en: "Configuration review, access control, backup and monitoring.",
+    },
+    excerpt: {
+      vi: "Tư vấn bảo mật, rà soát cấu hình và hỗ trợ quản trị kỹ thuật cho website, ứng dụng web và máy chủ, giúp duy trì hoạt động liên tục và bảo vệ dữ liệu.",
+      en: "Security advice, configuration review and technical administration for websites, web apps and servers — keeping services running and data protected.",
+    },
+    audience: {
+      vi: "Doanh nghiệp vận hành website, ứng dụng web hoặc máy chủ cần giảm rủi ro kỹ thuật, đặc biệt các hệ thống có lượng truy cập lớn hoặc yêu cầu tính sẵn sàng cao.",
+      en: "Organizations running websites, web apps or servers that need to lower technical risk, especially high-traffic or high-availability systems.",
+    },
+    highlights: {
+      vi: [
+        "Đánh giá cấu hình, phân quyền và bảo vệ API",
+        "Tư vấn firewall, WAF, reverse proxy và CDN",
+        "Sao lưu, phục hồi, giám sát và nhật ký hệ thống",
+      ],
+      en: [
+        "Configuration, access and API protection review",
+        "Firewall, WAF, reverse proxy and CDN advice",
+        "Backup, recovery, monitoring and system logs",
+      ],
+    },
+    body: {
+      vi: [
+        "Bảo mật website và phần mềm là yếu tố quan trọng để duy trì hoạt động kinh doanh liên tục, bảo vệ dữ liệu và giảm thiểu rủi ro từ các mối đe dọa trên môi trường mạng. VIA Global cung cấp dịch vụ tư vấn bảo mật, rà soát cấu hình và hỗ trợ quản trị kỹ thuật cho website, ứng dụng web và hệ thống máy chủ.",
+        "Phạm vi dịch vụ có thể bao gồm đánh giá cấu hình bảo mật, rà soát phân quyền truy cập, tư vấn bảo vệ API, thiết lập HTTPS, tối ưu security headers và tăng cường các biện pháp kiểm soát truy cập. Tùy theo kiến trúc hệ thống, chúng tôi tư vấn triển khai firewall, Web Application Firewall (WAF), reverse proxy, CDN và các lớp bảo vệ phù hợp.",
+        "VIA Global hỗ trợ khách hàng xây dựng phương án sao lưu, phục hồi dữ liệu, giám sát hoạt động và ghi nhận nhật ký hệ thống. Đối với các website có lượng truy cập lớn hoặc yêu cầu tính sẵn sàng cao, việc rà soát kiến trúc, tối ưu cấu hình và chuẩn bị phương án dự phòng có thể giúp giảm nguy cơ gián đoạn dịch vụ.",
+        "Dịch vụ được thiết kế dựa trên hiện trạng hệ thống, mức độ ưu tiên và phạm vi hợp tác. Qua đó, doanh nghiệp có thể chủ động hơn trong việc quản lý rủi ro kỹ thuật, duy trì hiệu năng và nâng cao độ tin cậy của nền tảng số.",
+      ],
+      en: [
+        "Website and software security is essential to keep business running, protect data and reduce risk from online threats. VIA Global provides security advice, configuration review and technical administration for websites, web applications and servers.",
+        "The scope can include security configuration review, access permission review, API protection advice, HTTPS setup, security headers and stronger access controls. Depending on the architecture, we advise on firewalls, a Web Application Firewall (WAF), reverse proxies, CDNs and other suitable layers.",
+        "We help clients set up backup and recovery, activity monitoring and system logs. For high-traffic or high-availability websites, reviewing the architecture, tuning configuration and preparing fallback plans can lower the risk of service disruption.",
+        "Each engagement is shaped by the current system, priorities and agreed scope, so the organization can manage technical risk, maintain performance and make its digital platform more reliable.",
+      ],
+    },
+    scope: {
+      vi: [
+        "Đánh giá cấu hình bảo mật và phân quyền truy cập",
+        "Bảo vệ API, thiết lập HTTPS và security headers",
+        "Tư vấn firewall, WAF, reverse proxy và CDN",
+        "Phương án sao lưu và phục hồi dữ liệu",
+        "Giám sát hoạt động và ghi nhận nhật ký hệ thống",
+        "Rà soát kiến trúc và phương án dự phòng cho hệ thống tải cao",
+      ],
+      en: [
+        "Security configuration and access review",
+        "API protection, HTTPS and security headers",
+        "Firewall, WAF, reverse proxy and CDN advice",
+        "Backup and data recovery plans",
+        "Activity monitoring and system logs",
+        "Architecture review and fallback plans for high-load systems",
+      ],
+    },
+    outcomes: {
+      vi: [
+        "Chủ động quản lý rủi ro kỹ thuật.",
+        "Giảm nguy cơ gián đoạn dịch vụ.",
+        "Dữ liệu được bảo vệ và có phương án khôi phục.",
+        "Nâng cao độ tin cậy của nền tảng số.",
+      ],
+      en: [
+        "Technical risk managed proactively.",
+        "Lower risk of service disruption.",
+        "Data protected, with a way to recover it.",
+        "A more reliable digital platform.",
+      ],
+    },
+  },
+  {
+    slug: "cloud-server",
+    expertise: "cloud-infrastructure",
+    icon: "cloud",
+    title: {
+      vi: "Cloud Server và hạ tầng đám mây",
+      en: "Cloud servers and cloud infrastructure",
+    },
+    tagline: {
+      vi: "Chọn cấu hình đúng nhu cầu, cân đối hiệu năng và chi phí.",
+      en: "The right configuration, balancing performance and cost.",
+    },
+    excerpt: {
+      vi: "Tư vấn và hỗ trợ triển khai Cloud Server, VPS và hạ tầng máy chủ cùng các đối tác phù hợp, cân đối hiệu năng, độ ổn định, khả năng mở rộng và chi phí.",
+      en: "Advice and deployment support for cloud servers, VPS and server infrastructure with suitable partners, balancing performance, stability, scale and cost.",
+    },
+    audience: {
+      vi: "Doanh nghiệp cần môi trường ổn định cho website, phần mềm và dữ liệu, hoặc đang cân nhắc chuyển đổi, mở rộng hạ tầng máy chủ.",
+      en: "Organizations that need a stable home for websites, software and data, or that are planning to move or expand their servers.",
+    },
+    highlights: {
+      vi: [
+        "Xác định nhu cầu tài nguyên và cấu hình phù hợp",
+        "Định hướng kiến trúc: reverse proxy, cân bằng tải, CDN",
+        "Phối hợp đối tác triển khai và quản trị kỹ thuật",
+      ],
+      en: [
+        "Resource needs and the right configuration",
+        "Architecture: reverse proxy, load balancing, CDN",
+        "Deployment and administration with partners",
+      ],
+    },
+    body: {
+      vi: [
+        "Hạ tầng máy chủ là nền tảng để website, phần mềm và các hệ thống dữ liệu vận hành ổn định. VIA Global cung cấp dịch vụ tư vấn và hỗ trợ triển khai Cloud Server, VPS, hạ tầng máy chủ và các giải pháp liên quan thông qua mô hình hợp tác với các đối tác cung cấp dịch vụ phù hợp.",
+        "Chúng tôi hỗ trợ doanh nghiệp xác định nhu cầu tài nguyên, lựa chọn cấu hình máy chủ và định hướng kiến trúc triển khai theo đặc điểm của ứng dụng. Các nội dung tư vấn có thể bao gồm môi trường triển khai website, ứng dụng web, cơ sở dữ liệu, reverse proxy, cân bằng tải, CDN và phương án sao lưu, phục hồi.",
+        "Tùy theo nhu cầu và phạm vi hợp tác, VIA Global phối hợp cùng đối tác để triển khai hạ tầng, cấu hình môi trường ứng dụng và hỗ trợ các công việc quản trị kỹ thuật. Giải pháp được định hướng nhằm cân đối hiệu năng, độ ổn định, khả năng mở rộng và chi phí vận hành.",
+        "Thông qua việc kết hợp tư vấn công nghệ và nguồn lực hạ tầng từ đối tác, VIA Global giúp doanh nghiệp lựa chọn phương án triển khai phù hợp, hạn chế đầu tư không cần thiết và xây dựng nền tảng đáp ứng nhu cầu phát triển trong tương lai.",
+      ],
+      en: [
+        "Server infrastructure is what keeps websites, software and data systems running steadily. VIA Global advises on and supports the deployment of cloud servers, VPS, server infrastructure and related solutions, working with suitable service partners.",
+        "We help organizations size resources, choose server configurations and shape the deployment architecture around the application. Advice can cover hosting for websites, web apps and databases, reverse proxies, load balancing, CDNs and backup and recovery.",
+        "Depending on the need and scope, VIA Global works with partners to deploy infrastructure, configure application environments and support technical administration — balancing performance, stability, scalability and running cost.",
+        "By combining technology advice with partner infrastructure, we help organizations choose the right deployment, avoid unnecessary spending and build a foundation ready for future growth.",
+      ],
+    },
+    scope: {
+      vi: [
+        "Xác định nhu cầu tài nguyên và lựa chọn cấu hình máy chủ",
+        "Môi trường triển khai website, ứng dụng web và cơ sở dữ liệu",
+        "Reverse proxy, cân bằng tải và CDN",
+        "Phương án sao lưu và phục hồi",
+        "Phối hợp đối tác triển khai hạ tầng và cấu hình môi trường",
+        "Hỗ trợ các công việc quản trị kỹ thuật",
+      ],
+      en: [
+        "Resource sizing and server configuration",
+        "Hosting for websites, web apps and databases",
+        "Reverse proxy, load balancing and CDN",
+        "Backup and recovery plans",
+        "Partner deployment and environment configuration",
+        "Technical administration support",
+      ],
+    },
+    outcomes: {
+      vi: [
+        "Hạ tầng phù hợp với đặc điểm ứng dụng.",
+        "Hạn chế đầu tư không cần thiết.",
+        "Hệ thống ổn định, sẵn sàng mở rộng.",
+        "Nền tảng đáp ứng nhu cầu phát triển trong tương lai.",
+      ],
+      en: [
+        "Infrastructure that fits the application.",
+        "No unnecessary spending.",
+        "A stable system, ready to scale.",
+        "A foundation for future growth.",
+      ],
+    },
+  },
+];
 
 export function getSolution(slug: string) {
   return solutions.find((item) => item.slug === slug);

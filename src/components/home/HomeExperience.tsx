@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { cn } from "@/lib/cn";
 
 type SectionLink = {
@@ -13,7 +13,9 @@ export function HomeExperience({ sections }: { sections: SectionLink[] }) {
   const signature = sections.map((section) => section.id).join("|");
   const onDark = active === "lien-he" || active === "mo-dau";
 
-  useEffect(() => {
+  // Snap must be removed before the router scrolls the next page to the top,
+  // otherwise mandatory snapping pulls that page toward the footer.
+  useLayoutEffect(() => {
     const root = document.documentElement;
     const media = window.matchMedia("(min-width: 1024px)");
     const syncSnap = () => {
@@ -22,6 +24,13 @@ export function HomeExperience({ sections }: { sections: SectionLink[] }) {
     };
     syncSnap();
     media.addEventListener("change", syncSnap);
+    return () => {
+      media.removeEventListener("change", syncSnap);
+      root.classList.remove("snap-y", "snap-mandatory");
+    };
+  }, []);
+
+  useEffect(() => {
     const nodes = signature
       .split("|")
       .map((id) => document.getElementById(id))
@@ -38,11 +47,7 @@ export function HomeExperience({ sections }: { sections: SectionLink[] }) {
     );
 
     nodes.forEach((node) => observer.observe(node));
-    return () => {
-      observer.disconnect();
-      media.removeEventListener("change", syncSnap);
-      root.classList.remove("snap-y", "snap-mandatory");
-    };
+    return () => observer.disconnect();
   }, [signature]);
 
   function go(id: string) {

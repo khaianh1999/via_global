@@ -1,13 +1,13 @@
 {
   "meta": {
     "homeTitle": "VIA Global",
-    "homeDescription": "VIA Global develops technology solutions, digital platforms and communication services, working with enterprises through the digital era.",
+    "homeDescription": "VIA Global provides website design, custom software, AI agents, content automation, newsroom CMS, system security and cloud infrastructure for businesses.",
     "aboutTitle": "About",
     "aboutDescription": "Learn about VIA Global’s direction, working method and the value we create for clients and partners.",
     "expertiseTitle": "Expertise",
     "expertiseDescription": "Technology & Software, Cloud & Digital Infrastructure, and Digital Media & Communication.",
-    "solutionsTitle": "Solutions",
-    "solutionsDescription": "Five VIA Global solution paths: enterprise software, digital platforms, cloud architecture, system integration and communication technology. Each is described by the problem, scope, delivery method and when it is a fit.",
+    "solutionsTitle": "Software and AI services",
+    "solutionsDescription": "Seven VIA Global services: website design, custom software, AI agents, VIA ContentFlow, newsroom CMS, website security and cloud servers.",
     "projectsTitle": "Projects",
     "projectsDescription": "Implemented work and practical capability at VIA Global across technology, infrastructure and communication.",
     "insightsTitle": "Insights",
@@ -19,7 +19,7 @@
     "home": "Home",
     "about": "About",
     "expertise": "Expertise",
-    "solutions": "Solutions",
+    "solutions": "Services",
     "projects": "Projects",
     "insights": "Insights",
     "contact": "Contact",
@@ -43,9 +43,9 @@
   "hero": {
     "eyebrow": "VIA Global",
     "title": "Technology that creates value",
-    "subtitle": "Working with enterprises through the digital era",
-    "body": "We develop technology solutions, digital platforms and communication services that help organizations operate with greater clarity and open new room to grow.",
-    "primary": "Explore our capability",
+    "subtitle": "AI that drives growth",
+    "body": "Websites, custom software, AI agents, content automation, security and cloud infrastructure — helping businesses run better on a solid technology foundation.",
+    "primary": "Explore our services",
     "secondary": "Partner with us",
     "visualAlt": "VIA Global software, cloud infrastructure, and digital media"
   },
@@ -63,25 +63,34 @@
     "body": "We concentrate on fields that can create clear operating value, rather than stretching across every digital service.",
     "cta": "Learn more"
   },
+  "services": {
+    "label": "Services",
+    "title": "End-to-end technology for growing businesses",
+    "body": "From needs analysis and architecture to development, integration, operations and upgrades.",
+    "productBadge": "Product",
+    "ctaTitle": "Not sure which service fits?",
+    "ctaBody": "Describe the problem and VIA Global will propose a way forward.",
+    "ctaAll": "View all services"
+  },
   "advantages": {
-    "label": "Capability and advantage",
-    "title": "The right solution. Durable technology. A lasting partnership.",
+    "label": "Why VIA Global",
+    "title": "A technology partner for your digital journey",
     "items": {
       "capability": {
-        "title": "Technology capability",
-        "body": "The ability to research and develop a solution that fits each organization’s context."
+        "title": "Start from the real problem",
+        "body": "We analyze the need and propose a fitting solution, instead of one fixed technology model for every client."
       },
       "practice": {
-        "title": "Practical thinking",
-        "body": "We start from the client’s need and problem, not from a catalogue of technologies."
+        "title": "Breadth in one direction",
+        "body": "Software, system integration, AI, data automation and infrastructure delivered as one coherent plan."
       },
       "integration": {
-        "title": "Integration",
-        "body": "Connecting systems, data and platforms so operations become more coherent."
+        "title": "Clear technical criteria",
+        "body": "Each solution is weighed on fit, maintainability, security, performance and scalability."
       },
       "partnership": {
-        "title": "Long-term partnership",
-        "body": "We work toward a durable relationship, with a path that can continue after the first delivery."
+        "title": "A transparent process",
+        "body": "From intake, delivery and testing to handover, support and upgrades as agreed."
       }
     }
   },
@@ -106,16 +115,16 @@
     "pathsLabel": "Three ways to start",
     "paths": {
       "software": {
-        "title": "Software and digital platforms",
-        "body": "Products, business systems and platforms people use every day."
+        "title": "Websites, software and AI",
+        "body": "Websites, custom software and AI agents for everyday operations."
       },
       "cloud": {
-        "title": "Cloud and infrastructure",
-        "body": "Server and cloud architecture, and a system that stays reliable."
+        "title": "Security and cloud",
+        "body": "Security reviews, cloud servers and systems that stay reliable."
       },
       "media": {
-        "title": "Communication technology",
-        "body": "Digital content platforms and communication flows tied to operations."
+        "title": "Digital content and CMS",
+        "body": "Newsroom CMS and VIA ContentFlow for multi-channel content."
       }
     },
     "stepsLabel": "A conversation moves through four steps",
@@ -184,39 +193,66 @@
     "label": "Expertise",
     "title": "Capability deep enough to take responsibility",
     "lead": "The three fields below are the scope VIA Global is prepared to stand behind. Each can stand alone or be combined in one collaboration.",
-    "relatedSolutions": "Related solutions"
+    "relatedSolutions": "Related services"
   },
   "solutionsPage": {
-    "label": "Solutions",
-    "title": "From an operating problem to a path that can be delivered",
-    "lead": "The five paths below are how VIA Global organizes its capability. Each solution is written around a real problem, a scope that can be handed over, and the conditions for a useful collaboration. When we work together, scope is adjusted to the organization, not forced into a fixed package.",
-    "methodTitle": "How we define a solution",
-    "methodBody": "A solution is offered only when four questions can be answered: what work is stuck, who will use the result, what the first stage contains, and when this is not the right choice.",
-    "principles": {
+    "label": "Services",
+    "title": "End-to-end technology solutions for businesses in the digital era",
+    "lead": "VIA Global provides website design, custom software, AI agents, content management systems, data automation, system security and cloud infrastructure — helping businesses run better, use their data well and build a technology foundation for long-term growth.",
+    "listLabel": "Seven services",
+    "listTitle": "One partner for the whole digital journey",
+    "listBody": "We work with clients from needs analysis and architecture to development, integration, operations and upgrades. Every solution follows the client’s real goals, with fit, scalability and long-term value in mind.",
+    "productBadge": "Developed by VIA Global",
+    "whyLabel": "Why VIA Global",
+    "whyTitle": "A technology partner that works alongside you",
+    "why": {
       "problem": {
-        "title": "Start from the work",
-        "body": "Software, infrastructure or a platform is a means. We describe the work already happening before proposing architecture."
+        "title": "Start from the real problem",
+        "body": "Every request starts from real business work: we analyze the need and propose a fitting solution instead of one fixed technology model for every client."
       },
-      "scope": {
-        "title": "Scope that can be settled",
-        "body": "The first stage must be specific enough to see, test and hand over. The rest is recorded, not mixed in to look complete."
+      "breadth": {
+        "title": "Breadth in one direction",
+        "body": "Software development, system integration, AI, data automation and infrastructure advice delivered as one coherent plan."
       },
-      "fit": {
-        "title": "Say when it is not a fit",
-        "body": "Trust is earned by declining at the right time. If the problem is unclear or the expectation does not match the method, we say so."
+      "criteria": {
+        "title": "Clear technical criteria",
+        "body": "Solutions are weighed on fit, maintainability, security, performance and scalability."
       }
     },
-    "problem": "The problem",
+    "processLabel": "How we work together",
+    "processTitle": "Clear from request to handover",
+    "processNote": "Scope, cost and timeline are set from the specific requirements of each project.",
+    "steps": {
+      "intake": {
+        "title": "Intake and analysis",
+        "body": "Listen to the request and clarify the business problem and real goals."
+      },
+      "proposal": {
+        "title": "Proposal",
+        "body": "Advise on architecture, scope, cost and timeline."
+      },
+      "build": {
+        "title": "Build and test",
+        "body": "Develop, integrate and test within the agreed scope."
+      },
+      "handover": {
+        "title": "Handover and upgrades",
+        "body": "Hand over, support operations and upgrade as agreed."
+      }
+    },
+    "closingTitle": "VIA Global – A technology partner for your digital journey",
+    "closingBody": "We believe technology only creates value when it solves a real problem, makes better use of resources and lays a foundation for sustainable growth.",
+    "slogan": "Technology that creates value. AI that drives growth.",
+    "overview": "Overview",
     "audience": "Who it is for",
-    "scope": "What the work includes",
-    "process": "How we deliver",
-    "outcomes": "The outcome we aim for",
-    "fit": "A fit when",
-    "notFor": "Not the right choice if",
-    "related": "Other solutions",
-    "expertiseLink": "View expertise",
-    "viewSolution": "Read the full solution",
-    "backToList": "All solutions"
+    "highlights": "Highlights",
+    "scope": "What we deliver",
+    "outcomes": "The value you get",
+    "noteTitle": "Before you deploy",
+    "related": "Other services",
+    "expertiseLink": "Part of",
+    "viewSolution": "View details",
+    "backToList": "All services"
   },
   "projectsPage": {
     "label": "Projects",
@@ -242,9 +278,10 @@
     "topic": "Primary need",
     "message": "Your message",
     "topicOptions": {
-      "software": "Software and digital platforms",
-      "cloud": "Cloud and infrastructure",
-      "media": "Communication technology",
+      "software": "Website design and custom software",
+      "ai": "AI agents and automation",
+      "media": "Newsroom CMS and VIA ContentFlow",
+      "cloud": "Security, cloud servers and infrastructure",
       "other": "Partnership or another conversation"
     },
     "submit": "Send message",

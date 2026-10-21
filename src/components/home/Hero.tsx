@@ -34,7 +34,7 @@ export async function Hero() {
           </p>
           <p className="mt-3 max-w-xl text-[15px] leading-7 text-white/75 sm:mt-6 sm:text-lg sm:leading-8">{t("body")}</p>
           <div className="mt-5 flex flex-col gap-2.5 sm:mt-10 sm:flex-row sm:gap-3">
-            <ButtonLink href="/linh-vuc" className="w-full sm:w-auto">
+            <ButtonLink href="/giai-phap" className="w-full sm:w-auto">
               {t("primary")}
             </ButtonLink>
             <ButtonLink href="/lien-he" variant="secondary" className="w-full sm:w-auto">
