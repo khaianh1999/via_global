@@ -60,7 +60,7 @@ export default async function ContactPage({
 
   const channels = [
     { key: "email" as const, label: footer("email"), value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-    { key: "phone" as const, label: footer("phone"), value: siteConfig.phone, href: `tel:${siteConfig.phone.replace(/\s/g, "")}` },
+    { key: "phone" as const, label: footer("phone"), value: siteConfig.phone, href: `tel:${siteConfig.phoneE164}` },
     ...(siteConfig.zalo.href
       ? [{ key: "zalo" as const, label: "Zalo", value: siteConfig.zalo.phone, href: siteConfig.zalo.href }]
       : []),

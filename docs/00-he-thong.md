@@ -18,7 +18,7 @@ Website là mặt tiền uy tín của doanh nghiệp. Khách hàng và đối t
 | Ngôn ngữ | TypeScript | `tsconfig.json` |
 | i18n | next-intl 4 | `src/i18n/routing.ts` |
 | Proxy locale | next-intl middleware | `src/proxy.ts` |
-| Font chữ | Fraunces + Manrope | `src/app/[locale]/layout.tsx` |
+| Font chữ | Be Vietnam Pro (một font cho toàn site) | `src/app/[locale]/layout.tsx` |
 
 ## Cấu trúc thư mục quan trọng
 
@@ -51,8 +51,8 @@ Không bật dark mode. Website giữ nền trắng – xanh dương để tạo
 
 ### Typography
 
-- Tiêu đề: Fraunces, serif, tracking chặt, màu navy
-- Nội dung: Manrope, sans-serif, leading rộng
+- Tiêu đề: Be Vietnam Pro đậm (class `font-serif` giữ tên cũ nhưng hiển thị weight 700), tracking chặt, màu navy
+- Nội dung: Be Vietnam Pro, sans-serif, leading rộng
 - Nhãn nhỏ: uppercase, tracking rộng, màu blue
 - Cả hai font đều có subset tiếng Việt
 

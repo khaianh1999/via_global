@@ -10,6 +10,17 @@
 | Ảnh bìa | `public/projects/` (trường `cover`) |
 | URL VI | `/du-an`, `/du-an/[slug]` |
 | URL EN | `/en/projects`, `/en/projects/[slug]` |
+
+## Đang tạm ẩn
+
+Trang Dự án đang tắt bằng `siteConfig.features.projects = false` trong `src/lib/site.ts`. Khi tắt:
+
+- Không có mục Dự án trong menu đầu trang, menu điện thoại và chân trang
+- Trang chủ không hiện khối dự án, thanh mục bên phải bỏ mục Dự án
+- `/du-an`, `/en/projects` và các trang chi tiết trả về 404, không index
+- Sitemap không liệt kê các URL dự án
+
+Muốn mở lại: đổi thành `projects: true` rồi build lại. Code và dữ liệu dự án vẫn giữ nguyên.
 
 ## Bố cục trang danh sách
 

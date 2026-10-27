@@ -60,7 +60,7 @@ export default async function HomePage({
           { id: "gioi-thieu", label: about("label") },
           { id: "linh-vuc", label: expertise("label") },
           { id: "nang-luc", label: advantages("label") },
-          { id: "du-an", label: projects("label") },
+          ...(siteConfig.features.projects ? [{ id: "du-an", label: projects("label") }] : []),
           { id: "goc-nhin", label: insights("label") },
           { id: "lien-he", label: contact("contact") },
         ]}
@@ -70,7 +70,7 @@ export default async function HomePage({
       <AboutPreview />
       <ExpertiseSection />
       <Advantages />
-      <FeaturedProjects />
+      {siteConfig.features.projects ? <FeaturedProjects /> : null}
       <InsightsPreview />
       <CtaContact />
     </>

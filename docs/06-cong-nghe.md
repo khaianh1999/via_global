@@ -28,8 +28,8 @@
 
 ## Bố cục
 
-- Danh sách: hero nền tối `DarkPageHero` với xấp ảnh bìa, bài mới nhất (theo `date`) trình bày lớn, các bài còn lại là thẻ trắng hai cột trên nền xanh nhạt, cuối trang là khối `CtaContact`
-- Chi tiết: hero nền tối (liên kết về danh sách, chủ đề, tiêu đề, tóm tắt, ngày đăng, thời gian đọc), ảnh bìa đè lên mép hero, nội dung một cột với chữ cái đầu lớn, khung thông tin bài viết bên phải, ba bài viết khác trên nền xanh nhạt và khối `CtaContact`
+- Danh sách: kiểu blog, nền trắng. Đầu trang căn giữa trên nền xanh nhạt (nhãn, tiêu đề, lead); bài mới nhất (theo `date`) là thẻ lớn ảnh + nội dung; các bài còn lại là lưới thẻ hai cột, mỗi thẻ có ảnh bo góc, chuyên mục, ngày, tiêu đề và hai dòng tóm tắt
+- Chi tiết: đầu bài căn giữa (liên kết về danh sách, chuyên mục, ngày, thời gian đọc, tiêu đề, tóm tắt), ảnh bìa lớn bo góc, nội dung một cột rộng khoảng 42rem, chữ ký VIA Global, rồi ba bài khác dạng thẻ trên nền xanh nhạt
 - Ảnh bìa dùng chung cho trang chủ, danh sách và chi tiết
 
 ## Schema dữ liệu

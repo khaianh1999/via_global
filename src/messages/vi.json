@@ -3,7 +3,7 @@
     "homeTitle": "Thiết kế website, phần mềm, AI và Cloud cho doanh nghiệp",
     "homeDescription": "VIA Global cung cấp thiết kế website, phần mềm theo yêu cầu, AI Agent, tự động hóa nội dung, CMS báo chí, bảo mật hệ thống và hạ tầng Cloud cho doanh nghiệp.",
     "aboutTitle": "Giới thiệu",
-    "aboutDescription": "Giới thiệu VIA Global: đội ngũ, dịch vụ và các hoạt động của công ty.",
+    "aboutDescription": "Giới thiệu VIA Global: đội ngũ, dịch vụ công nghệ và truyền thông (báo chí, sự kiện, podcast, video) cùng các hoạt động của công ty.",
     "solutionsTitle": "Dịch vụ công nghệ phần mềm và giải pháp AI",
     "solutionsDescription": "Bảy dịch vụ của VIA Global: thiết kế website, phần mềm theo yêu cầu, AI Agent, VIA ContentFlow, CMS báo chí, bảo mật website và hạ tầng Cloud Server.",
     "projectsTitle": "Dự án",
@@ -166,7 +166,7 @@
     "teamHeading": "Đội ngũ của chúng tôi",
     "team": "Đội ngũ VIA Global gồm các kỹ sư phần mềm, chuyên viên hạ tầng và nhân sự truyền thông số. Mỗi dự án có một đầu mối phụ trách xuyên suốt, giúp khách hàng trao đổi thuận tiện và nắm rõ tiến độ trong từng giai đoạn.",
     "servicesHeading": "Chúng tôi làm gì",
-    "services": "Chúng tôi cung cấp bảy dịch vụ: thiết kế website, phát triển phần mềm theo yêu cầu, AI Agent và tự động hóa, nền tảng VIA ContentFlow, hệ thống CMS báo chí, bảo mật hệ thống và hạ tầng Cloud Server. Các dịch vụ có thể triển khai riêng lẻ hoặc kết hợp trong cùng một chương trình hợp tác.",
+    "services": "VIA Global hoạt động ở hai mảng bổ trợ cho nhau: công nghệ và truyền thông. Doanh nghiệp có thể chọn từng dịch vụ riêng lẻ hoặc kết hợp trong cùng một chương trình hợp tác, với một đầu mối phụ trách xuyên suốt.",
     "servicesLink": "Xem các dịch vụ",
     "activitiesHeading": "Hoạt động",
     "activities": "Ngoài công việc dự án, đội ngũ VIA Global dành thời gian cho các buổi chia sẻ chuyên môn, sự kiện công nghệ và những hoạt động gắn kết. Đó là cách chúng tôi cập nhật kiến thức mới và giữ tinh thần làm việc cùng nhau.",
@@ -175,7 +175,33 @@
     "photoOuting": "Hoạt động gắn kết đội ngũ",
     "belief": "Chúng tôi tin rằng uy tín được xây dựng từ cách làm việc: hiểu đúng bài toán, triển khai có kiểm soát và giữ lời trong từng bước bàn giao.",
     "closing": "Nếu doanh nghiệp của bạn đang tìm một đối tác công nghệ, hãy liên hệ để cùng trao đổi về bài toán của bạn.",
-    "contactLink": "Liên hệ với VIA Global"
+    "contactLink": "Liên hệ với VIA Global",
+    "serviceGroups": {
+      "technology": {
+        "title": "Công nghệ",
+        "items": [
+          "Thiết kế website chuyên nghiệp",
+          "Phát triển phần mềm theo yêu cầu",
+          "AI Agent và tự động hóa thông minh",
+          "Nền tảng VIA ContentFlow",
+          "Hệ thống CMS báo chí và quản trị nội dung",
+          "Bảo mật website và quản trị hệ thống",
+          "Cloud Server và hạ tầng đám mây"
+        ]
+      },
+      "media": {
+        "title": "Truyền thông",
+        "items": [
+          "Truyền thông báo chí và quan hệ công chúng (PR)",
+          "Tổ chức và truyền thông sự kiện",
+          "Sản xuất podcast",
+          "Sản xuất video và nội dung số",
+          "Livestream và truyền hình trực tuyến",
+          "Quản lý mạng xã hội và kênh nội dung",
+          "Xây dựng thương hiệu và chiến dịch truyền thông"
+        ]
+      }
+    }
   },
   "solutionsPage": {
     "label": "Dịch vụ",
@@ -259,13 +285,9 @@
     "label": "Tin công nghệ",
     "title": "Góc nhìn chuyên môn, viết cho người cần quyết định",
     "lead": "Nội dung được biên soạn để làm rõ cách tiếp cận của VIA Global, hỗ trợ khách hàng hiểu năng lực công ty và tạo nền tảng thông tin cho tìm kiếm.",
-    "latest": "Bài mới nhất",
-    "more": "Bài viết khác",
-    "backToList": "Tất cả bài viết",
-    "aboutArticle": "Thông tin bài viết",
-    "topic": "Chủ đề",
-    "published": "Ngày đăng",
-    "readTime": "Thời gian đọc"
+    "more": "Bài viết mới",
+    "related": "Bài viết khác",
+    "count": "{count} bài viết"
   },
   "contactPage": {
     "label": "Liên hệ hợp tác",
@@ -303,11 +325,11 @@
     "explore": "Khám phá",
     "contact": "Liên hệ",
     "rights": "Mọi quyền được bảo lưu.",
-    "placeholderNote": "Tên pháp lý, địa chỉ và thông tin liên hệ sẽ được cập nhật khi hoàn tất hồ sơ doanh nghiệp.",
     "services": "Dịch vụ",
     "backToTop": "Lên đầu trang",
     "email": "Email",
     "phone": "Điện thoại",
-    "address": "Địa chỉ"
+    "address": "Địa chỉ",
+    "taxId": "Mã số doanh nghiệp"
   }
 }

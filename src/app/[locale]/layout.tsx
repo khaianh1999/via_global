@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -12,15 +12,10 @@ import { siteConfig } from "@/lib/site";
 import { JsonLd, organizationSchema, websiteSchema } from "@/lib/structured-data";
 import "../globals.css";
 
-const manrope = Manrope({
+const beVietnam = Be_Vietnam_Pro({
   subsets: ["latin", "latin-ext", "vietnamese"],
-  variable: "--font-manrope",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin", "latin-ext", "vietnamese"],
-  variable: "--font-fraunces",
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-be-vietnam",
   display: "swap",
 });
 
@@ -93,7 +88,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       data-scroll-behavior="smooth"
-      className={`${manrope.variable} ${fraunces.variable} h-full scroll-pt-16 scroll-smooth antialiased sm:scroll-pt-[4.75rem] motion-reduce:snap-none`}
+      className={`${beVietnam.variable} h-full scroll-pt-16 scroll-smooth antialiased sm:scroll-pt-[4.75rem] motion-reduce:snap-none`}
     >
       <body className="min-h-full bg-paper font-sans text-ink">
         <JsonLd data={[organizationSchema(locale as Locale, meta("homeDescription")), websiteSchema(locale as Locale)]} />

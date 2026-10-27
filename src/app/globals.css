@@ -26,8 +26,8 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
   --color-paper: var(--paper);
-  --font-sans: var(--font-manrope);
-  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-be-vietnam);
+  --font-serif: var(--font-be-vietnam);
 }
 
 html {
@@ -37,7 +37,7 @@ html {
 body {
   background: var(--paper);
   color: var(--ink);
-  font-family: var(--font-manrope), "Segoe UI", sans-serif;
+  font-family: var(--font-be-vietnam), "Segoe UI", sans-serif;
 }
 
 ::selection {
@@ -45,8 +45,11 @@ body {
   color: var(--navy);
 }
 
+/* The site uses a single typeface; headings keep the font-serif class but render in bold Be Vietnam Pro. */
 .font-serif {
-  font-family: var(--font-fraunces), "Times New Roman", serif;
+  font-family: var(--font-be-vietnam), "Segoe UI", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 @keyframes zalo-shake {

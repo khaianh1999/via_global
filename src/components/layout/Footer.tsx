@@ -53,7 +53,7 @@ export async function Footer() {
 
   const contacts = [
     { key: "email" as const, value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-    { key: "phone" as const, value: siteConfig.phone, href: `tel:${siteConfig.phone.replace(/\s/g, "")}` },
+    { key: "phone" as const, value: siteConfig.phone, href: `tel:${siteConfig.phoneE164}` },
     { key: "address" as const, value: siteConfig.address[locale], href: undefined },
   ];
 
@@ -66,7 +66,11 @@ export async function Footer() {
         <div className="sm:col-span-2 lg:col-span-3">
           <Logo onLight={false} />
           <p className="mt-6 max-w-sm font-serif text-xl leading-snug text-white/90">{t("tagline")}</p>
-          <p className="mt-4 max-w-sm text-sm leading-6 text-white/45">{t("placeholderNote")}</p>
+          <p className="mt-4 max-w-sm text-sm leading-6 text-white/55">
+            {siteConfig.legalName[locale]}
+            <br />
+            {t("taxId")}: {siteConfig.taxId}
+          </p>
         </div>
 
         <div className="lg:col-span-2">

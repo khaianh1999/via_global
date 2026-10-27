@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { CtaContact } from "@/components/home/CtaContact";
-import { CoverStack, DarkPageHero } from "@/components/pages/DarkPageHero";
 import { Container } from "@/components/ui/Container";
 import { insights } from "@/content/insights";
 import { Link } from "@/i18n/navigation";
@@ -30,6 +28,10 @@ export async function generateMetadata({
   });
 }
 
+type Article = (typeof insights)[number];
+
+const articleHref = (article: Article) => ({ pathname: "/cong-nghe/[slug]" as const, params: { slug: article.slug } });
+
 export default async function InsightsPage({
   params,
 }: {
@@ -40,100 +42,102 @@ export default async function InsightsPage({
   const lang = locale as Locale;
   const t = await getTranslations("insightsPage");
   const common = await getTranslations("common");
+  const nav = await getTranslations("nav");
   const format = await getFormatter();
   const sorted = [...insights].sort((a, b) => b.date.localeCompare(a.date));
-  const [latest, ...rest] = sorted;
-
-  const meta = (article: (typeof insights)[number]) =>
-    `${format.dateTime(new Date(article.date), { day: "numeric", month: "long", year: "numeric" })} · ${common("readingTime", { minutes: article.readTime })}`;
-  const nav = await getTranslations("nav");
+  const [featured, ...rest] = sorted;
+  const date = (article: Article) =>
+    format.dateTime(new Date(article.date), { day: "numeric", month: "long", year: "numeric" });
 
   return (
-    <>
+    <div className="bg-white pb-24 sm:pb-32">
       <JsonLd
         data={[
-          webPageSchema({ locale: locale as Locale, href: "/cong-nghe", name: t("title"), description: t("lead"), type: "CollectionPage" }),
-          itemListSchema(locale as Locale, sorted.map((item) => ({ name: item.title[locale as Locale], href: { pathname: "/cong-nghe/[slug]", params: { slug: item.slug } } }))),
-          breadcrumbSchema(locale as Locale, [{ name: nav("home"), href: "/" }, { name: nav("insights"), href: "/cong-nghe" }]),
+          webPageSchema({ locale: lang, href: "/cong-nghe", name: t("title"), description: t("lead"), type: "CollectionPage" }),
+          itemListSchema(lang, sorted.map((item) => ({ name: item.title[lang], href: articleHref(item) }))),
+          breadcrumbSchema(lang, [{ name: nav("home"), href: "/" }, { name: nav("insights"), href: "/cong-nghe" }]),
         ]}
       />
-      <DarkPageHero label={t("label")} title={t("title")} lead={t("lead")}>
-        <CoverStack covers={sorted.map((article) => article.cover)} />
-      </DarkPageHero>
 
-      {/* Latest article */}
-      <section className="bg-white py-14 sm:py-20">
-        <Container>
-          <p className="text-xs font-semibold tracking-[0.22em] text-blue uppercase">{t("latest")}</p>
-          <Link
-            href={{ pathname: "/cong-nghe/[slug]", params: { slug: latest.slug } }}
-            className="group mt-6 grid items-center gap-8 lg:grid-cols-12 lg:gap-12"
-          >
-            <div className="overflow-hidden rounded-[1.6rem] shadow-[0_24px_60px_rgba(12,44,86,0.18)] lg:col-span-7">
-              <Image
-                src={publicPath(latest.cover)}
-                alt={latest.topic[lang]}
-                width={1280}
-                height={720}
-                priority
-                sizes="(min-width: 1024px) 670px, 100vw"
-                className="aspect-[16/10] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
-              />
-            </div>
-            <div className="lg:col-span-5">
-              <span className="inline-flex rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold tracking-[0.14em] text-blue uppercase">
-                {latest.topic[lang]}
-              </span>
-              <h2 className="mt-4 font-serif text-3xl leading-tight text-navy transition-colors group-hover:text-blue sm:text-4xl">
-                {latest.title[lang]}
-              </h2>
-              <p className="mt-5 text-base leading-8 text-muted sm:text-lg">{latest.excerpt[lang]}</p>
-              <p className="mt-6 border-t border-line pt-5 text-sm text-muted">{meta(latest)}</p>
-              <span className="mt-6 inline-flex items-center gap-2 text-[15px] font-semibold text-blue">
-                {common("readArticle")}
-                <span className="transition-transform group-hover:translate-x-1">→</span>
-              </span>
-            </div>
-          </Link>
+      {/* Header */}
+      <section className="relative overflow-hidden bg-linear-to-b from-ice to-white">
+        <div className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-blue/10 blur-3xl" />
+        <Container className="relative max-w-3xl py-16 text-center sm:py-24">
+          <span className="inline-flex rounded-full bg-blue/10 px-4 py-1.5 text-xs font-semibold tracking-[0.16em] text-blue uppercase">
+            {t("label")}
+          </span>
+          <h1 className="mt-6 text-4xl leading-tight font-bold tracking-tight text-navy text-balance sm:text-5xl">
+            {t("title")}
+          </h1>
+          <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-muted">{t("lead")}</p>
         </Container>
       </section>
 
-      {/* Other articles */}
-      <section className="border-t border-line bg-ice py-14 sm:py-20">
-        <Container>
-          <p className="text-xs font-semibold tracking-[0.22em] text-blue uppercase">{t("more")}</p>
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
-            {rest.map((article) => (
-              <Link
-                key={article.slug}
-                href={{ pathname: "/cong-nghe/[slug]", params: { slug: article.slug } }}
-                className="group flex gap-5 rounded-[1.4rem] border border-line bg-white p-4 shadow-[0_12px_32px_rgba(18,59,114,0.06)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(37,99,235,0.16)] sm:gap-6 sm:p-5"
-              >
-                <div className="w-28 shrink-0 self-start overflow-hidden rounded-xl sm:w-44">
-                  <Image
-                    src={publicPath(article.cover)}
-                    alt={article.topic[lang]}
-                    width={1280}
-                    height={720}
-                    sizes="176px"
-                    className="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="min-w-0 py-1">
-                  <p className="text-[11px] font-semibold tracking-[0.16em] text-blue uppercase">{article.topic[lang]}</p>
-                  <h2 className="mt-2 font-serif text-lg leading-snug text-navy transition-colors group-hover:text-blue sm:text-xl">
-                    {article.title[lang]}
-                  </h2>
-                  <p className="mt-2 hidden text-sm leading-6 text-muted sm:line-clamp-2">{article.excerpt[lang]}</p>
-                  <p className="mt-3 text-xs text-muted">{meta(article)}</p>
-                </div>
-              </Link>
-            ))}
+      {/* Featured */}
+      <Container className="mt-4">
+        <Link
+          href={articleHref(featured)}
+          className="group grid overflow-hidden rounded-3xl bg-white ring-1 ring-line shadow-[0_20px_50px_rgba(18,59,114,0.08)] transition hover:shadow-[0_28px_60px_rgba(37,99,235,0.15)] lg:grid-cols-2"
+        >
+          <div className="overflow-hidden">
+            <Image
+              src={publicPath(featured.cover)}
+              alt={featured.title[lang]}
+              width={1280}
+              height={720}
+              priority
+              sizes="(min-width: 1024px) 576px, 100vw"
+              className="aspect-[16/10] h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+            />
           </div>
-        </Container>
-      </section>
+          <div className="flex flex-col justify-center p-7 sm:p-10">
+            <div className="flex flex-wrap items-center gap-3 text-sm">
+              <span className="rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold text-blue">{featured.topic[lang]}</span>
+              <span className="text-muted">{date(featured)}</span>
+            </div>
+            <h2 className="mt-5 text-2xl leading-snug font-bold text-navy transition-colors group-hover:text-blue sm:text-3xl">
+              {featured.title[lang]}
+            </h2>
+            <p className="mt-4 text-base leading-7 text-muted">{featured.excerpt[lang]}</p>
+            <span className="mt-7 inline-flex items-center gap-2 text-[15px] font-semibold text-blue">
+              {common("readArticle")}
+              <span className="transition-transform group-hover:translate-x-1">→</span>
+            </span>
+          </div>
+        </Link>
+      </Container>
 
-      <CtaContact />
-    </>
+      {/* Grid */}
+      <Container className="mt-16 sm:mt-20">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="text-2xl font-bold text-navy">{t("more")}</h2>
+          <p className="text-sm text-muted">{t("count", { count: sorted.length })}</p>
+        </div>
+        <div className="mt-8 grid gap-x-10 gap-y-12 sm:grid-cols-2">
+          {rest.map((article) => (
+            <Link key={article.slug} href={articleHref(article)} className="group flex flex-col">
+              <div className="overflow-hidden rounded-2xl ring-1 ring-line">
+                <Image
+                  src={publicPath(article.cover)}
+                  alt={article.title[lang]}
+                  width={1280}
+                  height={720}
+                  sizes="(min-width: 1024px) 560px, (min-width: 640px) 50vw, 100vw"
+                  className="aspect-[16/10] w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+              </div>
+              <div className="mt-5 flex flex-wrap items-center gap-3 text-sm">
+                <span className="rounded-full bg-blue/10 px-3 py-1 text-xs font-semibold text-blue">{article.topic[lang]}</span>
+                <span className="text-muted">{date(article)}</span>
+              </div>
+              <h3 className="mt-3 text-lg leading-snug font-bold text-navy transition-colors group-hover:text-blue sm:text-xl">
+                {article.title[lang]}
+              </h3>
+              <p className="mt-2 line-clamp-2 text-[15px] leading-6 text-muted">{article.excerpt[lang]}</p>
+            </Link>
+          ))}
+        </div>
+      </Container>
+    </div>
   );
 }

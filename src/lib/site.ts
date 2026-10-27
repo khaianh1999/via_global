@@ -6,13 +6,25 @@ export function publicPath(path: string) {
 export const siteConfig = {
   name: "VIA Global",
   shortName: "VIA",
-  legalName: "VIA Global",
+  legalName: {
+    vi: "Công ty Cổ phần Công nghệ và Truyền thông VIA Global",
+    en: "VIA Global Technology and Media Joint Stock Company",
+  },
+  // Enterprise registration (tax) number and first registration date.
+  taxId: "0111638951",
+  foundingDate: "2026-09-23",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-  email: "contact@via-global.vn",
-  phone: "+84 000 000 000",
+  email: "contact@viaglobal.vn",
+  phone: "0825 319 319",
+  phoneE164: "+84825319319",
   address: {
-    vi: "Việt Nam",
-    en: "Vietnam",
+    vi: "Tổ dân phố Đông Sơn, Phường Chương Mỹ, Thành phố Hà Nội, Việt Nam",
+    en: "Dong Son Residential Group, Chuong My Ward, Hanoi, Vietnam",
+  },
+  addressParts: {
+    street: { vi: "Tổ dân phố Đông Sơn, Phường Chương Mỹ", en: "Dong Son Residential Group, Chuong My Ward" },
+    locality: { vi: "Hà Nội", en: "Hanoi" },
+    country: "VN",
   },
   social: {
     linkedin: "",
@@ -23,5 +35,10 @@ export const siteConfig = {
     href: process.env.NEXT_PUBLIC_ZALO_PHONE
       ? `https://zalo.me/${process.env.NEXT_PUBLIC_ZALO_PHONE}`
       : "",
+  },
+  // Sections that can be switched off without deleting their code.
+  // Projects is hidden for now: no menu link, no homepage section, pages return 404.
+  features: {
+    projects: false,
   },
 } as const;

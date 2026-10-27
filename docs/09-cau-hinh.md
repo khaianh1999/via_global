@@ -11,7 +11,7 @@ NEXT_PUBLIC_ZALO_PHONE=0326927477
 
 `NEXT_PUBLIC_ZALO_PHONE` là số Zalo, không kèm `https://zalo.me/`. Website tự tạo link `https://zalo.me/{số}`. Đổi số rồi khởi động lại `npm run dev`.
 
-Trên production đặt domain chính thức, không có dấu `/` ở cuối. Ví dụ: `https://via-global.vn`.
+Trên production đặt domain chính thức, không có dấu `/` ở cuối. Ví dụ: `https://viaglobal.vn`.
 
 ## Lệnh
 
@@ -39,7 +39,7 @@ npm run lint     # eslint
 
 Header cố định khi cuộn. Footer lặp lại điều hướng, email, điện thoại và ghi chú placeholder pháp lý.
 
-Khi có giấy phép kinh doanh, thay `footer.placeholderNote` bằng thông tin MST, địa chỉ đăng ký và họ tên người đại diện nếu pháp lý yêu cầu.
+Tên pháp lý, mã số doanh nghiệp, địa chỉ trụ sở, email và điện thoại lấy theo giấy đăng ký doanh nghiệp, khai báo trong `src/lib/site.ts` và hiện ở chân trang.
 
 ## Form liên hệ
 

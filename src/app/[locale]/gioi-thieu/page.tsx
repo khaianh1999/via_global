@@ -51,6 +51,8 @@ function Photo({ src, caption, className }: { src: string; caption: string; clas
   );
 }
 
+const serviceGroups = ["technology", "media"] as const;
+
 export default async function AboutPage({
   params,
 }: {
@@ -99,6 +101,21 @@ export default async function AboutPage({
 
           <h2 className="mt-14 font-serif text-3xl text-navy sm:text-[2.1rem]">{t("servicesHeading")}</h2>
           <p className="mt-5">{t("services")}</p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            {serviceGroups.map((group) => (
+              <section key={group} className="rounded-2xl border border-line bg-ice/60 p-6">
+                <h3 className="text-xs font-bold tracking-[0.18em] text-blue uppercase">{t(`serviceGroups.${group}.title`)}</h3>
+                <ul className="mt-4 space-y-2.5 text-[15px] leading-6 text-ink">
+                  {t.raw(`serviceGroups.${group}.items`).map((service: string) => (
+                    <li key={service} className="flex gap-3">
+                      <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue" />
+                      {service}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
           <Link
             href="/giai-phap"
             className="group mt-4 inline-flex items-center gap-2 font-semibold text-blue underline decoration-blue/30 underline-offset-[6px] transition-colors hover:decoration-blue"

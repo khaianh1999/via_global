@@ -6,6 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { getProject, projects } from "@/content/projects";
 import { routing, type Locale } from "@/i18n/routing";
 import { buildPageMetadata, socialImage } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site";
 import { breadcrumbSchema, JsonLd, projectSchema } from "@/lib/structured-data";
 import { publicPath } from "@/lib/site";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -23,6 +24,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
+  if (!siteConfig.features.projects) return { robots: { index: false, follow: false } };
   const { locale, slug } = await params;
   const item = getProject(slug);
   if (!item) return {};
@@ -41,6 +43,7 @@ export default async function ProjectDetailPage({
 }: {
   params: Promise<{ locale: string; slug: string }>;
 }) {
+  if (!siteConfig.features.projects) notFound();
   const { locale, slug } = await params;
   setRequestLocale(locale);
   const item = getProject(slug);

@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import { CtaContact } from "@/components/home/CtaContact";
 import { CoverStack, DarkPageHero } from "@/components/pages/DarkPageHero";
@@ -6,6 +7,7 @@ import { projects } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site";
 import { breadcrumbSchema, itemListSchema, JsonLd, webPageSchema } from "@/lib/structured-data";
 import { publicPath } from "@/lib/site";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -19,6 +21,7 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string }>;
 }) {
+  if (!siteConfig.features.projects) return { robots: { index: false, follow: false } };
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
@@ -44,6 +47,7 @@ export default async function ProjectsPage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
+  if (!siteConfig.features.projects) notFound();
   const { locale } = await params;
   setRequestLocale(locale);
   const lang = locale as Locale;

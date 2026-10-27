@@ -3,7 +3,7 @@
     "homeTitle": "Websites, software, AI and cloud for businesses",
     "homeDescription": "VIA Global provides website design, custom software, AI agents, content automation, newsroom CMS, system security and cloud infrastructure for businesses.",
     "aboutTitle": "About",
-    "aboutDescription": "About VIA Global: our team, our services and our activities.",
+    "aboutDescription": "About VIA Global: our team, technology and communication services (press, events, podcasts, video) and our activities.",
     "solutionsTitle": "Software and AI services",
     "solutionsDescription": "Seven VIA Global services: website design, custom software, AI agents, VIA ContentFlow, newsroom CMS, website security and cloud servers.",
     "projectsTitle": "Projects",
@@ -166,7 +166,7 @@
     "teamHeading": "Our team",
     "team": "The VIA Global team brings together software engineers, infrastructure specialists and digital communication staff. Every project has one owner from start to finish, so clients always have a clear contact and know where things stand.",
     "servicesHeading": "What we do",
-    "services": "We offer seven services: website design, custom software, AI agents and automation, the VIA ContentFlow platform, newsroom CMS, system security and cloud servers. They can be delivered on their own or combined in a single engagement.",
+    "services": "VIA Global works across two complementary areas: technology and communication. Organizations can take any single service or combine several in one engagement, with one owner from start to finish.",
     "servicesLink": "See our services",
     "activitiesHeading": "Activities",
     "activities": "Beyond project work, the VIA Global team makes time for knowledge-sharing sessions, technology events and team activities. It is how we keep learning and keep working well together.",
@@ -175,7 +175,33 @@
     "photoOuting": "A team outing",
     "belief": "We believe trust is built through method: understand the problem, deliver with control and keep our word at every handover.",
     "closing": "If your organization is looking for a technology partner, get in touch and tell us about your challenge.",
-    "contactLink": "Contact VIA Global"
+    "contactLink": "Contact VIA Global",
+    "serviceGroups": {
+      "technology": {
+        "title": "Technology",
+        "items": [
+          "Professional website design",
+          "Custom software development",
+          "AI agents and intelligent automation",
+          "The VIA ContentFlow platform",
+          "Newsroom CMS and content management",
+          "Website security and system administration",
+          "Cloud servers and infrastructure"
+        ]
+      },
+      "media": {
+        "title": "Communication",
+        "items": [
+          "Press relations and public relations (PR)",
+          "Event organization and event communication",
+          "Podcast production",
+          "Video and digital content production",
+          "Livestreaming and online broadcasts",
+          "Social media and channel management",
+          "Brand building and communication campaigns"
+        ]
+      }
+    }
   },
   "solutionsPage": {
     "label": "Services",
@@ -259,13 +285,9 @@
     "label": "Insights",
     "title": "Specialist thinking, written for people who must decide",
     "lead": "These pieces explain VIA Global’s approach, help clients understand our capability and give the site a clear information foundation for search.",
-    "latest": "Latest article",
-    "more": "More articles",
-    "backToList": "All articles",
-    "aboutArticle": "About this article",
-    "topic": "Topic",
-    "published": "Published",
-    "readTime": "Reading time"
+    "more": "Recent articles",
+    "related": "More articles",
+    "count": "{count} articles"
   },
   "contactPage": {
     "label": "Partnership enquiry",
@@ -303,11 +325,11 @@
     "explore": "Explore",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "placeholderNote": "Legal name, address and contact details will be updated when company records are finalized.",
     "services": "Services",
     "backToTop": "Back to top",
     "email": "Email",
     "phone": "Phone",
-    "address": "Address"
+    "address": "Address",
+    "taxId": "Enterprise code"
   }
 }

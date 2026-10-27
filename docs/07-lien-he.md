@@ -40,12 +40,15 @@ Trạng thái thành công dùng `contactPage.successTitle` và `successBody`.
 Sửa `src/lib/site.ts`:
 
 ```ts
-email: "contact@via-global.vn"
-phone: "+84 000 000 000"
-address: { vi: "Việt Nam", en: "Vietnam" }
+legalName: { vi: "Công ty Cổ phần Công nghệ và Truyền thông VIA Global", en: "VIA Global Technology and Media Joint Stock Company" }
+taxId: "0111638951"           // mã số doanh nghiệp, hiện ở chân trang và JSON-LD
+email: "contact@viaglobal.vn"
+phone: "0825 319 319"         // hiển thị
+phoneE164: "+84825319319"     // dùng cho tel: và JSON-LD
+address: { vi: "Tổ dân phố Đông Sơn, Phường Chương Mỹ, Thành phố Hà Nội, Việt Nam", en: "Dong Son Residential Group, Chuong My Ward, Hanoi, Vietnam" }
 ```
 
-Các giá trị này hiện là placeholder và được nêu trong footer.
+Thông tin lấy theo giấy đăng ký doanh nghiệp, hiển thị ở chân trang, trang Liên hệ và dữ liệu cấu trúc (JSON-LD).
 
 ## Tích hợp gửi mail sau này
 

@@ -17,7 +17,7 @@ Trang là một bài viết giới thiệu công ty, nền trắng, cột chữ 
 1. Nhãn, tiêu đề, đoạn mở đầu
 2. Ảnh đội ngũ rộng toàn khung
 3. Đội ngũ của chúng tôi
-4. Chúng tôi làm gì, kèm liên kết tới trang Dịch vụ
+4. Chúng tôi làm gì: đoạn giới thiệu, hai khối danh sách Công nghệ và Truyền thông (`aboutPage.serviceGroups`), liên kết tới trang Dịch vụ
 5. Hoạt động, kèm ba ảnh hoạt động (hai ảnh cạnh nhau, một ảnh rộng)
 6. Câu trích về cách làm việc, câu kết và liên kết tới trang Liên hệ
 
@@ -41,11 +41,12 @@ Khi có ảnh thật: đặt file .jpg hoặc .webp vào `public/about/` rồi �
 | `aboutPage.title`, `aboutPage.lead` | Tiêu đề và đoạn mở đầu |
 | `aboutPage.team*` | Ảnh và đoạn giới thiệu đội ngũ |
 | `aboutPage.services*` | Đoạn dịch vụ và chữ của liên kết |
+| `aboutPage.serviceGroups.{technology,media}` | Tiêu đề và danh sách dịch vụ từng mảng; thêm hoặc bớt dòng trong `items` |
 | `aboutPage.activities*`, `aboutPage.photo*` | Đoạn hoạt động và chú thích ảnh |
 | `aboutPage.belief`, `aboutPage.closing`, `aboutPage.contactLink` | Câu trích, câu kết và liên kết liên hệ |
 
 ## Ghi chú cấu hình
 
 - Trang này cố ý không có năm thành lập hay số liệu tăng trưởng.
-- Khi danh sách dịch vụ thay đổi, sửa lại đoạn `aboutPage.services` cho khớp.
+- Khi danh sách dịch vụ thay đổi, sửa lại `aboutPage.services` và `aboutPage.serviceGroups` cho khớp.
 - Khi có hồ sơ pháp lý, thêm một đoạn thông tin công ty trước câu kết.
