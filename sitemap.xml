@@ -55,24 +55,6 @@
 <priority>0.7</priority>
 </url>
 <url>
-<loc>https://khaianh1999.github.io/via_global/du-an/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/en/projects/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
 <loc>https://khaianh1999.github.io/via_global/cong-nghe/</loc>
 <xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/cong-nghe/" />
 <xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/insights/" />
@@ -233,78 +215,6 @@
 <lastmod>2026-10-27</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/du-an/operations-platform/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/operations-platform/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/operations-platform/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/operations-platform/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/en/projects/operations-platform/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/operations-platform/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/operations-platform/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/operations-platform/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/du-an/cloud-foundation/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/cloud-foundation/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/cloud-foundation/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/cloud-foundation/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/en/projects/cloud-foundation/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/cloud-foundation/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/cloud-foundation/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/cloud-foundation/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/du-an/content-os/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/content-os/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/content-os/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/content-os/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/en/projects/content-os/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/content-os/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/content-os/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/content-os/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/du-an/integration-layer/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/integration-layer/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/integration-layer/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/integration-layer/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
-</url>
-<url>
-<loc>https://khaianh1999.github.io/via_global/en/projects/integration-layer/</loc>
-<xhtml:link rel="alternate" hreflang="vi" href="https://khaianh1999.github.io/via_global/du-an/integration-layer/" />
-<xhtml:link rel="alternate" hreflang="en" href="https://khaianh1999.github.io/via_global/en/projects/integration-layer/" />
-<xhtml:link rel="alternate" hreflang="x-default" href="https://khaianh1999.github.io/via_global/du-an/integration-layer/" />
-<lastmod>2026-10-27</lastmod>
-<changefreq>yearly</changefreq>
-<priority>0.6</priority>
 </url>
 <url>
 <loc>https://khaianh1999.github.io/via_global/cong-nghe/ai-in-the-enterprise/</loc>
