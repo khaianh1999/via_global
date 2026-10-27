@@ -26,6 +26,12 @@
 | `software-craft` | Công nghệ phần mềm |
 | `media-technology-trends` | Xu hướng công nghệ truyền thông |
 
+## Bố cục
+
+- Danh sách: hero nền tối `DarkPageHero` với xấp ảnh bìa, bài mới nhất (theo `date`) trình bày lớn, các bài còn lại là thẻ trắng hai cột trên nền xanh nhạt, cuối trang là khối `CtaContact`
+- Chi tiết: hero nền tối (liên kết về danh sách, chủ đề, tiêu đề, tóm tắt, ngày đăng, thời gian đọc), ảnh bìa đè lên mép hero, nội dung một cột với chữ cái đầu lớn, khung thông tin bài viết bên phải, ba bài viết khác trên nền xanh nhạt và khối `CtaContact`
+- Ảnh bìa dùng chung cho trang chủ, danh sách và chi tiết
+
 ## Schema dữ liệu
 
 ```ts
@@ -36,6 +42,7 @@
   excerpt: { vi: string; en: string }
   date: string
   readTime: number
+  cover: string // ảnh bìa trong public/insights/, tỉ lệ 16:9
   body: { vi: string[]; en: string[] }
 }
 ```
@@ -45,4 +52,4 @@
 - Mỗi bài có bản Việt và Anh riêng, không để một ngôn ngữ làm bản gốc lộ trong ngôn ngữ kia
 - Mở bài bằng luận điểm, không bằng định nghĩa Wikipedia
 - Có thể nhắc VIA Global như chủ thể tư duy, không biến bài viết thành brochure
-- Khi xuất bản bài mới: thêm vào `insights.ts`, sitemap sẽ tự lấy
+- Khi xuất bản bài mới: thêm vào `insights.ts` kèm ảnh bìa trong `public/insights/`, sitemap sẽ tự lấy

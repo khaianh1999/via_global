@@ -15,6 +15,7 @@ export const insights = [
     },
     date: "2026-09-12",
     readTime: 6,
+    cover: "/insights/ai.jpg",
     body: {
       vi: [
         "Nhiều cuộc thảo luận về AI bắt đầu từ công cụ: chatbot, mô hình ngôn ngữ, tự động hóa. Cách tiếp cận bền vững hơn là bắt đầu từ công việc. Bộ phận nào đang mất nhiều thời gian vào thao tác lặp? Dữ liệu nào đã có nhưng chưa được dùng? Quyết định nào chậm vì thiếu thông tin kịp thời?",
@@ -44,6 +45,7 @@ export const insights = [
     },
     date: "2026-08-20",
     readTime: 7,
+    cover: "/insights/transformation.jpg",
     body: {
       vi: [
         "Phần mềm mới không tự tạo ra cách làm việc mới. Nếu quy trình chưa rõ, hệ thống chỉ số hóa sự rối. Vì vậy bước đầu tiên của chuyển đổi số nên là mô tả công việc đang diễn ra: ai làm, dữ liệu đi đâu, điểm nào bị tắc.",
@@ -73,6 +75,7 @@ export const insights = [
     },
     date: "2026-07-18",
     readTime: 6,
+    cover: "/insights/cloud.jpg",
     body: {
       vi: [
         "Hạ tầng số không phải phần trang trí của dự án công nghệ. Nó quyết định hệ thống có thể chịu tải, khôi phục sau sự cố và mở rộng khi nhu cầu tăng. Những quyết định về Cloud, sao lưu, phân quyền và giám sát cần được ghi lại như một phần của năng lực vận hành.",
@@ -102,6 +105,7 @@ export const insights = [
     },
     date: "2026-06-09",
     readTime: 5,
+    cover: "/insights/software.svg",
     body: {
       vi: [
         "Một hệ thống chỉ thực sự hoàn thành khi người dùng hoàn thành được việc của họ. Giao diện đẹp hay kiến trúc hiện đại không đủ nếu thao tác hàng ngày còn vòng vèo, thiếu dữ liệu hoặc khó bàn giao cho người khác.",
@@ -131,6 +135,7 @@ export const insights = [
     },
     date: "2026-05-04",
     readTime: 6,
+    cover: "/insights/media.svg",
     body: {
       vi: [
         "Các nền tảng truyền thông xuất hiện và thay đổi liên tục. Doanh nghiệp dễ bị kéo theo từng kênh mới mà quên rằng vấn đề cốt lõi vẫn là: nội dung được tạo ra thế nào, ai duyệt, phát hành ở đâu và kết quả được đọc ra sao.",

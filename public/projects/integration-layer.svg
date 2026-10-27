@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+  <defs>
+    <radialGradient id="bg" cx="640" cy="360" r="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0d2556"/>
+      <stop offset="1" stop-color="#030b1c"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1d4ed8" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#0b2248" stop-opacity=".85"/>
+    </linearGradient>
+    <radialGradient id="hub" cx="640" cy="360" r="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset=".35" stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <g stroke="#3b82f6" stroke-opacity=".08">
+    <path d="M0 120h1280M0 240h1280M0 360h1280M0 480h1280M0 600h1280M160 0v720M320 0v720M480 0v720M640 0v720M800 0v720M960 0v720M1120 0v720"/>
+  </g>
+
+  <!-- connections -->
+  <g stroke="#60a5fa" stroke-width="3" fill="none" filter="url(#glow)" opacity=".9">
+    <path d="M360 200C480 200 520 320 600 350"/>
+    <path d="M920 200C800 200 760 320 680 350"/>
+    <path d="M360 520C480 520 520 400 600 372"/>
+    <path d="M920 520C800 520 760 400 680 372"/>
+  </g>
+  <g fill="#e0f2fe" filter="url(#glow)">
+    <circle cx="470" cy="236" r="6"/><circle cx="820" cy="250" r="6"/><circle cx="500" cy="470" r="6"/><circle cx="790" cy="484" r="6"/>
+  </g>
+
+  <!-- systems -->
+  <g filter="url(#glow)">
+    <rect x="170" y="130" width="200" height="140" rx="18" fill="url(#panel)" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="910" y="130" width="200" height="140" rx="18" fill="url(#panel)" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="170" y="450" width="200" height="140" rx="18" fill="url(#panel)" stroke="#60a5fa" stroke-width="2"/>
+    <rect x="910" y="450" width="200" height="140" rx="18" fill="url(#panel)" stroke="#60a5fa" stroke-width="2"/>
+  </g>
+  <g fill="#bfdbfe">
+    <!-- table -->
+    <rect x="195" y="160" width="150" height="14" rx="7" opacity=".9"/>
+    <rect x="195" y="188" width="150" height="8" rx="4" opacity=".45"/><rect x="195" y="206" width="150" height="8" rx="4" opacity=".45"/><rect x="195" y="224" width="110" height="8" rx="4" opacity=".45"/>
+    <!-- chart -->
+    <path d="M935 240l35-30 30 18 40-44 40 26" stroke="#7dd3fc" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="935" y="155" width="90" height="12" rx="6" opacity=".9"/>
+    <!-- database -->
+    <ellipse cx="270" cy="490" rx="44" ry="14" opacity=".9"/>
+    <path d="M226 490v56c0 8 20 14 44 14s44-6 44-14v-56" fill="none" stroke="#bfdbfe" stroke-width="5"/>
+    <path d="M226 518c0 8 20 14 44 14s44-6 44-14" fill="none" stroke="#bfdbfe" stroke-width="5" opacity=".6"/>
+    <!-- document -->
+    <rect x="975" y="475" width="70" height="90" rx="8" opacity=".9"/>
+    <rect x="988" y="495" width="44" height="7" rx="3" fill="#1e3a8a"/><rect x="988" y="512" width="44" height="7" rx="3" fill="#1e3a8a"/><rect x="988" y="529" width="30" height="7" rx="3" fill="#1e3a8a"/>
+  </g>
+
+  <!-- hub -->
+  <circle cx="640" cy="360" r="120" fill="url(#hub)" opacity=".55"/>
+  <g filter="url(#glow)">
+    <circle cx="640" cy="360" r="62" fill="#0b2248" stroke="#93c5fd" stroke-width="3"/>
+    <path d="M614 346h52M666 346l-12-12M666 374h-52M614 374l12 12" stroke="#e0f2fe" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

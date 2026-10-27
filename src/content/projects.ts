@@ -21,7 +21,7 @@ export const projects = [
       vi: "Dự án tập trung vào việc số hóa quy trình điều hành thay vì tạo thêm một công cụ rời rạc. VIA Global đảm nhận khảo sát nhu cầu, thiết kế thông tin, phát triển nền tảng và bàn giao quy trình sử dụng. Sản phẩm được xây dựng theo module để doanh nghiệp có thể mở rộng từng phần.",
       en: "The work focused on digitizing operating process rather than adding another isolated tool. VIA Global handled discovery, information design, platform development and handover of the usage process. The product was built in modules so the organization can expand in stages.",
     },
-    accent: "navy",
+    cover: "/projects/operations-platform.jpg",
     note: {
       vi: "Dự án triển khai thực tế / năng lực nội bộ. Vai trò: thiết kế, phát triển và bàn giao.",
       en: "Implemented case / internal capability project. Role: design, development and handover.",
@@ -49,7 +49,7 @@ export const projects = [
       vi: "Hạng mục tập trung vào nền tảng vận hành: phân tách môi trường, chính sách sao lưu, quan sát hệ thống và quy trình xử lý sự cố. VIA Global đóng vai trò tư vấn kiến trúc và triển khai, với ưu tiên hàng đầu là tính rõ ràng và khả năng kiểm soát lâu dài.",
       en: "The engagement focused on the operating foundation: environment separation, backup policy, observability and incident handling. VIA Global acted as architecture advisor and implementer, with clarity and long-term control as the first priorities.",
     },
-    accent: "blue",
+    cover: "/projects/cloud-foundation.jpg",
     note: {
       vi: "Mô hình triển khai hạ tầng. Vai trò: tư vấn kiến trúc và triển khai.",
       en: "Infrastructure implementation model. Role: architecture advisory and delivery.",
@@ -77,7 +77,7 @@ export const projects = [
       vi: "Thay vì phụ thuộc vào nhiều công cụ rời, dự án xây dựng một luồng vận hành nội dung thống nhất: soạn thảo, phê duyệt, xuất bản và đối chiếu kết quả. VIA Global phụ trách thiết kế luồng làm việc, phát triển hệ thống và hướng dẫn đội ngũ sử dụng.",
       en: "Instead of relying on scattered tools, the project established one content operating flow: drafting, approval, publishing and result review. VIA Global designed the workflow, developed the system and guided the team through adoption.",
     },
-    accent: "ice",
+    cover: "/projects/content-os.jpg",
     note: {
       vi: "Sản phẩm triển khai cho hoạt động truyền thông số. Vai trò: thiết kế luồng và phát triển hệ thống.",
       en: "Implementation for digital communication operations. Role: workflow design and system development.",
@@ -105,7 +105,7 @@ export const projects = [
       vi: "Dự án xuất phát từ nhu cầu đồng bộ dữ liệu giữa nhiều phần mềm. VIA Global rà soát nguồn dữ liệu, thiết kế lớp tích hợp và thiết lập quy tắc đối soát. Kết quả hướng đến một nguồn thông tin thống nhất cho các bộ phận liên quan.",
       en: "The project began with the need to synchronize data across multiple software systems. VIA Global reviewed sources, designed the integration layer and set reconciliation rules. The outcome is a more consistent information source for the teams involved.",
     },
-    accent: "slate",
+    cover: "/projects/integration-layer.svg",
     note: {
       vi: "Dự án tích hợp thực tế. Vai trò: phân tích dữ liệu và phát triển lớp kết nối.",
       en: "Practical integration project. Role: data analysis and connection-layer development.",

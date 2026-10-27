@@ -6,7 +6,6 @@ const outDir = path.resolve("out");
 
 const englishPaths = {
   "gioi-thieu": "about",
-  "linh-vuc": "expertise",
   "giai-phap": "solutions",
   "du-an": "projects",
   "cong-nghe": "insights",

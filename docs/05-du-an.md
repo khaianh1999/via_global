@@ -7,22 +7,20 @@
 | Danh sách | `src/app/[locale]/du-an/page.tsx` |
 | Chi tiết | `src/app/[locale]/du-an/[slug]/page.tsx` |
 | Dữ liệu | `src/content/projects.ts` |
-| Ảnh thẻ | `src/components/projects/ProjectCover.tsx` |
+| Ảnh bìa | `public/projects/` (trường `cover`) |
 | URL VI | `/du-an`, `/du-an/[slug]` |
 | URL EN | `/en/projects`, `/en/projects/[slug]` |
 
-## Cách trình bày khi chưa có nhiều dự án thương mại
+## Bố cục trang danh sách
 
-Mỗi thẻ gồm:
+1. Hero nền tối (`DarkPageHero`, cùng kiểu trang chủ và Dịch vụ): nhãn, tiêu đề, lead; bên phải là xấp ảnh bìa dự án
+2. Dự án nổi bật: dự án đầu tiên trong `projects`, ảnh lớn bên trái, nội dung bên phải; bên dưới là `projectsPage.disclaimer`
+3. Các dự án khác trên nền xanh nhạt: lưới ba cột thẻ trắng, mỗi thẻ có ảnh, số thứ tự, lĩnh vực, tên, mô tả, vai trò
+4. Khối liên hệ `CtaContact`
 
-- Hình minh họa trừu tượng theo `accent`
-- Tên dự án
-- Lĩnh vực
-- Mô tả ngắn
-- Trang chi tiết ghi rõ vai trò của công ty
-- Ghi chú: dự án triển khai thực tế / sản phẩm nội bộ / mô hình triển khai
+Muốn đổi dự án nổi bật, đưa dự án đó lên đầu mảng `projects`. Cùng ảnh bìa được dùng ở trang chủ, trang danh sách và trang chi tiết.
 
-Trang danh sách có `projectsPage.disclaimer` để nói rõ tên khách hàng chỉ được nêu khi có đồng ý.
+Mỗi dự án ghi rõ vai trò của công ty và ghi chú loại hạng mục (dự án triển khai thực tế / sản phẩm nội bộ / mô hình triển khai) ở trang chi tiết.
 
 ## Schema dữ liệu
 
@@ -34,7 +32,7 @@ Trang danh sách có `projectsPage.disclaimer` để nói rõ tên khách hàng 
   title: { vi: string; en: string }
   excerpt: { vi: string; en: string }
   body: { vi: string; en: string }
-  accent: "navy" | "blue" | "ice" | "slate"
+  cover: string // đường dẫn ảnh trong public/projects/, tỉ lệ 16:9
   note: { vi: string; en: string }
 }
 ```
@@ -43,5 +41,5 @@ Trang danh sách có `projectsPage.disclaimer` để nói rõ tên khách hàng 
 
 1. Thay title, excerpt, body bằng thông tin được phép công bố
 2. Ghi đúng vai trò: tư vấn, thiết kế, phát triển, triển khai, bảo trì
-3. Có thể thay `ProjectCover` bằng ảnh thật trong `public/projects/`
+3. Thay ảnh bìa bằng ảnh thật (16:9, rộng từ 1280px) trong `public/projects/` và cập nhật `cover`
 4. Không thêm số liệu “tăng X%” nếu khách hàng không xác nhận

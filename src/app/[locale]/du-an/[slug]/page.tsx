@@ -1,11 +1,13 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { CtaContact } from "@/components/home/CtaContact";
 import { PageHero } from "@/components/pages/PageHero";
-import { ProjectCover } from "@/components/projects/ProjectCover";
 import { Container } from "@/components/ui/Container";
 import { getProject, projects } from "@/content/projects";
 import { routing, type Locale } from "@/i18n/routing";
-import { buildPageMetadata } from "@/lib/metadata";
+import { buildPageMetadata, socialImage } from "@/lib/metadata";
+import { breadcrumbSchema, JsonLd, projectSchema } from "@/lib/structured-data";
+import { publicPath } from "@/lib/site";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export const dynamicParams = false;
@@ -30,6 +32,7 @@ export async function generateMetadata({
     title: item.title[locale as Locale],
     description: item.excerpt[locale as Locale],
     href: { pathname: "/du-an/[slug]", params: { slug } },
+    image: socialImage(item.cover),
   });
 }
 
@@ -45,9 +48,23 @@ export default async function ProjectDetailPage({
 
   const currentLocale = locale as Locale;
   const t = await getTranslations("common");
+  const nav = await getTranslations("nav");
 
   return (
     <>
+      <JsonLd
+        data={[
+          projectSchema({
+            locale: locale as Locale,
+            href: { pathname: "/du-an/[slug]", params: { slug: item.slug } },
+            name: item.title[locale as Locale],
+            description: item.excerpt[locale as Locale],
+            image: item.cover,
+            about: item.field[locale as Locale],
+          }),
+          breadcrumbSchema(locale as Locale, [{ name: nav("home"), href: "/" }, { name: nav("projects"), href: "/du-an" }, { name: item.title[locale as Locale], href: { pathname: "/du-an/[slug]", params: { slug: item.slug } } }]),
+        ]}
+      />
       <PageHero
         label={item.field[currentLocale]}
         title={item.title[currentLocale]}
@@ -56,7 +73,15 @@ export default async function ProjectDetailPage({
       <section className="bg-white py-20">
         <Container className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <ProjectCover accent={item.accent} className="h-72 rounded-[1.6rem]" />
+            <Image
+              src={publicPath(item.cover)}
+              alt={item.title[currentLocale]}
+              width={1280}
+              height={720}
+              priority
+              sizes="(min-width: 1024px) 680px, 100vw"
+              className="aspect-[16/9] w-full rounded-[1.6rem] object-cover"
+            />
             <p className="mt-8 text-base leading-8 text-muted">{item.body[currentLocale]}</p>
           </div>
           <aside className="h-fit rounded-[1.6rem] border border-line p-7">

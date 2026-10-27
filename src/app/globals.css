@@ -97,55 +97,76 @@ body {
   animation: zalo-ping 2.4s ease-out infinite;
 }
 
-@keyframes orbit-spin {
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes hero-twinkle {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.hero-float {
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+.hero-stars {
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 28% 72%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 44% 34%, #bae6fd 50%, transparent 51%),
+    radial-gradient(1px 1px at 58% 12%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 66% 84%, #fff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 78% 26%, #fde68a 50%, transparent 51%),
+    radial-gradient(1px 1px at 88% 62%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 94% 8%, #bae6fd 50%, transparent 51%),
+    radial-gradient(1px 1px at 6% 52%, #fff 50%, transparent 51%),
+    radial-gradient(1px 1px at 36% 92%, #bae6fd 50%, transparent 51%);
+  background-size: 420px 420px;
+  animation: hero-twinkle 5s ease-in-out infinite;
+}
+
+@keyframes hero-marquee {
   from {
-    transform: rotate(-120deg);
+    transform: translateX(0);
   }
   to {
-    transform: rotate(240deg);
+    transform: translateX(-50%);
   }
 }
 
-@keyframes orbit-spin-rev {
-  from {
-    transform: rotate(40deg);
+.hero-marquee {
+  animation: hero-marquee 48s linear infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-reveal .home-section:not(#mo-dau) > * {
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
   }
-  to {
-    transform: rotate(-320deg);
+
+  .home-reveal .home-section:not(#mo-dau):not([data-inview]) > * {
+    opacity: 0;
+    transform: translateY(28px);
   }
-}
-
-@keyframes orbit-spin-slow {
-  from {
-    transform: rotate(170deg);
-  }
-  to {
-    transform: rotate(530deg);
-  }
-}
-
-.orbit-ring,
-.orbit-ring-rev,
-.orbit-ring-slow {
-  transform-origin: center;
-}
-
-.orbit-ring {
-  animation: orbit-spin 26s linear infinite;
-}
-
-.orbit-ring-rev {
-  animation: orbit-spin-rev 18s linear infinite;
-}
-
-.orbit-ring-slow {
-  animation: orbit-spin-slow 34s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .orbit-ring,
-  .orbit-ring-rev,
-  .orbit-ring-slow {
+  .hero-float,
+  .hero-stars,
+  .hero-marquee {
     animation: none;
   }
 }

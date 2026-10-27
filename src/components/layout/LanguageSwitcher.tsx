@@ -28,32 +28,30 @@ export function LanguageSwitcher({
   return (
     <div
       className={cn(
-        "flex items-center gap-1 text-xs font-semibold tracking-[0.16em]",
-        onLight ? "text-muted" : "text-white/55",
+        "flex items-center rounded-full p-1 text-[13px] font-bold tracking-[0.08em]",
+        onLight ? "bg-navy/5 ring-1 ring-navy/10" : "bg-white/8 ring-1 ring-white/15",
       )}
       aria-label="Language"
     >
-      {(["vi", "en"] as const).map((code, index) => (
-        <span key={code} className="flex items-center gap-1">
-          {index > 0 ? <span aria-hidden="true">|</span> : null}
-          <button
-            type="button"
-            onClick={() => switchTo(code)}
-            className={cn(
-              "rounded-sm px-1 py-0.5 uppercase transition-colors",
-              locale === code
-                ? onLight
-                  ? "text-navy"
-                  : "text-white"
-                : onLight
-                  ? "hover:text-navy"
-                  : "hover:text-white",
-            )}
-            aria-pressed={locale === code}
-          >
-            {code}
-          </button>
-        </span>
+      {(["vi", "en"] as const).map((code) => (
+        <button
+          key={code}
+          type="button"
+          onClick={() => switchTo(code)}
+          className={cn(
+            "rounded-full px-2.5 py-1 uppercase transition-colors",
+            locale === code
+              ? onLight
+                ? "bg-navy text-white"
+                : "bg-white text-navy"
+              : onLight
+                ? "text-muted hover:text-navy"
+                : "text-white/65 hover:text-white",
+          )}
+          aria-pressed={locale === code}
+        >
+          {code}
+        </button>
       ))}
     </div>
   );

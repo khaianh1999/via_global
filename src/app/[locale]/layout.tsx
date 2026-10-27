@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
@@ -6,8 +6,10 @@ import { notFound } from "next/navigation";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { ZaloFloat } from "@/components/layout/ZaloFloat";
-import { routing } from "@/i18n/routing";
+import { routing, type Locale } from "@/i18n/routing";
+import { defaultOgImage } from "@/lib/metadata";
 import { siteConfig } from "@/lib/site";
+import { JsonLd, organizationSchema, websiteSchema } from "@/lib/structured-data";
 import "../globals.css";
 
 const manrope = Manrope({
@@ -41,8 +43,33 @@ export async function generateMetadata({
       template: `%s | ${siteConfig.name}`,
     },
     description: t("homeDescription"),
+    keywords: t("keywords").split(",").map((keyword) => keyword.trim()),
+    applicationName: siteConfig.name,
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
+    creator: siteConfig.name,
+    publisher: siteConfig.name,
+    category: "technology",
+    formatDetection: { email: false, address: false, telephone: false },
+    openGraph: {
+      type: "website",
+      siteName: siteConfig.name,
+      locale: locale === "vi" ? "vi_VN" : "en_US",
+      images: [{ ...defaultOgImage, alt: siteConfig.name }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: [defaultOgImage.url],
+    },
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+      : {}),
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: "#061733",
+  colorScheme: "light",
+};
 
 export default async function LocaleLayout({
   children,
@@ -60,6 +87,7 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
   const messages = await getMessages();
   const t = await getTranslations("common");
+  const meta = await getTranslations("meta");
 
   return (
     <html
@@ -68,6 +96,7 @@ export default async function LocaleLayout({
       className={`${manrope.variable} ${fraunces.variable} h-full scroll-pt-16 scroll-smooth antialiased sm:scroll-pt-[4.75rem] motion-reduce:snap-none`}
     >
       <body className="min-h-full bg-paper font-sans text-ink">
+        <JsonLd data={[organizationSchema(locale as Locale, meta("homeDescription")), websiteSchema(locale as Locale)]} />
         <NextIntlClientProvider messages={messages}>
           <a
             href="#main"

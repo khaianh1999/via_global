@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { getLocale, getTranslations } from "next-intl/server";
 import { IconCloud, IconMedia, IconTechnology } from "@/components/icons/Icons";
 import { homeSectionFrame } from "@/components/home/homeSection";
@@ -7,6 +8,7 @@ import { cn } from "@/lib/cn";
 import { expertiseItems } from "@/content/expertise";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
+import { publicPath } from "@/lib/site";
 
 const icons = {
   technology: IconTechnology,
@@ -14,36 +16,50 @@ const icons = {
   media: IconMedia,
 };
 
+const banners = {
+  technology: "/home/field-technology.svg",
+  cloud: "/home/field-cloud.svg",
+  media: "/home/field-media.svg",
+};
+
 export async function ExpertiseSection() {
   const t = await getTranslations("expertise");
   const locale = (await getLocale()) as Locale;
 
   return (
-    <section id="linh-vuc" className={cn(homeSectionFrame, "bg-ice py-10 sm:py-14 lg:py-16")}>
+    <section id="linh-vuc" className={cn(homeSectionFrame, "bg-ice py-10 sm:py-14 lg:py-12")}>
       <Container>
         <SectionHeading label={t("label")} title={t("title")} body={t("body")} />
-        <div className="mt-6 grid gap-3 sm:mt-8 lg:mt-12 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-6 grid gap-4 sm:mt-8 md:grid-cols-3 lg:mt-10 lg:gap-6">
           {expertiseItems.map((item) => {
             const Icon = icons[item.icon];
             return (
-              <article
+              <Link
                 key={item.slug}
-                className="flex gap-4 rounded-[1.35rem] border border-blue/10 border-l-4 border-l-blue bg-white p-4 shadow-[0_16px_40px_rgba(18,59,114,0.08)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(37,99,235,0.16)] sm:rounded-[1.6rem] lg:flex-col lg:border-t-4 lg:border-l lg:border-t-blue lg:border-l-blue/10 lg:p-7"
+                href={{ pathname: "/giai-phap", hash: item.slug }}
+                className="group flex flex-col overflow-hidden rounded-[1.4rem] border border-line bg-white shadow-[0_16px_40px_rgba(18,59,114,0.08)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(37,99,235,0.18)] sm:rounded-[1.6rem]"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-blue text-white shadow-[0_8px_18px_rgba(37,99,235,0.35)] sm:h-12 sm:w-12">
-                  <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
-                </span>
-                <div className="min-w-0">
-                <h3 className="font-serif text-xl text-navy lg:mt-6 lg:text-2xl">{item.title[locale]}</h3>
-                <p className="mt-1.5 text-sm leading-6 text-muted sm:mt-3 sm:leading-7">{item.excerpt[locale]}</p>
-                <Link
-                  href={{ pathname: "/linh-vuc/[slug]", params: { slug: item.slug } }}
-                  className="mt-3 inline-flex text-sm font-semibold text-blue hover:text-navy lg:mt-8"
-                >
-                  {t("cta")} →
-                </Link>
+                <div className="relative">
+                  <div className="overflow-hidden">
+                    <Image
+                      src={publicPath(banners[item.icon])}
+                      alt=""
+                      width={800}
+                      height={420}
+                      sizes="(min-width: 768px) 33vw, 100vw"
+                      className="h-36 w-full object-cover transition duration-500 group-hover:scale-105 sm:h-44 lg:h-40 xl:h-48"
+                    />
+                  </div>
+                  <span className="absolute -bottom-6 left-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue text-white shadow-[0_10px_22px_rgba(37,99,235,0.4)] ring-4 ring-white lg:left-6">
+                    <Icon className="h-6 w-6" />
+                  </span>
                 </div>
-              </article>
+                <div className="flex flex-1 flex-col p-5 pt-9 lg:p-6 lg:pt-10">
+                  <h3 className="font-serif text-xl text-navy group-hover:text-blue lg:text-2xl">{item.title[locale]}</h3>
+                  <p className="mt-2 flex-1 text-sm leading-6 text-muted sm:leading-7">{item.excerpt[locale]}</p>
+                  <p className="mt-4 text-sm font-semibold text-blue">{t("cta")} →</p>
+                </div>
+              </Link>
             );
           })}
         </div>

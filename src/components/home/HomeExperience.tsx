@@ -46,8 +46,29 @@ export function HomeExperience({ sections }: { sections: SectionLink[] }) {
       { rootMargin: "-42% 0px -42% 0px", threshold: [0.15, 0.35, 0.6] },
     );
 
-    nodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
+    // Sections fade up the first time they scroll into view.
+    const root = document.documentElement;
+    root.classList.add("home-reveal");
+    const reveal = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          (entry.target as HTMLElement).dataset.inview = "true";
+          reveal.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.12 },
+    );
+
+    nodes.forEach((node) => {
+      observer.observe(node);
+      reveal.observe(node);
+    });
+    return () => {
+      observer.disconnect();
+      reveal.disconnect();
+      root.classList.remove("home-reveal");
+    };
   }, [signature]);
 
   function go(id: string) {
@@ -55,7 +76,7 @@ export function HomeExperience({ sections }: { sections: SectionLink[] }) {
   }
 
   return (
-    <nav aria-label="Mục trang chủ" className="snap-y snap-mandatory pointer-events-none fixed top-1/2 right-3 z-40 -translate-y-1/2 xl:right-6">
+    <nav aria-label="Mục trang chủ" className="snap-y snap-mandatory pointer-events-none fixed hidden lg:block top-1/2 right-3 z-40 -translate-y-1/2 xl:right-6">
       <ol
         className={cn(
           "pointer-events-auto relative flex flex-col items-end gap-2.5 lg:gap-3.5 lg:border-r lg:pr-3",

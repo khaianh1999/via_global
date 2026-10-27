@@ -9,6 +9,7 @@ import { InsightsPreview } from "@/components/home/InsightsPreview";
 import { ServicesSection } from "@/components/home/ServicesSection";
 import { routing, type Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/metadata";
+import { siteConfig } from "@/lib/site";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export function generateStaticParams() {
@@ -23,12 +24,15 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
 
-  return buildPageMetadata({
+  const metadata = buildPageMetadata({
     locale: locale as Locale,
     title: t("homeTitle"),
     description: t("homeDescription"),
     href: "/",
   });
+
+  // The root page shares a segment with the layout, so the title template does not apply.
+  return { ...metadata, title: { absolute: `${siteConfig.name} | ${t("homeTitle")}` } };
 }
 
 export default async function HomePage({

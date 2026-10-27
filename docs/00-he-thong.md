@@ -80,7 +80,6 @@ Tên **VIA Global** lấy theo thư mục dự án và có thể thay. Các vị
 |---|---|---|---|---|
 | Trang chủ | Home | `/` | `/` | `/en` |
 | Giới thiệu | About | `/gioi-thieu` | `/gioi-thieu` | `/en/about` |
-| Lĩnh vực hoạt động | Expertise | `/linh-vuc` | `/linh-vuc` | `/en/expertise` |
 | Giải pháp | Solutions | `/giai-phap` | `/giai-phap` | `/en/solutions` |
 | Dự án | Projects | `/du-an` | `/du-an` | `/en/projects` |
 | Tin công nghệ | Insights | `/cong-nghe` | `/cong-nghe` | `/en/insights` |

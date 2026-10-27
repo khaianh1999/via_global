@@ -1,8 +1,10 @@
-import { CtaContact } from "@/components/home/CtaContact";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { PageHero } from "@/components/pages/PageHero";
+import { Link } from "@/i18n/navigation";
 import { routing, type Locale } from "@/i18n/routing";
 import { buildPageMetadata } from "@/lib/metadata";
+import { breadcrumbSchema, JsonLd, webPageSchema } from "@/lib/structured-data";
+import { publicPath } from "@/lib/site";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export function generateStaticParams() {
@@ -25,8 +27,29 @@ export async function generateMetadata({
   });
 }
 
-const steps = ["listen", "design", "build", "handover"] as const;
-const values = ["clarity", "fit", "continuity"] as const;
+// Placeholder illustrations in public/about/; swap each file for a real photo.
+const photos = {
+  team: "/about/team.svg",
+  workshop: "/about/activity-workshop.svg",
+  event: "/about/activity-event.svg",
+  outing: "/about/activity-outing.svg",
+};
+
+function Photo({ src, caption, className }: { src: string; caption: string; className?: string }) {
+  return (
+    <figure className={className}>
+      <Image
+        src={publicPath(src)}
+        alt={caption}
+        width={1200}
+        height={800}
+        sizes="(min-width: 768px) 50vw, 100vw"
+        className="aspect-[3/2] w-full rounded-2xl object-cover"
+      />
+      <figcaption className="mt-3 text-sm text-muted">{caption}</figcaption>
+    </figure>
+  );
+}
 
 export default async function AboutPage({
   params,
@@ -36,47 +59,80 @@ export default async function AboutPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("aboutPage");
+  const nav = await getTranslations("nav");
 
   return (
     <>
-      <PageHero label={t("label")} title={t("title")} lead={t("lead")} />
-      <section className="bg-white py-20">
-        <Container className="grid gap-12 lg:grid-cols-2">
-          <div>
-            <h2 className="font-serif text-3xl text-navy">{t("storyTitle")}</h2>
-            <p className="mt-5 text-base leading-8 text-muted">{t("story")}</p>
-          </div>
-          <div>
-            <h2 className="font-serif text-3xl text-navy">{t("approachTitle")}</h2>
-            <p className="mt-5 text-base leading-8 text-muted">{t("approach")}</p>
-          </div>
+      <JsonLd
+        data={[
+          webPageSchema({ locale: locale as Locale, href: "/gioi-thieu", name: nav("about"), description: t("lead"), type: "AboutPage" }),
+          breadcrumbSchema(locale as Locale, [{ name: nav("home"), href: "/" }, { name: nav("about"), href: "/gioi-thieu" }]),
+        ]}
+      />
+      <article className="bg-white pb-24 sm:pb-32">
+        <header className="mx-auto max-w-3xl px-5 pt-16 sm:px-8 sm:pt-24">
+          <p className="text-xs font-bold tracking-[0.22em] text-blue uppercase">{t("label")}</p>
+          <h1 className="mt-5 font-serif text-4xl leading-[1.12] tracking-tight text-navy text-balance sm:text-[3.2rem]">
+            {t("title")}
+          </h1>
+          <p className="mt-7 text-lg leading-8 text-muted sm:text-xl sm:leading-9">{t("lead")}</p>
+        </header>
+
+        <Container className="mt-12 sm:mt-16">
+          <figure>
+            <Image
+              src={publicPath(photos.team)}
+              alt={t("teamAlt")}
+              width={1600}
+              height={800}
+              priority
+              sizes="(min-width: 1280px) 1152px, 100vw"
+              className="aspect-[3/2] w-full rounded-2xl object-cover sm:aspect-[2/1] sm:rounded-3xl"
+            />
+            <figcaption className="mt-4 text-center text-sm text-muted">{t("teamCaption")}</figcaption>
+          </figure>
         </Container>
-      </section>
-      <section className="bg-ice py-20">
-        <Container className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, index) => (
-            <article key={step} className="rounded-[1.4rem] bg-white p-6">
-              <p className="text-xs tracking-[0.18em] text-blue uppercase">0{index + 1}</p>
-              <h3 className="mt-4 font-serif text-2xl text-navy">{t(`steps.${step}.title`)}</h3>
-              <p className="mt-3 text-sm leading-7 text-muted">{t(`steps.${step}.body`)}</p>
-            </article>
-          ))}
-        </Container>
-      </section>
-      <section className="bg-white py-20">
-        <Container>
-          <h2 className="font-serif text-3xl text-navy">{t("valuesTitle")}</h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {values.map((value) => (
-              <article key={value} className="rounded-[1.4rem] border border-line p-7">
-                <h3 className="font-serif text-2xl text-navy">{t(`values.${value}.title`)}</h3>
-                <p className="mt-3 text-sm leading-7 text-muted">{t(`values.${value}.body`)}</p>
-              </article>
-            ))}
+
+        <div className="mx-auto mt-14 max-w-3xl px-5 text-[17px] leading-8 text-ink/80 sm:mt-20 sm:px-8 sm:text-lg sm:leading-9">
+          <h2 className="font-serif text-3xl text-navy sm:text-[2.1rem]">{t("teamHeading")}</h2>
+          <p className="mt-5">{t("team")}</p>
+
+          <h2 className="mt-14 font-serif text-3xl text-navy sm:text-[2.1rem]">{t("servicesHeading")}</h2>
+          <p className="mt-5">{t("services")}</p>
+          <Link
+            href="/giai-phap"
+            className="group mt-4 inline-flex items-center gap-2 font-semibold text-blue underline decoration-blue/30 underline-offset-[6px] transition-colors hover:decoration-blue"
+          >
+            {t("servicesLink")}
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+
+          <h2 className="mt-14 font-serif text-3xl text-navy sm:text-[2.1rem]">{t("activitiesHeading")}</h2>
+          <p className="mt-5">{t("activities")}</p>
+        </div>
+
+        <Container className="mt-10 max-w-5xl">
+          <div className="grid gap-6 sm:grid-cols-2">
+            <Photo src={photos.workshop} caption={t("photoWorkshop")} />
+            <Photo src={photos.event} caption={t("photoEvent")} />
           </div>
+          <Photo src={photos.outing} caption={t("photoOuting")} className="mt-6 sm:[&_img]:aspect-[2/1]" />
         </Container>
-      </section>
-      <CtaContact />
+
+        <div className="mx-auto mt-14 max-w-3xl px-5 text-[17px] leading-8 text-ink/80 sm:px-8 sm:text-lg sm:leading-9">
+          <p className="border-l-[3px] border-blue pl-6 font-serif text-2xl leading-snug text-navy sm:text-[1.7rem]">
+            {t("belief")}
+          </p>
+          <p className="mt-10">{t("closing")}</p>
+          <Link
+            href="/lien-he"
+            className="group mt-4 inline-flex items-center gap-2 font-semibold text-blue underline decoration-blue/30 underline-offset-[6px] transition-colors hover:decoration-blue"
+          >
+            {t("contactLink")}
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </Link>
+        </div>
+      </article>
     </>
   );
 }

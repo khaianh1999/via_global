@@ -1,3 +1,5 @@
+import { publicPath } from "@/lib/site";
+
 type Localized<T> = { vi: T; en: T };
 
 export type ServiceIconName = "web" | "code" | "ai" | "flow" | "news" | "shield" | "cloud";
@@ -581,6 +583,10 @@ export const solutions: Service[] = [
 
 export function getSolution(slug: string) {
   return solutions.find((item) => item.slug === slug);
+}
+
+export function solutionImage(slug: string) {
+  return publicPath(`/solutions/${slug}.svg`);
 }
 
 export function getRelatedSolutions(slug: string) {

@@ -10,12 +10,6 @@ import { cn } from "@/lib/cn";
 import { publicPath } from "@/lib/site";
 import type { Locale } from "@/i18n/routing";
 
-const covers: Record<string, string> = {
-  "operations-platform": "/projects/operations-platform.jpg",
-  "cloud-foundation": "/projects/cloud-foundation.jpg",
-  "content-os": "/projects/content-os.jpg",
-};
-
 export async function FeaturedProjects() {
   const t = await getTranslations("projects");
   const locale = (await getLocale()) as Locale;
@@ -38,7 +32,7 @@ export async function FeaturedProjects() {
               className="group flex flex-col overflow-hidden rounded-[1.35rem] border border-line bg-white shadow-[0_10px_30px_rgba(18,59,114,0.04)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(18,59,114,0.1)] sm:rounded-[1.6rem]"
             >
               <Image
-                src={publicPath(covers[project.slug])}
+                src={publicPath(project.cover)}
                 alt={project.title[locale]}
                 width={1280}
                 height={720}

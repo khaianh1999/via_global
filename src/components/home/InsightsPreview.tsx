@@ -10,12 +10,6 @@ import { Link } from "@/i18n/navigation";
 import { publicPath } from "@/lib/site";
 import type { Locale } from "@/i18n/routing";
 
-const covers: Record<string, string> = {
-  "ai-in-the-enterprise": "/insights/ai.jpg",
-  "digital-transformation": "/insights/transformation.jpg",
-  "cloud-and-internet": "/insights/cloud.jpg",
-};
-
 export async function InsightsPreview() {
   const t = await getTranslations("insights");
   const common = await getTranslations("common");
@@ -39,7 +33,7 @@ export async function InsightsPreview() {
               className="group flex flex-col overflow-hidden rounded-[1.35rem] border border-line bg-white shadow-[0_10px_30px_rgba(18,59,114,0.04)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(18,59,114,0.1)]"
             >
               <Image
-                src={publicPath(covers[article.slug])}
+                src={publicPath(article.cover)}
                 alt={article.topic[locale]}
                 width={1280}
                 height={720}

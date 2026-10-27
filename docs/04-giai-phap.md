@@ -13,21 +13,26 @@
 
 ## Bố cục trang danh sách
 
-1. `PageHero`: tiêu đề và lead
-2. Ba nguyên tắc định nghĩa giải pháp: bắt đầu từ việc, phạm vi có thể chốt, nói rõ khi không phù hợp
-3. Năm thẻ lớn: số thứ tự, lĩnh vực, mô tả, ba điểm nhấn, nút xem chi tiết
-4. CTA liên hệ
+1. Hero nền tối: tiêu đề, lead, hai nút, ba con số, hình `public/solutions/hero.svg`
+2. Ba thẻ lĩnh vực (lấy từ `src/content/expertise.ts`), bấm để cuộn tới nhóm tương ứng (`#technology-software`, ...)
+3. Mỗi lĩnh vực một khối: các dịch vụ xếp so le ảnh/chữ; giải pháp `product: true` nằm trong khung tối
+4. Vì sao chọn VIA Global và quy trình 4 bước dạng dòng thời gian
+5. Lời kết và CTA liên hệ
+
+Trang Lĩnh vực đã bỏ; lĩnh vực giờ chỉ là cách nhóm dịch vụ trên trang này.
+
+## Hình minh họa
+
+Mỗi dịch vụ có một hình SVG tại `public/solutions/<slug>.svg` (800×520), lấy qua `solutionImage(slug)`. Thêm dịch vụ mới thì thêm hình cùng tên slug.
 
 ## Bố cục trang chi tiết
 
-1. Hero: lĩnh vực, tên giải pháp, excerpt
-2. Ba đoạn phân tích
-3. Bài toán / Dành cho ai
-4. Phạm vi triển khai và kết quả hướng tới
-5. Bốn bước triển khai
-6. Phù hợp khi / Chưa phải lựa chọn nếu
-7. Các giải pháp khác
-8. CTA liên hệ
+1. Hero nền navy: liên kết về danh sách, icon và lĩnh vực (hoặc nhãn sản phẩm), tên dịch vụ, `excerpt`, nút liên hệ và nút cuộn xuống; ảnh dịch vụ bên phải
+2. Tổng quan: `tagline` làm câu dẫn, các đoạn `body`; bên phải là thẻ tối dính khi cuộn gồm `audience`, `highlights` và liên kết lĩnh vực
+3. Phạm vi dịch vụ (thẻ đánh số) và Giá trị mang lại trên nền xanh nhạt; `note` nếu có
+4. Quy trình bốn bước trên nền tối
+5. Dịch vụ khác dạng thẻ có ảnh
+6. Khối liên hệ `CtaContact`
 
 ## Danh mục
 
