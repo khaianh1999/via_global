@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b2248"/>
+      <stop offset="1" stop-color="#071631"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="400" cy="150" r="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8" stop-opacity=".4"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#e0f2fe"/>
+      <stop offset="1" stop-color="#7dd3fc"/>
+    </linearGradient>
+    <linearGradient id="unit" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#cbd5e1"/>
+      <stop offset="1" stop-color="#64748b"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1e4a8a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#0f2c57" stop-opacity=".95"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#020a1a" flood-opacity=".6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <rect width="800" height="520" fill="url(#halo)"/>
+  <g stroke="#93c5fd" stroke-opacity=".07">
+    <path d="M0 104h800M0 208h800M0 312h800M0 416h800M160 0v520M320 0v520M480 0v520M640 0v520"/>
+  </g>
+
+  <!-- cloud -->
+  <ellipse cx="400" cy="120" rx="150" ry="60" fill="#38bdf8" opacity=".45" filter="url(#glow)"/>
+  <g filter="url(#shadow)">
+    <path d="M300 168h196a46 46 0 0 0 8-91 66 66 0 0 0-124-16 50 50 0 0 0-80 47 30 30 0 0 0 0 60z" fill="url(#cloud)" stroke="#ffffff" stroke-width="2"/>
+    <path d="M384 92v44M372 104l12-12 12 12" stroke="#0369a1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M420 136V92M408 124l12 12 12-12" stroke="#0369a1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- data beams -->
+  <g stroke="#7dd3fc" stroke-width="2.5" stroke-linecap="round">
+    <path d="M370 172v58" stroke-opacity=".8"/>
+    <path d="M390 172v58"/>
+    <path d="M410 172v58"/>
+    <path d="M430 172v58" stroke-opacity=".8"/>
+  </g>
+  <g fill="#e0f2fe">
+    <circle cx="370" cy="200" r="3.5"/>
+    <circle cx="390" cy="186" r="3.5"/>
+    <circle cx="410" cy="212" r="3.5"/>
+    <circle cx="430" cy="194" r="3.5"/>
+  </g>
+
+  <!-- server stack -->
+  <ellipse cx="400" cy="440" rx="170" ry="26" fill="#38bdf8" opacity=".4" filter="url(#glow)"/>
+  <g filter="url(#shadow)">
+    <rect x="300" y="230" width="200" height="58" rx="12" fill="url(#unit)"/>
+    <rect x="300" y="296" width="200" height="58" rx="12" fill="url(#unit)"/>
+    <rect x="300" y="362" width="200" height="58" rx="12" fill="url(#unit)"/>
+    <g fill="#334155">
+      <rect x="318" y="252" width="90" height="14" rx="4"/>
+      <rect x="318" y="318" width="90" height="14" rx="4"/>
+      <rect x="318" y="384" width="90" height="14" rx="4"/>
+    </g>
+    <g fill="#22d3ee">
+      <circle cx="456" cy="259" r="5"/>
+      <circle cx="476" cy="259" r="5"/>
+      <circle cx="456" cy="325" r="5"/>
+      <circle cx="476" cy="325" r="5"/>
+      <circle cx="456" cy="391" r="5"/>
+    </g>
+    <circle cx="476" cy="391" r="5" fill="#34d399"/>
+    <rect x="300" y="420" width="200" height="14" rx="7" fill="#38bdf8" fill-opacity=".6"/>
+  </g>
+
+  <!-- load balancer -->
+  <g stroke="#60a5fa" stroke-width="2.5" stroke-dasharray="5 6">
+    <path d="M300 325H200v-80"/>
+    <path d="M200 325v80"/>
+    <path d="M500 325h100v-80"/>
+    <path d="M600 325v80"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="140" y="200" width="120" height="48" rx="14" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <circle cx="164" cy="224" r="10" stroke="#93c5fd" stroke-width="2.5"/>
+    <path d="M154 224h20M164 214c-5 6-5 14 0 20M164 214c5 6 5 14 0 20" stroke="#93c5fd" stroke-width="2"/>
+    <text x="184" y="230" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">CDN</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="140" y="402" width="120" height="48" rx="14" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <path d="M158 418v16M154 430l4 4 4-4M170 434v-16M166 422l4-4 4 4" stroke="#34d399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="184" y="432" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Backup</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="540" y="200" width="130" height="48" rx="14" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <path d="M560 216h20M560 224h20M560 232h20" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+    <text x="590" y="230" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Balancer</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="540" y="402" width="130" height="48" rx="14" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <path d="M558 436l8-10 8 6 10-14" stroke="#34d399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="592" y="432" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">99.9%</text>
+  </g>
+
+  <!-- side gauges -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="70" width="140" height="92" rx="16" fill="#0f2c57" fill-opacity=".95" stroke="#60a5fa" stroke-opacity=".55"/>
+    <text x="638" y="96" fill="#bfdbfe" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">CPU</text>
+    <rect x="638" y="104" width="104" height="8" rx="4" fill="#ffffff" fill-opacity=".12"/>
+    <rect x="638" y="104" width="46" height="8" rx="4" fill="#22d3ee"/>
+    <text x="638" y="132" fill="#bfdbfe" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">RAM</text>
+    <rect x="638" y="140" width="104" height="8" rx="4" fill="#ffffff" fill-opacity=".12"/>
+    <rect x="638" y="140" width="68" height="8" rx="4" fill="#34d399"/>
+  </g>
+  <g fill="#bae6fd">
+    <circle cx="90" cy="90" r="3"/>
+    <circle cx="200" cy="120" r="2"/>
+    <circle cx="740" cy="300" r="2"/>
+    <circle cx="70" cy="300" r="2"/>
+  </g>
+</svg>

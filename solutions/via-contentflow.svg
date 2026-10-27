@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b2248"/>
+      <stop offset="1" stop-color="#071631"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="400" cy="260" r="340" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#2563eb" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#1e4a8a" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#0f2c57" stop-opacity=".95"/>
+    </linearGradient>
+    <linearGradient id="engine" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#60a5fa"/>
+      <stop offset="1" stop-color="#4f46e5"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#60a5fa" stop-opacity=".2"/>
+      <stop offset=".5" stop-color="#93c5fd"/>
+      <stop offset="1" stop-color="#60a5fa" stop-opacity=".2"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#020a1a" flood-opacity=".6"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <rect width="800" height="520" fill="url(#halo)"/>
+  <g stroke="#93c5fd" stroke-opacity=".07">
+    <path d="M0 104h800M0 208h800M0 312h800M0 416h800M160 0v520M320 0v520M480 0v520M640 0v520"/>
+  </g>
+
+  <!-- flow lines -->
+  <g stroke="url(#flow)" stroke-width="3" stroke-linecap="round">
+    <path d="M150 130c80 0 100 120 180 120"/>
+    <path d="M150 260h180"/>
+    <path d="M150 390c80 0 100-120 180-120"/>
+    <path d="M470 260h70"/>
+    <path d="M660 240c30 0 30-110 60-110"/>
+    <path d="M660 260h60"/>
+    <path d="M660 280c30 0 30 110 60 110"/>
+  </g>
+  <g fill="#bfdbfe">
+    <circle cx="250" cy="188" r="4"/>
+    <circle cx="240" cy="260" r="4"/>
+    <circle cx="250" cy="332" r="4"/>
+    <circle cx="505" cy="260" r="4"/>
+  </g>
+
+  <!-- sources -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="92" width="90" height="76" rx="16" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <circle cx="105" cy="130" r="20" stroke="#93c5fd" stroke-width="3"/>
+    <path d="M85 130h40M105 110c-10 12-10 28 0 40M105 110c10 12 10 28 0 40" stroke="#93c5fd" stroke-width="3"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="60" y="222" width="90" height="76" rx="16" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <circle cx="90" cy="276" r="5" fill="#fb923c"/>
+    <path d="M86 254a24 24 0 0 1 24 24M86 242a36 36 0 0 1 36 36" stroke="#fb923c" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="60" y="352" width="90" height="76" rx="16" fill="url(#glass)" stroke="#93c5fd" stroke-opacity=".5"/>
+    <rect x="84" y="372" width="42" height="36" rx="4" fill="#e2e8f0"/>
+    <path d="M90 382h30M90 390h30M90 398h18" stroke="#2563eb" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- AI engine -->
+  <circle cx="400" cy="260" r="80" fill="#4f46e5" opacity=".5" filter="url(#glow)"/>
+  <g filter="url(#shadow)">
+    <rect x="330" y="190" width="140" height="140" rx="32" fill="url(#engine)" stroke="#c7d2fe" stroke-width="2"/>
+    <path d="M400 216l8 22 22 8-22 8-8 22-8-22-22-8 22-8z" fill="#ffffff"/>
+    <path d="M436 280l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" fill="#e0e7ff"/>
+    <path d="M362 212l3 7 7 3-7 3-3 7-3-7-7-3 7-3z" fill="#e0e7ff"/>
+    <text x="400" y="314" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" text-anchor="middle">AI DRAFT</text>
+  </g>
+
+  <!-- draft card -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="176" width="120" height="168" rx="16" fill="#f8fafc"/>
+    <rect x="552" y="188" width="96" height="56" rx="8" fill="#93c5fd"/>
+    <path d="M552 236l26-22 18 14 14-10 38 26v0a8 8 0 0 1-8 0z" fill="#2563eb" fill-opacity=".6"/>
+    <rect x="552" y="254" width="88" height="8" rx="4" fill="#0f2c57"/>
+    <rect x="552" y="268" width="70" height="8" rx="4" fill="#0f2c57"/>
+    <rect x="552" y="284" width="96" height="5" rx="2.5" fill="#94a3b8"/>
+    <rect x="552" y="294" width="90" height="5" rx="2.5" fill="#94a3b8"/>
+    <rect x="552" y="304" width="76" height="5" rx="2.5" fill="#94a3b8"/>
+    <rect x="552" y="318" width="52" height="16" rx="8" fill="#34d399"/>
+    <path d="M562 326l4 4 8-8" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- channels -->
+  <g filter="url(#shadow)">
+    <rect x="720" y="100" width="60" height="60" rx="16" fill="#2563eb"/>
+    <rect x="734" y="116" width="32" height="26" rx="4" stroke="#ffffff" stroke-width="3"/>
+    <path d="M734 124h32" stroke="#ffffff" stroke-width="3"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="720" y="230" width="60" height="60" rx="16" fill="#ef4444"/>
+    <path d="M743 248v24l20-12z" fill="#ffffff"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="720" y="360" width="60" height="60" rx="16" fill="#0ea5e9"/>
+    <circle cx="738" cy="390" r="6" fill="#ffffff"/>
+    <circle cx="762" cy="378" r="6" fill="#ffffff"/>
+    <circle cx="762" cy="402" r="6" fill="#ffffff"/>
+    <path d="M738 390l24-12M738 390l24 12" stroke="#ffffff" stroke-width="3"/>
+  </g>
+
+  <!-- schedule chip -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="400" width="200" height="46" rx="23" fill="#0f2c57" fill-opacity=".95" stroke="#60a5fa" stroke-opacity=".6"/>
+    <rect x="318" y="412" width="22" height="22" rx="5" stroke="#93c5fd" stroke-width="2.5"/>
+    <path d="M318 419h22M324 408v6M334 408v6" stroke="#93c5fd" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="352" y="428" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">08:00 · Auto publish</text>
+  </g>
+
+  <g fill="#93c5fd">
+    <circle cx="300" cy="70" r="3"/>
+    <circle cx="560" cy="440" r="2"/>
+    <circle cx="640" cy="80" r="2"/>
+  </g>
+</svg>
