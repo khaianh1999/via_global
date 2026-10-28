@@ -101,14 +101,14 @@ export default async function SolutionsPage({
               {t("title")}
             </h1>
             <p className="mt-5 max-w-2xl text-[15px] leading-7 text-white/75 sm:text-lg sm:leading-8">{t("lead")}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a
                 href="#danh-sach"
                 className="inline-flex items-center justify-center rounded-full bg-blue px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-[0_8px_20px_rgba(37,99,235,0.35)] transition-colors hover:bg-blue-bright"
               >
                 {t("heroPrimary")} ↓
               </a>
-              <ButtonLink href="/lien-he" variant="light">
+              <ButtonLink href="/lien-he" variant="light" className="w-full sm:w-auto">
                 {t("heroSecondary")}
               </ButtonLink>
             </div>

@@ -75,7 +75,7 @@ export async function Footer() {
 
         <div className="lg:col-span-2">
           <p className="text-[13px] font-bold tracking-[0.18em] text-sky-300 uppercase">{t("explore")}</p>
-          <ul className="mt-5 space-y-3">
+          <ul className="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 lg:grid-cols-1">
             {primaryNav.map((item) => (
               <li key={item.href}>
                 <Link href={item.href} className="text-[15px] text-white/75 transition-colors hover:text-white">

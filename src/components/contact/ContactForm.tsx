@@ -47,11 +47,11 @@ export function ContactForm() {
     <form onSubmit={onSubmit} noValidate className="grid gap-6">
       <fieldset>
         <legend className="mb-3 text-sm font-semibold text-navy">{t("topic")}</legend>
-        <div className="flex flex-wrap gap-2.5">
+        <div className="grid gap-2 sm:flex sm:flex-wrap sm:gap-2.5">
           {topics.map((topic) => (
             <label
               key={topic}
-              className="cursor-pointer rounded-full border border-line bg-white px-4 py-2 text-sm text-ink/80 transition hover:border-blue/50 has-checked:border-navy has-checked:bg-navy has-checked:text-white has-focus-visible:ring-4 has-focus-visible:ring-blue/20"
+              className="cursor-pointer rounded-xl border border-line bg-white px-4 py-3 text-sm sm:rounded-full sm:py-2 text-ink/80 transition hover:border-blue/50 has-checked:border-navy has-checked:bg-navy has-checked:text-white has-focus-visible:ring-4 has-focus-visible:ring-blue/20"
             >
               <input type="radio" name="topic" value={topic} defaultChecked={topic === "software"} className="sr-only" />
               {t(`topicOptions.${topic}`)}

@@ -29,7 +29,7 @@ export async function CtaContact() {
             <p className="mt-4 max-w-xl text-[15px] leading-7 text-white/80 sm:text-lg sm:leading-8">{t("body")}</p>
             <a
               href={`mailto:${siteConfig.email}`}
-              className="mt-5 inline-flex w-fit items-center gap-3 rounded-full border border-white/15 bg-white/10 py-1.5 pr-4 pl-1.5 text-sm font-semibold text-white transition hover:bg-white/15"
+              className="mt-5 inline-flex max-w-full items-center gap-3 rounded-full border border-white/15 bg-white/10 py-1.5 pr-4 pl-1.5 text-sm font-semibold text-white transition hover:bg-white/15"
             >
               <span className="rounded-full bg-blue px-3 py-1 text-[11px] tracking-[0.14em] text-white uppercase">
                 {t("emailLabel")}
@@ -37,7 +37,7 @@ export async function CtaContact() {
               {siteConfig.email}
             </a>
             <div className="mt-6">
-              <ButtonLink href="/lien-he" variant="light">
+              <ButtonLink href="/lien-he" variant="light" className="w-full sm:w-auto">
                 {t("button")}
               </ButtonLink>
             </div>

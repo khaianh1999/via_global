@@ -137,7 +137,7 @@ export default async function AboutPage({
         </Container>
 
         <div className="mx-auto mt-14 max-w-3xl px-5 text-[17px] leading-8 text-ink/80 sm:px-8 sm:text-lg sm:leading-9">
-          <p className="border-l-[3px] border-blue pl-6 font-serif text-2xl leading-snug text-navy sm:text-[1.7rem]">
+          <p className="border-l-[3px] border-blue pl-5 font-serif text-xl leading-snug text-navy sm:pl-6 sm:text-[1.7rem]">
             {t("belief")}
           </p>
           <p className="mt-10">{t("closing")}</p>

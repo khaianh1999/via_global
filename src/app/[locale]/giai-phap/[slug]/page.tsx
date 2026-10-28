@@ -227,18 +227,20 @@ export default async function SolutionDetailPage({
         <Container className="relative">
           <p className="text-xs font-semibold tracking-[0.22em] text-blue-bright uppercase">{t("processLabel")}</p>
           <h2 className="mt-3 font-serif text-3xl sm:text-4xl">{t("processTitle")}</h2>
-          <ol className="relative mt-12 grid gap-10 md:grid-cols-4 md:gap-6">
+          <ol className="relative mt-10 grid gap-7 md:mt-12 md:grid-cols-4 md:gap-6">
             <span
               aria-hidden
               className="absolute top-6 right-[12%] left-[12%] hidden h-px bg-linear-to-r from-sky-400/0 via-sky-400/60 to-sky-400/0 md:block"
             />
             {stepKeys.map((key, index) => (
-              <li key={key} className="relative md:text-center">
-                <span className="relative flex h-12 w-12 items-center justify-center rounded-full border border-sky-300/40 bg-[#071a3a] font-serif text-lg text-sky-200 shadow-[0_0_30px_rgba(56,189,248,0.25)] md:mx-auto">
+              <li key={key} className="relative flex gap-4 md:block md:text-center">
+                <span className="relative flex h-12 w-12 items-center justify-center rounded-full border border-sky-300/40 bg-[#071a3a] shrink-0 font-serif text-lg text-sky-200 shadow-[0_0_30px_rgba(56,189,248,0.25)] md:mx-auto">
                   {index + 1}
                 </span>
-                <h3 className="mt-5 font-serif text-xl">{t(`steps.${key}.title`)}</h3>
-                <p className="mt-2 text-sm leading-6 text-white/60">{t(`steps.${key}.body`)}</p>
+                <div>
+                  <h3 className="mt-2.5 font-serif text-lg md:mt-5 md:text-xl">{t(`steps.${key}.title`)}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-white/60 md:mt-2">{t(`steps.${key}.body`)}</p>
+                </div>
               </li>
             ))}
           </ol>

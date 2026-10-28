@@ -77,7 +77,7 @@ export default async function ContactPage({
         ]}
       />
       <DarkPageHero label={t("label")} title={t("title")} lead={t("lead")}>
-        <aside className="rounded-[1.6rem] border border-white/12 bg-white/[0.06] p-7 backdrop-blur-xl sm:p-9">
+        <aside className="rounded-[1.6rem] border border-white/12 bg-white/[0.06] p-6 backdrop-blur-xl sm:p-9">
           <h2 className="font-serif text-2xl">{t("asideTitle")}</h2>
           <p className="mt-3 text-[15px] leading-7 text-white/65">{t("asideBody")}</p>
           <ul className="mt-8 space-y-5">
@@ -112,7 +112,7 @@ export default async function ContactPage({
                       {content}
                     </a>
                   ) : (
-                    <div className="flex items-center gap-4">{content}</div>
+                    <div className="flex items-start gap-4">{content}</div>
                   )}
                 </li>
               );
