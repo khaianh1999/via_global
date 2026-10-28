@@ -1,4 +1,4 @@
-:HL["/via_global/_next/static/chunks/3ilrpnv1o2hgb.css","style"]
+:HL["/via_global/_next/static/chunks/36pgq6utx1_23.css","style"]
 :HL["/via_global/_next/static/media/0cd6149dd3f9fc6a-s.p.1two88yljb5sr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/via_global/_next/static/media/1f6c95fdd7b08cc8-s.p.0jaqhc1tb-5xm.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/via_global/_next/static/media/25d341d5876d8ede-s.p.2wu4yy186g04j.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -21,4 +21,4 @@
 3:[["children",{"s":{"n":"slug","t":"d","k":"ai-in-the-enterprise","s":[]},"h":65632,"c":"$Q4"}]]
 2:[["children",{"s":"cong-nghe","h":131136,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"vi","s":[]},"h":196640,"c":"$Q2"}]]
-0:{"b":"S8M_H36zbXTqPh_8-UDXS","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
+0:{"b":"kFNp9BT9yCQkXGPNqP6jm","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
